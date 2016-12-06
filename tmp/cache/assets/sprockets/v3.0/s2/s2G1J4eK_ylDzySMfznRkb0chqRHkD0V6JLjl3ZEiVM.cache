@@ -1,0 +1,19 @@
+{:uriI"¢file://app/assets/javascripts/angular/templates/old_modal/modal-ui-default.html?type=text/html&id=8e87fd61f326f42d3d85fbe4ff9725c97d55f735b11af9c7df09c68d3e84c9f9:ET:load_pathI"app/assets/javascripts;T:filenameI"Mapp/assets/javascripts/angular/templates/old_modal/modal-ui-default.html;T:	nameI"1angular/templates/old_modal/modal-ui-default;T:logical_pathI"6angular/templates/old_modal/modal-ui-default.html;T:content_typeI"text/html;T:sourceI"~      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="modal-title"><h5>Loading...</h5></div>
+      </div>
+      <div class="modal-body">
+		<div class="modal-loading loader"></div>
+		<div class="modal-view" ng-view>
+		</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="modal-action">Save changes</button>
+        <button type="button" class="btn btn-secondary" id="modal-close" data-dismiss="modal">Cancel</button>
+      </div>;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"[file-digest://app/assets/javascripts/angular/templates/old_modal/modal-ui-default.html;TTF:charsetI"
+utf-8;F:digest"%Zf“Ù∏bÈºûP{|A(Å‡utΩU)N~î{›"az:lengthi~:dependencies_digest"%Q2¡$Ñ€äDøh“ŒØßc«ÃaÁ^IÜq9ŸˇZn¨ó:idI"E8e87fd61f326f42d3d85fbe4ff9725c97d55f735b11af9c7df09c68d3e84c9f9;F:
+mtimel+hWCX

@@ -1,0 +1,18 @@
+    <div class="pos-f-t">
+      <div class="navbar navbar-light bg-faded navbar-static-top">
+      	<a href="/" class="navbar-brand"><%= image_tag("glbrc-logo-38x38.jpg", size: "30" ) %> GREAT LAKES BIOENERGY RESEARCH CENTER DEMO</a>
+        <div class="pull-right" style="line-height: 40px;">
+        	<form>
+            <% if user_signed_in? %>    
+          	<button class="btn btn-danger btn-sm" data-target="#modal" data-toggle="modal" data-title="Customize Homepage"  ui-sref="custom-homepage">
+          		         <%= icon("cog") %> Customize Homepage
+          	</button>
+           
+          	<%= button_to_with_icon("<i class='fa fa-user'></i> Logout", "delete", method: "delete", "ui-sref" => "logout", :data => { :target => '#modal', :toggle => 'modal' }, class: "btn btn-default btn-sm") %>
+
+          	<% else %>
+            <%= button_to_with_icon("<i class='fa fa-user'></i> Login", "get", method: "get",  "ui-sref" => "login", :data => { :target => '#modal', :toggle => 'modal' }, class: "btn btn-default btn-sm") %>
+          	<% end %>
+        </div>
+      </div>
+    </div>

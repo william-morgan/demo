@@ -1,0 +1,70 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* cards */
+.card-footer{
+  position: absolute; 
+  bottom:0; 
+  width:100%;
+}
+.card{
+  width:24%; 
+  height: 29.5vh; 
+  padding-left:0;
+  padding-right:0;
+  margin-left: .5%;
+  margin-right: .5%;
+}
+.card-block {
+    padding: 0.80rem;
+}
+.card-header{
+  font-size:.73rem; font-weight:bold;
+}
+/*helpers */
+mark{
+  font-style: italic;
+}
+.program-break{
+  min-height: 30px;
+  display: block;
+}
+
+/*card baked content */
+.icon{
+   color: #970000; 
+}
+
+.program-highlighted-text{
+  margin: 9% auto;
+  padding: 10px 0 10px 15px;
+  width: 95%;
+  background: #f3f3f3;
+  font-size: 0.70rem;
+}
+.program-highlighted-text p, .program-highlighted-text ul{
+  width: 100%;
+  text-align: left;
+}
+.program-highlighted-text p{
+  font-weight: bold;
+  padding: 0 0 0 0;
+  /* boostrap override 1.00rem*/
+  margin-bottom: 0.5rem;
+}
+.program-highlighted-text ul{
+  font-size: 0.65rem;
+  padding: 0 0 0 15px;
+}
+.program-highlighted-text ul li{
+  line-height: 10px;
+  padding: 0 0 0 0;
+}
+
+.btn-launch{
+  font-size:.75rem; 
+  position: relative; 
+  bottom: 0; 
+  margin: 0 auto;
+}

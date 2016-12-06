@@ -1,0 +1,25 @@
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="modal-title-container">
+        	<h5 class="modal-title-loading">Loading {{ title_loading }}...</h5>
+        	<h5 class="modal-title"><i class="fa fa-{{ program.icon }}"></i> {{ title_loaded }}</h5 ng-title>
+        </div>
+      </div>
+      <div class="modal-body">
+		<div class="modal-view-loading loader"></div>
+		<div class="modal-view" ng-view>
+			<ul>
+				<li>id: <mark>{{ program.id }}</mark></li>
+				<li>url: <mark>NULL</mark></li>
+				<li>name: <mark>{{ program.name }}</mark></li>
+				<li>icon: <mark>fa-{{ program.icon }}</mark></li>
+				<li>description: <mark>{{ program.html }}</mark></li>
+			</ul>
+		</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="modal-action" disabled>Launch</button>
+        <button type="button" class="btn btn-secondary" id="modal-close" data-dismiss="modal">Close</button>
+      </div>

@@ -1,0 +1,60 @@
+.modal{
+  overflow: hidden;
+}
+.modal-view.ng-move,
+.modal-view.ng-enter,
+.modal-view.ng-leave {
+  -webkit-transition:all linear 0.5s;
+  transition:all linear 0.5s;
+}
+
+.modal-view.ng-leave.ng-leave-active,
+.modal-view.ng-move,
+.modal-view.ng-enter {
+  opacity:0;
+}
+
+.modal-view.ng-leave,
+.modal-view.ng-move.ng-move-active,
+.modal-view.ng-enter.ng-enter-active {
+  opacity:1;
+}
+.modal-view ul{
+   list-style-type: none;
+}
+.loader {
+  width: 30px;
+  height: 30px;
+  margin: 30px auto;
+  animation: rotate 1.4s infinite ease-in-out, background 1.4s infinite ease-in-out alternate;
+}
+
+@keyframes rotate {
+  0% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
+  }
+}
+@keyframes background {
+  0% {
+  background-color: #27ae60;
+  }
+  50% {
+    background-color: #9b59b6;
+  }
+  100% {
+    background-color: #c0392b;
+  }
+}
+
+.modal-instructions{
+  margin-left: 20px;
+  font-size: .75em;     
+  color: #373a3c;    
+  background: #f3f3f3;
+}

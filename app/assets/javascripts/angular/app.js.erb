@@ -1,0 +1,297 @@
+console.clear();
+
+var app = angular.module('InteractiveModal', ['ui.router', 'ng-token-auth']);
+app.filter('encodeURIComponent', function($window) {
+    return $window.encodeURIComponent;
+});
+app.run(function($window, $rootScope, $timeout) {
+  var hideClass = 'ng-hide',
+    delay = 3000,
+    firstChangeStartt = false,
+    firstContentLoaded = false,
+    timer;
+  $rootScope.$on('$stateChangeStart',
+    function(event, toState, toParams, fromState, fromParams) {
+      if (!firstChangeStartt) {
+        firstChangeStartt = true;
+        return;
+      }
+      $timeout.cancel(timer);
+
+      $(".modal-title-loading").removeClass(hideClass);
+      $('.modal-title').addClass(hideClass);
+      $(".modal-view-loading").removeClass(hideClass);
+      $('.modal-view').addClass(hideClass);
+	  $("#modal-action").prop('disabled', true);
+    });
+
+  $rootScope.$on('$viewContentLoaded',
+    function(event, toState, toParams, fromState, fromParams) {
+      if (!firstContentLoaded) {
+        firstContentLoaded = true;
+        return;
+      }
+      $timeout.cancel(timer);
+      var title = $('.modal-title');
+      var view  = $('.modal-view');
+      title.addClass(hideClass);
+      view.addClass(hideClass);
+      timer = $timeout(function() {
+        title.removeClass(hideClass);
+        view.removeClass(hideClass);
+        $(".modal-title-loading").addClass(hideClass);
+        $(".modal-view-loading").addClass(hideClass);
+	    $("#modal-action").prop('disabled', false);
+      }, delay, false);
+    });
+});
+
+app.config(function($stateProvider, $urlRouterProvider, $authProvider, $locationProvider) {
+  $locationProvider.html5Mode({
+         enabled: true,
+         requireBase: false
+  });
+  $urlRouterProvider.otherwise('/');
+  $authProvider.configure({
+    apiUrl: '/api/v1'
+  });
+  $stateProvider
+  .state('default', {
+    templateUrl: "<%= asset_path('angular/templates/modal/ui-default.html') %>"
+  })
+  .state('login', {
+    controller: function($scope, $state, $http, $location){
+    	$scope.title = "Login";
+    	
+	    $scope.custom = function() {
+	    	$("#modal-action").on("click", function(){
+	    		var json ={"email": $("#login-email").val(), "password": $("#login-password").val()};
+	    		$http(
+	    			{
+	    				url:'/api/v1/auth/sign_in.json', 
+	    				data: json,
+			            method: "POST",
+			            headers: {'Content-Type': 'application/json'}
+	    			}
+	    		).success(function(response, status, r, x) {
+			            console.log(status);
+			            console.log(response);
+			            console.log(x);
+			            console.log(x.headers['access-token']);
+			            console.log(x.headers['client']);
+			            console.log(x.headers['expiry']);
+			            console.log($('meta[name="csrf-token"]').attr('content'));
+			            location.reload();			            
+			    }).error(function(response, status, errors){
+			            console.log(status);
+			            console.log(response);
+			            console.log(errors);
+	    			    $(".modal-content").shake(3,7,800);			    	
+			    });
+
+	    	});
+			$('#modal').on('hidden.bs.modal', function ($stateParams) {
+			    $state.transitionTo('default', $stateParams, {reload: true});
+			});		
+	    }
+	    $scope.custom();   	
+    },	
+    templateUrl: "<%= asset_path('angular/templates/modal/_login.html') %>"
+  })
+  .state('logout', {
+        controller: function($scope, $state, $http){
+        //$http.delete('/api/v1/auth/users/sign_out.json');
+    	$scope.title = "Logout";
+	    $scope.custom = function() {	
+	    	eraseCookie("auth_headers");
+	    	window.location.href = "../";
+	    }
+	    $scope.custom();   	
+    },	
+    templateUrl: "<%= asset_path('angular/templates/modal/_logout.html') %>"
+  })
+  .state('recent-payroll', { 
+    controller: function($scope, $state){
+    	$scope.title = "Recent Payroll";
+	    $scope.custom = function() {
+	    	// custom code (jQuery, extras)//
+			$('#modal').on('hidden.bs.modal', function ($stateParams) {
+			    $state.transitionTo('default', $stateParams, {reload: true});
+			})
+	    }
+	    $scope.custom();   	
+    },	
+    templateUrl: "<%= asset_path('angular/templates/modal/_recent-payroll.html') %>"
+  })
+  .state('course-search', {
+    controller: function($scope, $state){
+    	if(typeof $scope.q=='undefined'){
+    	    $scope.q = "<blank>";    		
+    	}
+    	$scope.title = "Search Results";
+	    $scope.custom = function() {
+	    	// custom code (jQuery, extras)//
+			$('#modal').on('hidden.bs.modal', function ($stateParams) {
+			    $state.transitionTo('default', $stateParams, {reload: true});
+			});
+	    }
+	    $scope.custom();   	
+    },
+    templateUrl: "<%= asset_path('angular/templates/modal/_course-search-results.html') %>"
+  })
+  .state('custom-homepage', {
+    resolve: {
+    	programListing: function($http){
+    		return $http({method: 'GET', url: '/api/v1/listing.json'});
+    	}
+    },
+    controller: function($http, $scope, $state, programListing){
+    	$scope.programs = new Array();
+    	$scope.title_loading = "Custom Homepage Settings";
+    	$scope.title_loaded = "Customize Homepage";
+		angular.forEach(programListing.data, function(value, key){
+			$scope.programs.push({
+       	                       "id"      : value.id, 
+       	                       "name"    : value.name_shorthand, 
+       	                       "display" : value.display
+			});
+		});
+	    $scope.custom = function() {
+	        $("#program-listing-list").first().sortable();
+	        $("#program-listing-list").first().disableSelection();
+	        $("#program-listing-list").bind('DOMNodeInserted DOMNodeRemoved', function() {
+				$(this).children().each(function(){
+					$(this).attr("data-current", $(this).index());
+				});
+	        });
+	        $("#modal-action").click(function(){
+	        	var json            = {};
+			   	var listing_objects = [];
+			   	var listing_object  = {};
+                var token           = $("#modal").data("token");
+                var user_id         = $("#modal").data("user");
+			   	$("#program-listing-list li").each(function(){
+			   		 listing_object = {
+			   		 	 "program_id" : $(this).data("id"),
+			   		 	 "user_id"    : user_id,	
+			   		 	 "display"    : $(this).find(".program-listing-checkbox").is(":checked") ? 1:0,
+			   		 	 "order"      : $(this).data("current"),
+			   		 	 "token"      : token			    		 	 			    		
+			   		 };
+			   		 listing_objects.push(listing_object);
+			   	});
+			   	json = {"user_programs": listing_objects};
+	    		$http(
+	    			{
+	    				url:'/api/v1/listing.json', 
+	    				data: json,
+			            method: "POST",
+			            headers: {'Content-Type': 'application/json'}
+	    			}
+	    		).success(function(response, status, r, x) {
+			            location.reload();			            
+			    }).error(function(response, status, errors){
+	    			    $(".modal-content").shake(3,7,800);			    	
+			    });
+			});
+			$('#modal').on('hidden.bs.modal', function ($stateParams) {
+			    $state.transitionTo('default', $stateParams, {reload: true});
+			});
+	    }
+	    $scope.custom();   	
+    },
+    templateUrl: "<%= asset_path('angular/templates/modal/program-listing.html') %>"
+  })
+  .state('program-launch', {
+  	url: '/program-launch/:id',
+    params: {
+	 id: '1'
+	},
+	controller: function($stateParams, $http, $scope, $state){
+      $http.get('api/v1/programs/' + $stateParams.id + '.json').then(function (response){
+         $scope.data = response.data[0];
+         $scope.title_loading = $scope.data.name_shorthand + " Application";
+         $scope.title_loaded  = $scope.data.name;
+         $scope.program = {
+                          "id"        : $scope.data.id,
+                          "name"      : $scope.data.name,
+                          "icon"      : $scope.data.icon,
+                          "shorthand" : $scope.data.name_shorthand,
+                          "html"      : $scope.data.description     	
+         	
+         };
+	     $scope.custom = function() {
+			$('#modal').on('hidden.bs.modal', function ($stateParams) {
+			    $state.transitionTo('default', $stateParams, {reload: true});
+			});
+		    $("#modal-action").click(function(){
+		    	alert( $scope.data.name + ' Demo only');
+		    });
+	     }
+	     $scope.custom(); 
+   	  });
+	},
+	templateUrl: "<%= asset_path('angular/templates/modal/program-launch.html') %>"
+  })
+});
+
+var encodeQueryString = function encodeRFC5987ValueChars (str) {
+    return encodeURIComponent(str).
+        // Note that although RFC3986 reserves "!", RFC5987 does not,
+        // so we do not need to escape it
+        replace(/['()]/g, escape). // i.e., %27 %28 %29
+        replace(/\*/g, '%2A').
+            // The following are not required for percent-encoding per RFC5987, 
+            // so we can allow for a little better readability over the wire: |`^
+            replace(/%(?:7C|60|5E)/g, unescape);
+}
+jQuery.fn.shake = function(intShakes, intDistance, intDuration) {
+	this.each(function() {
+		$(this).css("position","relative"); 
+		for (var x=1; x<=intShakes; x++) {
+			$(this).animate({left:(intDistance*-1)}, (((intDuration/intShakes)/4)))
+    		.animate({left:intDistance}, ((intDuration/intShakes)/2))
+    		.animate({left:0}, (((intDuration/intShakes)/4)));
+   		}
+  	});
+	return this;
+};
+
+var getCookies = function(){
+  var pairs = document.cookie.split(";");
+  var cookies = {};
+  for (var i=0; i<pairs.length; i++){
+    var pair = pairs[i].split("=");
+    cookies[pair[0]] = unescape(pair[1]);
+  }
+  return cookies;
+}
+function createCookie(name,value,days) {
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime()+(days*24*60*60*1000));
+        var expires = "; expires="+date.toGMTString();
+    }
+    else var expires = "";
+    document.cookie = name+"="+value+expires+"; path=/";
+}
+
+function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+}
+
+function eraseCookie(name) {
+    createCookie(name,"",-1);
+}
+
+function getBaseUrl() {
+    var re = new RegExp(/^.*\//);
+    return re.exec(window.location.href);
+}

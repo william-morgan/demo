@@ -1,0 +1,21 @@
+{:uriI"πfile://app/assets/javascripts/angular/templates/old_modal/modal-application-course-search-results.html?type=text/html&id=e3d1a5cf6911b091b34ed4d9de8d0644ea0422e64f1cd56274b5cb1e57e569c3:ET:load_pathI"app/assets/javascripts;T:filenameI"dapp/assets/javascripts/angular/templates/old_modal/modal-application-course-search-results.html;T:	nameI"Hangular/templates/old_modal/modal-application-course-search-results;T:logical_pathI"Mangular/templates/old_modal/modal-application-course-search-results.html;T:content_typeI"text/html;T:sourceI"·      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="modal-title"><h5>Search results for "{{ q }}"</h5></div>
+      </div>
+      <div class="modal-body">
+		<div class="modal-loading loader"></div>
+		<div class="modal-view" ng-view>
+			<p><mark>/?q={{ q }}</mark></p>
+			<p class="highlighted-text">No Results</p>
+		</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="modal-action">Save changes</button>
+        <button type="button" class="btn btn-secondary" id="modal-close" data-dismiss="modal">Cancel</button>
+      </div>;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"rfile-digest://app/assets/javascripts/angular/templates/old_modal/modal-application-course-search-results.html;TTF:charsetI"
+utf-8;F:digest"%s}£„”IKŒ·45R”q£•,$Úı¡ò§ƒ¡?pÕ…:lengthi·:dependencies_digest"%êz8ê·&Nﬁ≈©b%£QzÈIœ∫Ï≠≠:7î-a :idI"Ee3d1a5cf6911b091b34ed4d9de8d0644ea0422e64f1cd56274b5cb1e57e569c3;F:
+mtimel+·VCX

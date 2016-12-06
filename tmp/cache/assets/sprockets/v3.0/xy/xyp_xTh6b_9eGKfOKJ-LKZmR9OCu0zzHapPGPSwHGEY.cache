@@ -1,0 +1,35 @@
+{:uriI"”file://app/assets/javascripts/angular/templates/modal/_login.html?type=text/html&id=00be93bb64dd64bfd7830d094d251123451e5b827ede74404f8b5951ef97f642:ET:load_pathI"app/assets/javascripts;T:filenameI"?app/assets/javascripts/angular/templates/modal/_login.html;T:	nameI"#angular/templates/modal/_login;T:logical_pathI"(angular/templates/modal/_login.html;T:content_typeI"text/html;T:sourceI"Ú      <div class="modal-header">
+        <div class="modal-title-container">
+        	<h5 class="modal-title-loading">Loading {{ title }}...</h5>
+        	<h5 class="modal-title"><i class="fa fa-sign-in"></i> Login Credentials</h5 ng-title>
+        </div>
+      </div>
+      <div class="modal-body">
+		<div class="modal-view-loading loader"></div>
+		<div class="modal-view" ng-view>
+			<form>
+              <div class="form-group">
+                <label for="login-email" class="col-md-4 col-sm-4 col-xs-3 control-label">Login</label>
+                <input name="user[email]" type="email" class="form-control" id="login-email" placeholder="E-mail Address">
+              </div>
+              <div class="form-group">
+                <label for="login-password" class="col-md-4 col-sm-4 col-xs-3 control-label">Password</label>
+                <input name="user[password]" type="password" class="form-control" id="login-password" placeholder="Password">
+              </div>
+              <div class="form-group">
+                 <div class="remember">
+                 	<div class="remember-holder">
+                 	  <input name="user[remember]" type="checkbox" value="off" id="login-remember"> <span class="remember-me">Remember me</span>
+                 	</div>
+                 </div>
+              </div>
+           </form>
+		</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="modal-action" disabled>Login</button>
+      </div>;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"Mfile-digest://app/assets/javascripts/angular/templates/modal/_login.html;TTF:charsetI"
+utf-8;F:digest"%Ï7€Òí™}%hãñØð“Î:3Úc«Ç€O‹›¿§cš:lengthiÚ:dependencies_digest"%ùC%âH­íJÚBUäÝ}8Õ[àö¾{ŠE2ŽÌ¦:idI"E00be93bb64dd64bfd7830d094d251123451e5b827ede74404f8b5951ef97f642;F:
+mtimel+ø¤FX

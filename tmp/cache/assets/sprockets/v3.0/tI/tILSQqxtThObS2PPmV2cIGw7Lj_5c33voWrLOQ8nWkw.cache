@@ -1,0 +1,25 @@
+{:uriI"ªfile://app/assets/javascripts/angular/templates/old_modal/modal-application-launch.html?type=text/html&id=a5bcad9bd77c13059034fb7ba79835f1d5501809d52437ce7bd796916cae9faa:ET:load_pathI"app/assets/javascripts;T:filenameI"Uapp/assets/javascripts/angular/templates/old_modal/modal-application-launch.html;T:	nameI"9angular/templates/old_modal/modal-application-launch;T:logical_pathI">angular/templates/old_modal/modal-application-launch.html;T:content_typeI"text/html;T:sourceI"-      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="modal-title"><h5>Loading {{ title }}...</h5></div>
+      </div>
+      <div class="modal-body">
+		<div class="modal-loading loader"></div>
+		<div class="modal-view" ng-view>
+			<ul>
+				<li>name: <mark>{{ name }}</mark></li>
+				<li>shorthand: <mark>{{ shorthand }}</mark></li>
+				<li>description: <mark>{{ html }}</mark></li>
+			</ul>
+		</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="modal-action">Save changes</button>
+        <button type="button" class="btn btn-secondary" id="modal-close" data-dismiss="modal">Cancel</button>
+      </div>;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"cfile-digest://app/assets/javascripts/angular/templates/old_modal/modal-application-launch.html;TTF:charsetI"
+utf-8;F:digest"%×
+¨ÏDì´ÐMˆ5(ÜàE>j@ôVoõ…J2*ó3åÓ8:lengthi-:dependencies_digest"%1î&ø,½çGÅdî­@ëaWPÒÔàÖy¤I:4Á«W2:idI"Ea5bcad9bd77c13059034fb7ba79835f1d5501809d52437ce7bd796916cae9faa;F:
+mtimel+PWCX

@@ -1,0 +1,19 @@
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import "partials/modal/*";
+@import "layouts/*";
+
+.main-body{
+  margin-top: 68px;
+}
+
+.text-center {
+   text-align:center;
+   padding: 0;
+   margin: 0;
+}
+
+.text-justified, p {
+   text-align: justify;
+}
