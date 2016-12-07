@@ -3,12 +3,12 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 /* cards */
-.card-footer{
+.program-list .card-footer{
   position: absolute; 
   bottom:0; 
   width:100%;
 }
-.card{
+.program-list .card{
   width:24%; 
   height: 29.5vh; 
   padding-left:0;
@@ -16,10 +16,10 @@
   margin-left: .5%;
   margin-right: .5%;
 }
-.card-block {
+.program-list .card-block {
     padding: 0.80rem;
 }
-.card-header{
+.program-list .card-header{
   font-size:.73rem; font-weight:bold;
 }
 /*helpers */

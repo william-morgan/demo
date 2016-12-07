@@ -53,8 +53,11 @@
 }
 
 .modal-instructions{
-  margin-left: 20px;
+  margin-bottom: 20px;
   font-size: .75em;     
   color: #373a3c;    
   background: #f3f3f3;
+}
+.modal-instructions p{
+  width: 60%;
 }

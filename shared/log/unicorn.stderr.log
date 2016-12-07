@@ -1,0 +1,45 @@
+I, [2016-12-07T02:59:43.057293 #28491]  INFO -- : Refreshing Gem list
+I, [2016-12-07T02:59:45.472846 #28491]  INFO -- : listening on addr=/var/glbrc/demo/shared/sockets/unicorn.sock fd=12
+I, [2016-12-07T02:59:45.473063 #28491]  INFO -- : worker=0 spawning...
+I, [2016-12-07T02:59:45.474634 #28491]  INFO -- : worker=1 spawning...
+I, [2016-12-07T02:59:45.475707 #28499]  INFO -- : worker=0 spawned pid=28499
+I, [2016-12-07T02:59:45.475879 #28499]  INFO -- : worker=0 ready
+I, [2016-12-07T02:59:45.477437 #28491]  INFO -- : master process ready
+I, [2016-12-07T02:59:45.484233 #28502]  INFO -- : worker=1 spawned pid=28502
+I, [2016-12-07T02:59:45.484542 #28502]  INFO -- : worker=1 ready
+ArgumentError: Already running on PID:28491 (or pid=/var/glbrc/demo/shared/pids/unicorn.pid is stale)
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:195:in `pid='
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:127:in `start'
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/bin/unicorn_rails:209:in `<top (required)>'
+  /root/.rbenv/versions/2.3.1/bin/unicorn_rails:23:in `load'
+  /root/.rbenv/versions/2.3.1/bin/unicorn_rails:23:in `<top (required)>'
+ArgumentError: Already running on PID:28491 (or pid=/var/glbrc/demo/shared/pids/unicorn.pid is stale)
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:195:in `pid='
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:127:in `start'
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/bin/unicorn:126:in `<top (required)>'
+  /root/.rbenv/versions/2.3.1/bin/unicorn:23:in `load'
+  /root/.rbenv/versions/2.3.1/bin/unicorn:23:in `<top (required)>'
+ArgumentError: Already running on PID:28491 (or pid=/var/glbrc/demo/shared/pids/unicorn.pid is stale)
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:195:in `pid='
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:127:in `start'
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/bin/unicorn:126:in `<top (required)>'
+  /root/.rbenv/versions/2.3.1/bin/unicorn:23:in `load'
+  /root/.rbenv/versions/2.3.1/bin/unicorn:23:in `<top (required)>'
+ArgumentError: Already running on PID:28491 (or pid=/var/glbrc/demo/shared/pids/unicorn.pid is stale)
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:195:in `pid='
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:127:in `start'
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/bin/unicorn:126:in `<top (required)>'
+  /root/.rbenv/versions/2.3.1/bin/unicorn:23:in `load'
+  /root/.rbenv/versions/2.3.1/bin/unicorn:23:in `<top (required)>'
+ArgumentError: Already running on PID:28491 (or pid=/var/glbrc/demo/shared/pids/unicorn.pid is stale)
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:195:in `pid='
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:127:in `start'
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/bin/unicorn:126:in `<top (required)>'
+  /root/.rbenv/versions/2.3.1/bin/unicorn:23:in `load'
+  /root/.rbenv/versions/2.3.1/bin/unicorn:23:in `<top (required)>'
+ArgumentError: Already running on PID:28491 (or pid=/var/glbrc/demo/shared/pids/unicorn.pid is stale)
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:195:in `pid='
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:127:in `start'
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/bin/unicorn:126:in `<top (required)>'
+  /root/.rbenv/versions/2.3.1/bin/unicorn:23:in `load'
+  /root/.rbenv/versions/2.3.1/bin/unicorn:23:in `<top (required)>'

@@ -1,0 +1,66 @@
+.program-listing{
+  margin: 10px auto;
+}
+
+.program-listing ul { 
+  text-align:left; 
+  margin: 0 auto;
+  padding: 0;
+ }
+ 
+
+.program-listing .card{ 
+    /* drag & drop */
+    cursor: move; /* fallback if grab cursor is unsupported */
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+    /* make list elements fall inline as block elements */
+    position: relative;
+    display: inline-block;
+    width: 23%;
+    margin-left: 1%;
+    margin-right: 1%;
+    text-align: left;
+    vertical-align: middle;
+   background: #ffffff;
+}
+.program-listing .card-block{
+  padding: .85rem;
+  font-weight: bold;
+  font-size: .70rem;
+  text-align: center;
+}
+.program-listing .card-footer{
+  padding:0;
+  text-align: center;
+}
+.program-listing ul li:active{ 
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+}
+/* horizontally center ul element */
+
+ 
+ .program-listing-label{
+  height: 25px;
+  line-height: 25px;
+  padding: 0;
+  margin: 0;
+  display: block;
+  padding-left: 15px;
+  text-indent: -15px;
+  font-size: .65rem;
+  vertical-align: middle;
+ }
+ .program-listing-checkbox{
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  margin:0;
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
+  *overflow: hidden;
+ }

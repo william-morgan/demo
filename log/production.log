@@ -11039,3 +11039,855 @@ I, [2016-12-06T08:14:45.244917 #10368]  INFO -- : Started GET "/assets/applicati
 I, [2016-12-06T08:14:45.640215 #10368]  INFO -- : Started GET "/assets/application-c49165744816977fa2eaba0dcaa308f398345479e53fe2d36a66da0e542b87e9.css" for 172.13.50.136 at 2016-12-06 08:14:45 -0500
 I, [2016-12-06T08:14:45.848094 #10368]  INFO -- : Started GET "/assets/glbrc-logo-38x38-ab29766fe53fa7c7542c289783ff019df86fe620dde94481a154a23908371c3e.jpg" for 172.13.50.136 at 2016-12-06 08:14:45 -0500
 I, [2016-12-06T08:14:46.943240 #10368]  INFO -- : Started GET "/assets/font-awesome/fontawesome-webfont-2adefcbc041e7d18fcf2d417879dc5a09997aa64d675b7a3c4b6ce33da13f3fe.woff2?v=4.7.0" for 172.13.50.136 at 2016-12-06 08:14:46 -0500
+I, [2016-12-07T01:55:58.332913 #25758]  INFO -- : Started GET "/" for 172.13.50.136 at 2016-12-07 01:55:58 -0500
+I, [2016-12-07T01:55:58.342270 #25758]  INFO -- : Processing by LoginController#index as HTML
+D, [2016-12-07T01:55:58.349981 #25758] DEBUG -- :   [1m[36mUser Load (0.8ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`uid` = 'wmorgan2@wisc.edu' LIMIT 1[0m
+I, [2016-12-07T01:55:58.373250 #25758]  INFO -- : Redirected to http://192.241.239.22:3000/session
+I, [2016-12-07T01:55:58.373545 #25758]  INFO -- : Completed 302 Found in 31ms (ActiveRecord: 3.5ms)
+I, [2016-12-07T01:55:58.516048 #25758]  INFO -- : Started GET "/session" for 172.13.50.136 at 2016-12-07 01:55:58 -0500
+I, [2016-12-07T01:55:58.520419 #25758]  INFO -- : Processing by ProgramController#index as HTML
+D, [2016-12-07T01:55:58.522679 #25758] DEBUG -- :   [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`uid` = 'wmorgan2@wisc.edu' LIMIT 1
+D, [2016-12-07T01:55:58.527015 #25758] DEBUG -- :   [1m[36m (1.0ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE `users`.`email` = 'wmorgan2@wisc.edu'[0m
+D, [2016-12-07T01:55:58.533551 #25758] DEBUG -- :   [1m[35mUserProgram Load (0.4ms)[0m  SELECT  DISTINCT `user_programs`.`created_at` FROM `user_programs` WHERE `user_programs`.`user_id` = 23  ORDER BY created_at DESC LIMIT 1
+D, [2016-12-07T01:55:58.579075 #25758] DEBUG -- :   [1m[36mUserProgram Load (3.7ms)[0m  [1mSELECT programs.id, 
+                                       programs.name,
+                                       programs.name_shorthand, 
+                                       programs.description, 
+                                       programs.launch_text,
+                                       user_programs.display FROM `user_programs` INNER JOIN `users` ON `users`.`id` = `user_programs`.`user_id` INNER JOIN `programs` ON `programs`.`id` = `user_programs`.`program_id` WHERE (user_programs.user_id=23) AND (user_programs.created_at='2016-12-07 06:51:57.000000') AND (user_programs.display=1) AND (( programs.admin = 0 AND (users.admin = 1 OR users.admin = 0)) OR (programs.admin=1 AND users.admin =1))  ORDER BY user_programs.order[0m
+I, [2016-12-07T01:55:58.587227 #25758]  INFO -- :   Rendered program/index.html.erb within layouts/application (22.9ms)
+I, [2016-12-07T01:56:28.458856 #25758]  INFO -- :   Rendered partials/_navigation.html.erb (4.8ms)
+I, [2016-12-07T01:56:28.461252 #25758]  INFO -- :   Rendered partials/_modal.html.erb (0.9ms)
+I, [2016-12-07T01:56:28.462447 #25758]  INFO -- : Completed 200 OK in 29942ms (Views: 29903.3ms | ActiveRecord: 7.7ms)
+I, [2016-12-07T01:56:28.466399 #25758]  INFO -- : Started GET "/" for 172.13.50.136 at 2016-12-07 01:56:28 -0500
+I, [2016-12-07T01:56:28.469882 #25758]  INFO -- : Processing by LoginController#index as HTML
+D, [2016-12-07T01:56:28.473349 #25758] DEBUG -- :   [1m[35mUser Load (1.1ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`uid` = 'wmorgan2@wisc.edu' LIMIT 1
+I, [2016-12-07T01:56:28.475679 #25758]  INFO -- : Redirected to http://192.241.239.22:3000/session
+I, [2016-12-07T01:56:28.476172 #25758]  INFO -- : Completed 302 Found in 6ms (ActiveRecord: 1.1ms)
+I, [2016-12-07T01:56:28.635628 #25758]  INFO -- : Started GET "/session" for 172.13.50.136 at 2016-12-07 01:56:28 -0500
+I, [2016-12-07T01:56:28.638417 #25758]  INFO -- : Processing by ProgramController#index as HTML
+D, [2016-12-07T01:56:28.641047 #25758] DEBUG -- :   [1m[36mUser Load (0.6ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`uid` = 'wmorgan2@wisc.edu' LIMIT 1[0m
+D, [2016-12-07T01:56:28.646612 #25758] DEBUG -- :   [1m[35m (0.4ms)[0m  SELECT `users`.`id` FROM `users` WHERE `users`.`email` = 'wmorgan2@wisc.edu'
+D, [2016-12-07T01:56:28.649429 #25758] DEBUG -- :   [1m[36mUserProgram Load (0.3ms)[0m  [1mSELECT  DISTINCT `user_programs`.`created_at` FROM `user_programs` WHERE `user_programs`.`user_id` = 23  ORDER BY created_at DESC LIMIT 1[0m
+D, [2016-12-07T01:56:28.655766 #25758] DEBUG -- :   [1m[35mUserProgram Load (0.3ms)[0m  SELECT programs.id, 
+                                       programs.name,
+                                       programs.name_shorthand, 
+                                       programs.description, 
+                                       programs.launch_text,
+                                       user_programs.display FROM `user_programs` INNER JOIN `users` ON `users`.`id` = `user_programs`.`user_id` INNER JOIN `programs` ON `programs`.`id` = `user_programs`.`program_id` WHERE (user_programs.user_id=23) AND (user_programs.created_at='2016-12-07 06:51:57.000000') AND (user_programs.display=1) AND (( programs.admin = 0 AND (users.admin = 1 OR users.admin = 0)) OR (programs.admin=1 AND users.admin =1))  ORDER BY user_programs.order
+I, [2016-12-07T01:56:28.670301 #25758]  INFO -- :   Rendered program/index.html.erb within layouts/application (16.8ms)
+I, [2016-12-07T01:56:28.677558 #25758]  INFO -- :   Rendered partials/_navigation.html.erb (1.9ms)
+I, [2016-12-07T01:56:28.678374 #25758]  INFO -- :   Rendered partials/_modal.html.erb (0.1ms)
+I, [2016-12-07T01:56:28.679056 #25758]  INFO -- : Completed 200 OK in 40ms (Views: 27.0ms | ActiveRecord: 1.6ms)
+I, [2016-12-07T01:56:29.131963 #25758]  INFO -- : Started GET "/assets/application-73c1fe533ba1a2a0982e06ebfe094f35a1ba06e3e3af8b6e8fcb114309ed7a8c.css" for 172.13.50.136 at 2016-12-07 01:56:29 -0500
+I, [2016-12-07T01:56:29.146779 #25758]  INFO -- : Started GET "/assets/application-70d5aabe08153cd06f35eb53fef16a91560a47d93bb5ed07c524afdd7b71ff8b.js" for 172.13.50.136 at 2016-12-07 01:56:29 -0500
+I, [2016-12-07T01:56:56.410860 #25758]  INFO -- : Started GET "/" for 172.13.50.136 at 2016-12-07 01:56:56 -0500
+I, [2016-12-07T01:56:56.413404 #25758]  INFO -- : Processing by LoginController#index as HTML
+D, [2016-12-07T01:56:56.416426 #25758] DEBUG -- :   [1m[36mUser Load (0.7ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`uid` = 'wmorgan2@wisc.edu' LIMIT 1[0m
+I, [2016-12-07T01:56:56.418483 #25758]  INFO -- : Redirected to http://192.241.239.22:3000/session
+I, [2016-12-07T01:56:56.419023 #25758]  INFO -- : Completed 302 Found in 5ms (ActiveRecord: 0.7ms)
+I, [2016-12-07T01:56:56.502034 #25758]  INFO -- : Started GET "/session" for 172.13.50.136 at 2016-12-07 01:56:56 -0500
+I, [2016-12-07T01:56:56.504291 #25758]  INFO -- : Processing by ProgramController#index as HTML
+D, [2016-12-07T01:56:56.506808 #25758] DEBUG -- :   [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`uid` = 'wmorgan2@wisc.edu' LIMIT 1
+D, [2016-12-07T01:56:56.509680 #25758] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE `users`.`email` = 'wmorgan2@wisc.edu'[0m
+D, [2016-12-07T01:56:56.511296 #25758] DEBUG -- :   [1m[35mUserProgram Load (0.2ms)[0m  SELECT  DISTINCT `user_programs`.`created_at` FROM `user_programs` WHERE `user_programs`.`user_id` = 23  ORDER BY created_at DESC LIMIT 1
+D, [2016-12-07T01:56:56.514443 #25758] DEBUG -- :   [1m[36mUserProgram Load (0.3ms)[0m  [1mSELECT programs.id, 
+                                       programs.name,
+                                       programs.name_shorthand, 
+                                       programs.description, 
+                                       programs.launch_text,
+                                       user_programs.display FROM `user_programs` INNER JOIN `users` ON `users`.`id` = `user_programs`.`user_id` INNER JOIN `programs` ON `programs`.`id` = `user_programs`.`program_id` WHERE (user_programs.user_id=23) AND (user_programs.created_at='2016-12-07 06:51:57.000000') AND (user_programs.display=1) AND (( programs.admin = 0 AND (users.admin = 1 OR users.admin = 0)) OR (programs.admin=1 AND users.admin =1))  ORDER BY user_programs.order[0m
+I, [2016-12-07T01:56:56.525559 #25758]  INFO -- :   Rendered program/index.html.erb within layouts/application (12.3ms)
+I, [2016-12-07T01:56:56.531277 #25758]  INFO -- :   Rendered partials/_navigation.html.erb (1.8ms)
+I, [2016-12-07T01:56:56.531786 #25758]  INFO -- :   Rendered partials/_modal.html.erb (0.1ms)
+I, [2016-12-07T01:56:56.532303 #25758]  INFO -- : Completed 200 OK in 28ms (Views: 19.5ms | ActiveRecord: 1.1ms)
+I, [2016-12-07T01:58:23.133080 #25842]  INFO -- : Started GET "/assets/application-70d5aabe08153cd06f35eb53fef16a91560a47d93bb5ed07c524afdd7b71ff8b.js" for 172.13.50.136 at 2016-12-07 01:58:23 -0500
+I, [2016-12-07T01:58:25.159199 #25842]  INFO -- : Started GET "/favicon.ico" for 172.13.50.136 at 2016-12-07 01:58:25 -0500
+F, [2016-12-07T01:58:25.162842 #25842] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  /root/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /root/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /root/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+I, [2016-12-07T01:58:29.767810 #25842]  INFO -- : Started GET "/session" for 172.13.50.136 at 2016-12-07 01:58:29 -0500
+I, [2016-12-07T01:58:29.775547 #25842]  INFO -- : Processing by ProgramController#index as HTML
+D, [2016-12-07T01:58:29.795481 #25842] DEBUG -- :   [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`uid` = 'wmorgan2@wisc.edu' LIMIT 1[0m
+D, [2016-12-07T01:58:29.838612 #25842] DEBUG -- :   [1m[35m (0.4ms)[0m  SELECT `users`.`id` FROM `users` WHERE `users`.`email` = 'wmorgan2@wisc.edu'
+D, [2016-12-07T01:58:29.844574 #25842] DEBUG -- :   [1m[36mUserProgram Load (0.2ms)[0m  [1mSELECT  DISTINCT `user_programs`.`created_at` FROM `user_programs` WHERE `user_programs`.`user_id` = 23  ORDER BY created_at DESC LIMIT 1[0m
+D, [2016-12-07T01:58:29.883227 #25842] DEBUG -- :   [1m[35mUserProgram Load (0.3ms)[0m  SELECT programs.id, 
+                                       programs.name,
+                                       programs.name_shorthand, 
+                                       programs.description, 
+                                       programs.launch_text,
+                                       user_programs.display FROM `user_programs` INNER JOIN `users` ON `users`.`id` = `user_programs`.`user_id` INNER JOIN `programs` ON `programs`.`id` = `user_programs`.`program_id` WHERE (user_programs.user_id=23) AND (user_programs.created_at='2016-12-07 06:51:57.000000') AND (user_programs.display=1) AND (( programs.admin = 0 AND (users.admin = 1 OR users.admin = 0)) OR (programs.admin=1 AND users.admin =1))  ORDER BY user_programs.order
+I, [2016-12-07T01:58:29.892168 #25842]  INFO -- :   Rendered program/index.html.erb within layouts/application (24.5ms)
+I, [2016-12-07T01:58:30.019796 #25842]  INFO -- : Completed 500 Internal Server Error in 244ms (ActiveRecord: 8.3ms)
+F, [2016-12-07T01:58:30.022157 #25842] FATAL -- : 
+ActionView::Template::Error (couldn't find file 'angular/helpers/main' with type 'application/javascript'
+Checked in these paths: 
+  /var/glbrc/demo/app/assets/images
+  /var/glbrc/demo/app/assets/javascripts
+  /var/glbrc/demo/app/assets/stylesheets
+  /var/glbrc/demo/vendor/assets/javascripts
+  /var/glbrc/demo/vendor/assets/stylesheets
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/angularjs-rails-1.5.8/vendor/assets/javascripts
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/rails-assets-tether-1.4.0/app/assets/javascripts
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/rails-assets-tether-1.4.0/app/assets/stylesheets
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/jquery-rails-4.2.1/vendor/assets/javascripts
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/coffee-rails-4.1.1/lib/assets/javascripts
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/turbolinks-source-5.0.0/lib/assets/javascripts
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-4.0.0.alpha5/assets/stylesheets
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-4.0.0.alpha5/assets/javascripts
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/fonts):
+    2: <html>
+    3: <head>
+    4:   <title>GLBRC Demo</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" type="text/css">
+    7:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    8:   <%= csrf_meta_tags %>
+  app/assets/javascripts/application.js:21
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___1016604762513646702_69813192502620'
+
+
+I, [2016-12-07T01:58:36.985508 #25842]  INFO -- : Started GET "/session" for 172.13.50.136 at 2016-12-07 01:58:36 -0500
+I, [2016-12-07T01:58:36.988176 #25842]  INFO -- : Processing by ProgramController#index as HTML
+D, [2016-12-07T01:58:36.990250 #25842] DEBUG -- :   [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`uid` = 'wmorgan2@wisc.edu' LIMIT 1[0m
+D, [2016-12-07T01:58:36.992535 #25842] DEBUG -- :   [1m[35m (0.2ms)[0m  SELECT `users`.`id` FROM `users` WHERE `users`.`email` = 'wmorgan2@wisc.edu'
+D, [2016-12-07T01:58:36.994090 #25842] DEBUG -- :   [1m[36mUserProgram Load (0.2ms)[0m  [1mSELECT  DISTINCT `user_programs`.`created_at` FROM `user_programs` WHERE `user_programs`.`user_id` = 23  ORDER BY created_at DESC LIMIT 1[0m
+D, [2016-12-07T01:58:36.997518 #25842] DEBUG -- :   [1m[35mUserProgram Load (0.3ms)[0m  SELECT programs.id, 
+                                       programs.name,
+                                       programs.name_shorthand, 
+                                       programs.description, 
+                                       programs.launch_text,
+                                       user_programs.display FROM `user_programs` INNER JOIN `users` ON `users`.`id` = `user_programs`.`user_id` INNER JOIN `programs` ON `programs`.`id` = `user_programs`.`program_id` WHERE (user_programs.user_id=23) AND (user_programs.created_at='2016-12-07 06:51:57.000000') AND (user_programs.display=1) AND (( programs.admin = 0 AND (users.admin = 1 OR users.admin = 0)) OR (programs.admin=1 AND users.admin =1))  ORDER BY user_programs.order
+I, [2016-12-07T01:58:37.006890 #25842]  INFO -- :   Rendered program/index.html.erb within layouts/application (10.7ms)
+I, [2016-12-07T01:58:37.053679 #25842]  INFO -- : Completed 500 Internal Server Error in 65ms (ActiveRecord: 1.2ms)
+F, [2016-12-07T01:58:37.057933 #25842] FATAL -- : 
+ActionView::Template::Error (couldn't find file 'angular/helpers/main' with type 'application/javascript'
+Checked in these paths: 
+  /var/glbrc/demo/app/assets/images
+  /var/glbrc/demo/app/assets/javascripts
+  /var/glbrc/demo/app/assets/stylesheets
+  /var/glbrc/demo/vendor/assets/javascripts
+  /var/glbrc/demo/vendor/assets/stylesheets
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/angularjs-rails-1.5.8/vendor/assets/javascripts
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/rails-assets-tether-1.4.0/app/assets/javascripts
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/rails-assets-tether-1.4.0/app/assets/stylesheets
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/jquery-rails-4.2.1/vendor/assets/javascripts
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/coffee-rails-4.1.1/lib/assets/javascripts
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/turbolinks-source-5.0.0/lib/assets/javascripts
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-4.0.0.alpha5/assets/stylesheets
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-4.0.0.alpha5/assets/javascripts
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/fonts):
+    2: <html>
+    3: <head>
+    4:   <title>GLBRC Demo</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" type="text/css">
+    7:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    8:   <%= csrf_meta_tags %>
+  app/assets/javascripts/application.js:21
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___1016604762513646702_69813192502620'
+
+
+I, [2016-12-07T01:58:46.600930 #25884]  INFO -- : Started GET "/session" for 172.13.50.136 at 2016-12-07 01:58:46 -0500
+I, [2016-12-07T01:58:46.611589 #25884]  INFO -- : Processing by ProgramController#index as HTML
+D, [2016-12-07T01:58:46.618357 #25884] DEBUG -- :   [1m[36mUser Load (0.1ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`uid` = 'wmorgan2@wisc.edu' LIMIT 1[0m
+D, [2016-12-07T01:58:46.640369 #25884] DEBUG -- :   [1m[35m (0.2ms)[0m  SELECT `users`.`id` FROM `users` WHERE `users`.`email` = 'wmorgan2@wisc.edu'
+D, [2016-12-07T01:58:46.642953 #25884] DEBUG -- :   [1m[36mUserProgram Load (0.1ms)[0m  [1mSELECT  DISTINCT `user_programs`.`created_at` FROM `user_programs` WHERE `user_programs`.`user_id` = 23  ORDER BY created_at DESC LIMIT 1[0m
+D, [2016-12-07T01:58:46.664612 #25884] DEBUG -- :   [1m[35mUserProgram Load (0.2ms)[0m  SELECT programs.id, 
+                                       programs.name,
+                                       programs.name_shorthand, 
+                                       programs.description, 
+                                       programs.launch_text,
+                                       user_programs.display FROM `user_programs` INNER JOIN `users` ON `users`.`id` = `user_programs`.`user_id` INNER JOIN `programs` ON `programs`.`id` = `user_programs`.`program_id` WHERE (user_programs.user_id=23) AND (user_programs.created_at='2016-12-07 06:51:57.000000') AND (user_programs.display=1) AND (( programs.admin = 0 AND (users.admin = 1 OR users.admin = 0)) OR (programs.admin=1 AND users.admin =1))  ORDER BY user_programs.order
+I, [2016-12-07T01:58:46.671143 #25884]  INFO -- :   Rendered program/index.html.erb within layouts/application (16.3ms)
+I, [2016-12-07T01:58:47.073683 #25884]  INFO -- : Completed 500 Internal Server Error in 462ms (ActiveRecord: 3.2ms)
+F, [2016-12-07T01:58:47.075466 #25884] FATAL -- : 
+ActionView::Template::Error (couldn't find file 'angular/helpers/main' with type 'application/javascript'
+Checked in these paths: 
+  /var/glbrc/demo/app/assets/images
+  /var/glbrc/demo/app/assets/javascripts
+  /var/glbrc/demo/app/assets/stylesheets
+  /var/glbrc/demo/vendor/assets/javascripts
+  /var/glbrc/demo/vendor/assets/stylesheets
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/angularjs-rails-1.5.8/vendor/assets/javascripts
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/rails-assets-tether-1.4.0/app/assets/javascripts
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/rails-assets-tether-1.4.0/app/assets/stylesheets
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/jquery-rails-4.2.1/vendor/assets/javascripts
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/coffee-rails-4.1.1/lib/assets/javascripts
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/turbolinks-source-5.0.0/lib/assets/javascripts
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-4.0.0.alpha5/assets/stylesheets
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-4.0.0.alpha5/assets/javascripts
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/fonts):
+    2: <html>
+    3: <head>
+    4:   <title>GLBRC Demo</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" type="text/css">
+    7:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    8:   <%= csrf_meta_tags %>
+  app/assets/javascripts/application.js:21
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__3092323384680508932_47269302814620'
+
+
+I, [2016-12-07T01:58:52.243348 #25884]  INFO -- : Started GET "/" for 172.13.50.136 at 2016-12-07 01:58:52 -0500
+I, [2016-12-07T01:58:52.249272 #25884]  INFO -- : Processing by LoginController#index as HTML
+D, [2016-12-07T01:58:52.252382 #25884] DEBUG -- :   [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`uid` = 'wmorgan2@wisc.edu' LIMIT 1[0m
+I, [2016-12-07T01:58:52.256655 #25884]  INFO -- : Redirected to http://192.241.239.22:3000/session
+I, [2016-12-07T01:58:52.257004 #25884]  INFO -- : Completed 302 Found in 8ms (ActiveRecord: 0.4ms)
+I, [2016-12-07T01:58:52.395229 #25884]  INFO -- : Started GET "/session" for 172.13.50.136 at 2016-12-07 01:58:52 -0500
+I, [2016-12-07T01:58:52.397141 #25884]  INFO -- : Processing by ProgramController#index as HTML
+D, [2016-12-07T01:58:52.398735 #25884] DEBUG -- :   [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`uid` = 'wmorgan2@wisc.edu' LIMIT 1
+D, [2016-12-07T01:58:52.401226 #25884] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE `users`.`email` = 'wmorgan2@wisc.edu'[0m
+D, [2016-12-07T01:58:52.402721 #25884] DEBUG -- :   [1m[35mUserProgram Load (0.2ms)[0m  SELECT  DISTINCT `user_programs`.`created_at` FROM `user_programs` WHERE `user_programs`.`user_id` = 23  ORDER BY created_at DESC LIMIT 1
+D, [2016-12-07T01:58:52.405959 #25884] DEBUG -- :   [1m[36mUserProgram Load (0.2ms)[0m  [1mSELECT programs.id, 
+                                       programs.name,
+                                       programs.name_shorthand, 
+                                       programs.description, 
+                                       programs.launch_text,
+                                       user_programs.display FROM `user_programs` INNER JOIN `users` ON `users`.`id` = `user_programs`.`user_id` INNER JOIN `programs` ON `programs`.`id` = `user_programs`.`program_id` WHERE (user_programs.user_id=23) AND (user_programs.created_at='2016-12-07 06:51:57.000000') AND (user_programs.display=1) AND (( programs.admin = 0 AND (users.admin = 1 OR users.admin = 0)) OR (programs.admin=1 AND users.admin =1))  ORDER BY user_programs.order[0m
+I, [2016-12-07T01:58:52.412668 #25884]  INFO -- :   Rendered program/index.html.erb within layouts/application (7.9ms)
+I, [2016-12-07T01:58:52.446783 #25884]  INFO -- : Completed 500 Internal Server Error in 49ms (ActiveRecord: 0.9ms)
+F, [2016-12-07T01:58:52.449860 #25884] FATAL -- : 
+ActionView::Template::Error (couldn't find file 'angular/helpers/main' with type 'application/javascript'
+Checked in these paths: 
+  /var/glbrc/demo/app/assets/images
+  /var/glbrc/demo/app/assets/javascripts
+  /var/glbrc/demo/app/assets/stylesheets
+  /var/glbrc/demo/vendor/assets/javascripts
+  /var/glbrc/demo/vendor/assets/stylesheets
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/angularjs-rails-1.5.8/vendor/assets/javascripts
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/rails-assets-tether-1.4.0/app/assets/javascripts
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/rails-assets-tether-1.4.0/app/assets/stylesheets
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/jquery-rails-4.2.1/vendor/assets/javascripts
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/coffee-rails-4.1.1/lib/assets/javascripts
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/turbolinks-source-5.0.0/lib/assets/javascripts
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-4.0.0.alpha5/assets/stylesheets
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-4.0.0.alpha5/assets/javascripts
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/fonts):
+    2: <html>
+    3: <head>
+    4:   <title>GLBRC Demo</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" type="text/css">
+    7:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    8:   <%= csrf_meta_tags %>
+  app/assets/javascripts/application.js:21
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__3092323384680508932_47269302814620'
+
+
+I, [2016-12-07T02:02:10.162043 #26012]  INFO -- : Started GET "/" for 172.13.50.136 at 2016-12-07 02:02:10 -0500
+I, [2016-12-07T02:02:10.195265 #26012]  INFO -- : Processing by LoginController#index as HTML
+D, [2016-12-07T02:02:10.213482 #26012] DEBUG -- :   [1m[36mUser Load (0.6ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`uid` = 'wmorgan2@wisc.edu' LIMIT 1[0m
+I, [2016-12-07T02:02:10.274945 #26012]  INFO -- : Redirected to http://192.241.239.22:3000/session
+I, [2016-12-07T02:02:10.275506 #26012]  INFO -- : Completed 302 Found in 80ms (ActiveRecord: 4.1ms)
+I, [2016-12-07T02:02:10.474249 #26012]  INFO -- : Started GET "/session" for 172.13.50.136 at 2016-12-07 02:02:10 -0500
+I, [2016-12-07T02:02:10.486571 #26012]  INFO -- : Processing by ProgramController#index as HTML
+D, [2016-12-07T02:02:10.490485 #26012] DEBUG -- :   [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`uid` = 'wmorgan2@wisc.edu' LIMIT 1
+D, [2016-12-07T02:02:10.495389 #26012] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE `users`.`email` = 'wmorgan2@wisc.edu'[0m
+D, [2016-12-07T02:02:10.498783 #26012] DEBUG -- :   [1m[35mUserProgram Load (0.1ms)[0m  SELECT  DISTINCT `user_programs`.`created_at` FROM `user_programs` WHERE `user_programs`.`user_id` = 23  ORDER BY created_at DESC LIMIT 1
+D, [2016-12-07T02:02:10.521608 #26012] DEBUG -- :   [1m[36mUserProgram Load (0.1ms)[0m  [1mSELECT programs.id, 
+                                       programs.name,
+                                       programs.name_shorthand, 
+                                       programs.description, 
+                                       programs.launch_text,
+                                       user_programs.display FROM `user_programs` INNER JOIN `users` ON `users`.`id` = `user_programs`.`user_id` INNER JOIN `programs` ON `programs`.`id` = `user_programs`.`program_id` WHERE (user_programs.user_id=23) AND (user_programs.created_at='2016-12-07 06:51:57.000000') AND (user_programs.display=1) AND (( programs.admin = 0 AND (users.admin = 1 OR users.admin = 0)) OR (programs.admin=1 AND users.admin =1))  ORDER BY user_programs.order[0m
+I, [2016-12-07T02:02:10.528484 #26012]  INFO -- :   Rendered program/index.html.erb within layouts/application (15.2ms)
+I, [2016-12-07T02:02:10.532380 #26012]  INFO -- :   Rendered partials/_navigation.html.erb (1.7ms)
+I, [2016-12-07T02:02:10.533184 #26012]  INFO -- :   Rendered partials/_modal.html.erb (0.3ms)
+I, [2016-12-07T02:02:10.533789 #26012]  INFO -- : Completed 200 OK in 47ms (Views: 24.4ms | ActiveRecord: 2.2ms)
+I, [2016-12-07T02:02:11.061801 #26012]  INFO -- : Started GET "/assets/application-70d5aabe08153cd06f35eb53fef16a91560a47d93bb5ed07c524afdd7b71ff8b.js" for 172.13.50.136 at 2016-12-07 02:02:11 -0500
+I, [2016-12-07T02:02:31.154662 #26012]  INFO -- : Started GET "/session?utf8=%E2%9C%93&authenticity_token=jlEwtHFQLQg9U2lVAoakz9k%2FkGhVb%2F8DLEg8Sljrh3mbffpBg7znStn6x2%2BQMKdwmhtZddgD%2BmQur0omV3%2BZlw%3D%3D" for 172.13.50.136 at 2016-12-07 02:02:31 -0500
+I, [2016-12-07T02:02:31.156672 #26012]  INFO -- : Processing by ProgramController#index as HTML
+I, [2016-12-07T02:02:31.156752 #26012]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"jlEwtHFQLQg9U2lVAoakz9k/kGhVb/8DLEg8Sljrh3mbffpBg7znStn6x2+QMKdwmhtZddgD+mQur0omV3+Zlw=="}
+D, [2016-12-07T02:02:31.158126 #26012] DEBUG -- :   [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`uid` = 'wmorgan2@wisc.edu' LIMIT 1
+D, [2016-12-07T02:02:31.159582 #26012] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE `users`.`email` = 'wmorgan2@wisc.edu'[0m
+D, [2016-12-07T02:02:31.160358 #26012] DEBUG -- :   [1m[35mUserProgram Load (0.1ms)[0m  SELECT  DISTINCT `user_programs`.`created_at` FROM `user_programs` WHERE `user_programs`.`user_id` = 23  ORDER BY created_at DESC LIMIT 1
+D, [2016-12-07T02:02:31.162248 #26012] DEBUG -- :   [1m[36mUserProgram Load (0.1ms)[0m  [1mSELECT programs.id, 
+                                       programs.name,
+                                       programs.name_shorthand, 
+                                       programs.description, 
+                                       programs.launch_text,
+                                       user_programs.display FROM `user_programs` INNER JOIN `users` ON `users`.`id` = `user_programs`.`user_id` INNER JOIN `programs` ON `programs`.`id` = `user_programs`.`program_id` WHERE (user_programs.user_id=23) AND (user_programs.created_at='2016-12-07 06:51:57.000000') AND (user_programs.display=1) AND (( programs.admin = 0 AND (users.admin = 1 OR users.admin = 0)) OR (programs.admin=1 AND users.admin =1))  ORDER BY user_programs.order[0m
+I, [2016-12-07T02:02:31.165967 #26012]  INFO -- :   Rendered program/index.html.erb within layouts/application (4.3ms)
+I, [2016-12-07T02:02:31.167502 #26012]  INFO -- :   Rendered partials/_navigation.html.erb (0.5ms)
+I, [2016-12-07T02:02:31.167750 #26012]  INFO -- :   Rendered partials/_modal.html.erb (0.1ms)
+I, [2016-12-07T02:02:31.168025 #26012]  INFO -- : Completed 200 OK in 11ms (Views: 6.7ms | ActiveRecord: 0.5ms)
+I, [2016-12-07T02:02:41.497539 #26012]  INFO -- : Started GET "/session?utf8=%E2%9C%93&authenticity_token=P%2F0TGJN7vKaKxJmRIoGVnQX8M1OR0zvecRyMuc9nIOIq0dntYZd25G5tN6uwN5YiRtj6Thy%2FPrlz%2B%2FrVwPM%2BDA%3D%3D&button=" for 172.13.50.136 at 2016-12-07 02:02:41 -0500
+I, [2016-12-07T02:02:41.499724 #26012]  INFO -- : Processing by ProgramController#index as HTML
+I, [2016-12-07T02:02:41.499856 #26012]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"P/0TGJN7vKaKxJmRIoGVnQX8M1OR0zvecRyMuc9nIOIq0dntYZd25G5tN6uwN5YiRtj6Thy/Prlz+/rVwPM+DA==", "button"=>""}
+D, [2016-12-07T02:02:41.501807 #26012] DEBUG -- :   [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`uid` = 'wmorgan2@wisc.edu' LIMIT 1
+D, [2016-12-07T02:02:41.503873 #26012] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE `users`.`email` = 'wmorgan2@wisc.edu'[0m
+D, [2016-12-07T02:02:41.505237 #26012] DEBUG -- :   [1m[35mUserProgram Load (0.2ms)[0m  SELECT  DISTINCT `user_programs`.`created_at` FROM `user_programs` WHERE `user_programs`.`user_id` = 23  ORDER BY created_at DESC LIMIT 1
+D, [2016-12-07T02:02:41.508085 #26012] DEBUG -- :   [1m[36mUserProgram Load (0.3ms)[0m  [1mSELECT programs.id, 
+                                       programs.name,
+                                       programs.name_shorthand, 
+                                       programs.description, 
+                                       programs.launch_text,
+                                       user_programs.display FROM `user_programs` INNER JOIN `users` ON `users`.`id` = `user_programs`.`user_id` INNER JOIN `programs` ON `programs`.`id` = `user_programs`.`program_id` WHERE (user_programs.user_id=23) AND (user_programs.created_at='2016-12-07 06:51:57.000000') AND (user_programs.display=1) AND (( programs.admin = 0 AND (users.admin = 1 OR users.admin = 0)) OR (programs.admin=1 AND users.admin =1))  ORDER BY user_programs.order[0m
+I, [2016-12-07T02:02:41.515470 #26012]  INFO -- :   Rendered program/index.html.erb within layouts/application (8.5ms)
+I, [2016-12-07T02:02:41.517646 #26012]  INFO -- :   Rendered partials/_navigation.html.erb (0.7ms)
+I, [2016-12-07T02:02:41.518137 #26012]  INFO -- :   Rendered partials/_modal.html.erb (0.1ms)
+I, [2016-12-07T02:02:41.518607 #26012]  INFO -- : Completed 200 OK in 19ms (Views: 11.8ms | ActiveRecord: 1.0ms)
+I, [2016-12-07T02:02:47.452743 #26012]  INFO -- : Started GET "/" for 172.13.50.136 at 2016-12-07 02:02:47 -0500
+I, [2016-12-07T02:02:47.457331 #26012]  INFO -- : Processing by LoginController#index as HTML
+D, [2016-12-07T02:02:47.461395 #26012] DEBUG -- :   [1m[35mUser Load (0.9ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`uid` = 'wmorgan2@wisc.edu' LIMIT 1
+I, [2016-12-07T02:02:47.463504 #26012]  INFO -- : Redirected to http://192.241.239.22:3000/session
+I, [2016-12-07T02:02:47.463922 #26012]  INFO -- : Completed 302 Found in 6ms (ActiveRecord: 0.9ms)
+I, [2016-12-07T02:02:47.615064 #26012]  INFO -- : Started GET "/session" for 172.13.50.136 at 2016-12-07 02:02:47 -0500
+I, [2016-12-07T02:02:47.617374 #26012]  INFO -- : Processing by ProgramController#index as HTML
+D, [2016-12-07T02:02:47.619686 #26012] DEBUG -- :   [1m[36mUser Load (0.5ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`uid` = 'wmorgan2@wisc.edu' LIMIT 1[0m
+D, [2016-12-07T02:02:47.621974 #26012] DEBUG -- :   [1m[35m (0.3ms)[0m  SELECT `users`.`id` FROM `users` WHERE `users`.`email` = 'wmorgan2@wisc.edu'
+D, [2016-12-07T02:02:47.623430 #26012] DEBUG -- :   [1m[36mUserProgram Load (0.2ms)[0m  [1mSELECT  DISTINCT `user_programs`.`created_at` FROM `user_programs` WHERE `user_programs`.`user_id` = 23  ORDER BY created_at DESC LIMIT 1[0m
+D, [2016-12-07T02:02:47.627095 #26012] DEBUG -- :   [1m[35mUserProgram Load (0.2ms)[0m  SELECT programs.id, 
+                                       programs.name,
+                                       programs.name_shorthand, 
+                                       programs.description, 
+                                       programs.launch_text,
+                                       user_programs.display FROM `user_programs` INNER JOIN `users` ON `users`.`id` = `user_programs`.`user_id` INNER JOIN `programs` ON `programs`.`id` = `user_programs`.`program_id` WHERE (user_programs.user_id=23) AND (user_programs.created_at='2016-12-07 06:51:57.000000') AND (user_programs.display=1) AND (( programs.admin = 0 AND (users.admin = 1 OR users.admin = 0)) OR (programs.admin=1 AND users.admin =1))  ORDER BY user_programs.order
+I, [2016-12-07T02:02:47.635742 #26012]  INFO -- :   Rendered program/index.html.erb within layouts/application (10.1ms)
+I, [2016-12-07T02:02:47.638213 #26012]  INFO -- :   Rendered partials/_navigation.html.erb (1.0ms)
+I, [2016-12-07T02:02:47.638673 #26012]  INFO -- :   Rendered partials/_modal.html.erb (0.1ms)
+I, [2016-12-07T02:02:47.639181 #26012]  INFO -- : Completed 200 OK in 22ms (Views: 14.1ms | ActiveRecord: 1.3ms)
+I, [2016-12-07T02:02:51.280982 #26012]  INFO -- : Started GET "/session?utf8=%E2%9C%93&authenticity_token=zCQAWqSqShhYa3YsPfO03ge%2BOOosRfpFzhuPF4ZETx7ZCMqvVkaAWrzC2BavRbdhRJrx96Ep%2FyLM%2FPl7idBR8A%3D%3D&button=" for 172.13.50.136 at 2016-12-07 02:02:51 -0500
+I, [2016-12-07T02:02:51.284355 #26012]  INFO -- : Processing by ProgramController#index as HTML
+I, [2016-12-07T02:02:51.284630 #26012]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"zCQAWqSqShhYa3YsPfO03ge+OOosRfpFzhuPF4ZETx7ZCMqvVkaAWrzC2BavRbdhRJrx96Ep/yLM/Pl7idBR8A==", "button"=>""}
+D, [2016-12-07T02:02:51.287288 #26012] DEBUG -- :   [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`uid` = 'wmorgan2@wisc.edu' LIMIT 1[0m
+D, [2016-12-07T02:02:51.290212 #26012] DEBUG -- :   [1m[35m (0.4ms)[0m  SELECT `users`.`id` FROM `users` WHERE `users`.`email` = 'wmorgan2@wisc.edu'
+D, [2016-12-07T02:02:51.292153 #26012] DEBUG -- :   [1m[36mUserProgram Load (0.3ms)[0m  [1mSELECT  DISTINCT `user_programs`.`created_at` FROM `user_programs` WHERE `user_programs`.`user_id` = 23  ORDER BY created_at DESC LIMIT 1[0m
+D, [2016-12-07T02:02:51.295923 #26012] DEBUG -- :   [1m[35mUserProgram Load (0.3ms)[0m  SELECT programs.id, 
+                                       programs.name,
+                                       programs.name_shorthand, 
+                                       programs.description, 
+                                       programs.launch_text,
+                                       user_programs.display FROM `user_programs` INNER JOIN `users` ON `users`.`id` = `user_programs`.`user_id` INNER JOIN `programs` ON `programs`.`id` = `user_programs`.`program_id` WHERE (user_programs.user_id=23) AND (user_programs.created_at='2016-12-07 06:51:57.000000') AND (user_programs.display=1) AND (( programs.admin = 0 AND (users.admin = 1 OR users.admin = 0)) OR (programs.admin=1 AND users.admin =1))  ORDER BY user_programs.order
+I, [2016-12-07T02:02:51.312346 #26012]  INFO -- :   Rendered program/index.html.erb within layouts/application (17.7ms)
+I, [2016-12-07T02:02:51.316098 #26012]  INFO -- :   Rendered partials/_navigation.html.erb (1.3ms)
+I, [2016-12-07T02:02:51.316759 #26012]  INFO -- :   Rendered partials/_modal.html.erb (0.1ms)
+I, [2016-12-07T02:02:51.317261 #26012]  INFO -- : Completed 200 OK in 32ms (Views: 23.2ms | ActiveRecord: 1.5ms)
+I, [2016-12-07T02:02:57.785214 #26012]  INFO -- : Started GET "/" for 172.13.50.136 at 2016-12-07 02:02:57 -0500
+I, [2016-12-07T02:02:57.787564 #26012]  INFO -- : Processing by LoginController#index as HTML
+D, [2016-12-07T02:02:57.789734 #26012] DEBUG -- :   [1m[36mUser Load (0.5ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`uid` = 'wmorgan2@wisc.edu' LIMIT 1[0m
+I, [2016-12-07T02:02:57.791316 #26012]  INFO -- : Redirected to http://192.241.239.22:3000/session
+I, [2016-12-07T02:02:57.791634 #26012]  INFO -- : Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+I, [2016-12-07T02:02:57.923583 #26012]  INFO -- : Started GET "/session" for 172.13.50.136 at 2016-12-07 02:02:57 -0500
+I, [2016-12-07T02:02:57.926078 #26012]  INFO -- : Processing by ProgramController#index as HTML
+D, [2016-12-07T02:02:57.928001 #26012] DEBUG -- :   [1m[35mUser Load (0.5ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`uid` = 'wmorgan2@wisc.edu' LIMIT 1
+D, [2016-12-07T02:02:57.930102 #26012] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE `users`.`email` = 'wmorgan2@wisc.edu'[0m
+D, [2016-12-07T02:02:57.931461 #26012] DEBUG -- :   [1m[35mUserProgram Load (0.2ms)[0m  SELECT  DISTINCT `user_programs`.`created_at` FROM `user_programs` WHERE `user_programs`.`user_id` = 23  ORDER BY created_at DESC LIMIT 1
+D, [2016-12-07T02:02:57.934986 #26012] DEBUG -- :   [1m[36mUserProgram Load (0.3ms)[0m  [1mSELECT programs.id, 
+                                       programs.name,
+                                       programs.name_shorthand, 
+                                       programs.description, 
+                                       programs.launch_text,
+                                       user_programs.display FROM `user_programs` INNER JOIN `users` ON `users`.`id` = `user_programs`.`user_id` INNER JOIN `programs` ON `programs`.`id` = `user_programs`.`program_id` WHERE (user_programs.user_id=23) AND (user_programs.created_at='2016-12-07 06:51:57.000000') AND (user_programs.display=1) AND (( programs.admin = 0 AND (users.admin = 1 OR users.admin = 0)) OR (programs.admin=1 AND users.admin =1))  ORDER BY user_programs.order[0m
+I, [2016-12-07T02:02:57.942582 #26012]  INFO -- :   Rendered program/index.html.erb within layouts/application (8.8ms)
+I, [2016-12-07T02:02:57.944935 #26012]  INFO -- :   Rendered partials/_navigation.html.erb (0.9ms)
+I, [2016-12-07T02:02:57.945386 #26012]  INFO -- :   Rendered partials/_modal.html.erb (0.1ms)
+I, [2016-12-07T02:02:57.945903 #26012]  INFO -- : Completed 200 OK in 20ms (Views: 12.9ms | ActiveRecord: 1.3ms)
+I, [2016-12-07T02:03:03.397597 #26012]  INFO -- : Started GET "/session?utf8=%E2%9C%93&authenticity_token=sqvpOAA1MuG5D09g0nn8l9gHPSTpiEiiZcGKssPrSaKnhyPN8tn4o12m4VpAz%2F8omyP0OWTkTcVnJvzezH9XTA%3D%3D&button=" for 172.13.50.136 at 2016-12-07 02:03:03 -0500
+I, [2016-12-07T02:03:03.398828 #26012]  INFO -- : Processing by ProgramController#index as HTML
+I, [2016-12-07T02:03:03.398889 #26012]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"sqvpOAA1MuG5D09g0nn8l9gHPSTpiEiiZcGKssPrSaKnhyPN8tn4o12m4VpAz/8omyP0OWTkTcVnJvzezH9XTA==", "button"=>""}
+D, [2016-12-07T02:03:03.399820 #26012] DEBUG -- :   [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`uid` = 'wmorgan2@wisc.edu' LIMIT 1
+D, [2016-12-07T02:03:03.400829 #26012] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE `users`.`email` = 'wmorgan2@wisc.edu'[0m
+D, [2016-12-07T02:03:03.401481 #26012] DEBUG -- :   [1m[35mUserProgram Load (0.1ms)[0m  SELECT  DISTINCT `user_programs`.`created_at` FROM `user_programs` WHERE `user_programs`.`user_id` = 23  ORDER BY created_at DESC LIMIT 1
+D, [2016-12-07T02:03:03.402873 #26012] DEBUG -- :   [1m[36mUserProgram Load (0.1ms)[0m  [1mSELECT programs.id, 
+                                       programs.name,
+                                       programs.name_shorthand, 
+                                       programs.description, 
+                                       programs.launch_text,
+                                       user_programs.display FROM `user_programs` INNER JOIN `users` ON `users`.`id` = `user_programs`.`user_id` INNER JOIN `programs` ON `programs`.`id` = `user_programs`.`program_id` WHERE (user_programs.user_id=23) AND (user_programs.created_at='2016-12-07 06:51:57.000000') AND (user_programs.display=1) AND (( programs.admin = 0 AND (users.admin = 1 OR users.admin = 0)) OR (programs.admin=1 AND users.admin =1))  ORDER BY user_programs.order[0m
+I, [2016-12-07T02:03:03.406366 #26012]  INFO -- :   Rendered program/index.html.erb within layouts/application (4.0ms)
+I, [2016-12-07T02:03:03.407355 #26012]  INFO -- :   Rendered partials/_navigation.html.erb (0.4ms)
+I, [2016-12-07T02:03:03.407597 #26012]  INFO -- :   Rendered partials/_modal.html.erb (0.1ms)
+I, [2016-12-07T02:03:03.407771 #26012]  INFO -- : Completed 200 OK in 9ms (Views: 5.5ms | ActiveRecord: 0.5ms)
+I, [2016-12-07T02:03:44.060761 #26135]  INFO -- : Started GET "/" for 172.13.50.136 at 2016-12-07 02:03:44 -0500
+I, [2016-12-07T02:03:44.080312 #26135]  INFO -- : Processing by LoginController#index as HTML
+I, [2016-12-07T02:03:44.091978 #26135]  INFO -- :   Rendered login/index.html.erb within layouts/application (1.0ms)
+I, [2016-12-07T02:03:44.098727 #26135]  INFO -- :   Rendered partials/_navigation.html.erb (2.7ms)
+I, [2016-12-07T02:03:44.100639 #26135]  INFO -- :   Rendered partials/_modal.html.erb (0.9ms)
+I, [2016-12-07T02:03:44.101334 #26135]  INFO -- : Completed 200 OK in 21ms (Views: 18.8ms | ActiveRecord: 0.0ms)
+I, [2016-12-07T02:03:44.633155 #26135]  INFO -- : Started GET "/assets/application-73c1fe533ba1a2a0982e06ebfe094f35a1ba06e3e3af8b6e8fcb114309ed7a8c.css" for 172.13.50.136 at 2016-12-07 02:03:44 -0500
+I, [2016-12-07T02:03:45.051620 #26135]  INFO -- : Started GET "/assets/application-70d5aabe08153cd06f35eb53fef16a91560a47d93bb5ed07c524afdd7b71ff8b.js" for 172.13.50.136 at 2016-12-07 02:03:45 -0500
+I, [2016-12-07T02:03:45.239871 #26135]  INFO -- : Started GET "/assets/glbrc-logo-38x38-ab29766fe53fa7c7542c289783ff019df86fe620dde94481a154a23908371c3e.jpg" for 172.13.50.136 at 2016-12-07 02:03:45 -0500
+I, [2016-12-07T02:03:45.584847 #26135]  INFO -- : Started GET "/assets/font-awesome/fontawesome-webfont-2adefcbc041e7d18fcf2d417879dc5a09997aa64d675b7a3c4b6ce33da13f3fe.woff2?v=4.7.0" for 172.13.50.136 at 2016-12-07 02:03:45 -0500
+I, [2016-12-07T02:09:15.905970 #26311]  INFO -- : Started GET "/" for 172.13.50.136 at 2016-12-07 02:09:15 -0500
+I, [2016-12-07T02:09:15.925877 #26311]  INFO -- : Processing by LoginController#index as HTML
+I, [2016-12-07T02:09:15.937725 #26311]  INFO -- :   Rendered login/index.html.erb within layouts/application (1.1ms)
+I, [2016-12-07T02:09:15.944178 #26311]  INFO -- :   Rendered partials/_navigation.html.erb (2.5ms)
+I, [2016-12-07T02:09:15.946793 #26311]  INFO -- :   Rendered partials/_modal.html.erb (1.1ms)
+I, [2016-12-07T02:09:15.947380 #26311]  INFO -- : Completed 200 OK in 21ms (Views: 19.3ms | ActiveRecord: 0.0ms)
+I, [2016-12-07T02:09:16.505789 #26311]  INFO -- : Started GET "/assets/application-73c1fe533ba1a2a0982e06ebfe094f35a1ba06e3e3af8b6e8fcb114309ed7a8c.css" for 172.13.50.136 at 2016-12-07 02:09:16 -0500
+I, [2016-12-07T02:09:16.793276 #26311]  INFO -- : Started GET "/assets/application-d1f98f5752c7333476ac62a982e4e8d46e25663ea9048d6970d24cc0f82d402f.js" for 172.13.50.136 at 2016-12-07 02:09:16 -0500
+I, [2016-12-07T02:09:17.073252 #26311]  INFO -- : Started GET "/assets/glbrc-logo-38x38-ab29766fe53fa7c7542c289783ff019df86fe620dde94481a154a23908371c3e.jpg" for 172.13.50.136 at 2016-12-07 02:09:17 -0500
+I, [2016-12-07T02:09:18.178478 #26311]  INFO -- : Started GET "/assets/font-awesome/fontawesome-webfont-2adefcbc041e7d18fcf2d417879dc5a09997aa64d675b7a3c4b6ce33da13f3fe.woff2?v=4.7.0" for 172.13.50.136 at 2016-12-07 02:09:18 -0500
+I, [2016-12-07T02:09:26.518872 #26311]  INFO -- : Started GET "/?utf8=%E2%9C%93&authenticity_token=eEWU02%2Bh1nMx3%2BVfh3fo3AKEWqzGmH0VLTbzZp%2BWc3yvs3mMwUELrJmWN7GlIOMBWtNfi14J%2Fgz63po4twx7Ug%3D%3D&button=" for 172.13.50.136 at 2016-12-07 02:09:26 -0500
+I, [2016-12-07T02:09:26.522712 #26311]  INFO -- : Processing by LoginController#index as HTML
+I, [2016-12-07T02:09:26.522891 #26311]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"eEWU02+h1nMx3+Vfh3fo3AKEWqzGmH0VLTbzZp+Wc3yvs3mMwUELrJmWN7GlIOMBWtNfi14J/gz63po4twx7Ug==", "button"=>""}
+I, [2016-12-07T02:09:26.526027 #26311]  INFO -- :   Rendered login/index.html.erb within layouts/application (0.3ms)
+I, [2016-12-07T02:09:26.529481 #26311]  INFO -- :   Rendered partials/_navigation.html.erb (1.6ms)
+I, [2016-12-07T02:09:26.530034 #26311]  INFO -- :   Rendered partials/_modal.html.erb (0.1ms)
+I, [2016-12-07T02:09:26.530530 #26311]  INFO -- : Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+I, [2016-12-07T02:09:32.500350 #26311]  INFO -- : Started GET "/" for 172.13.50.136 at 2016-12-07 02:09:32 -0500
+I, [2016-12-07T02:09:32.502677 #26311]  INFO -- : Processing by LoginController#index as HTML
+I, [2016-12-07T02:09:32.504384 #26311]  INFO -- :   Rendered login/index.html.erb within layouts/application (0.1ms)
+I, [2016-12-07T02:09:32.506749 #26311]  INFO -- :   Rendered partials/_navigation.html.erb (0.9ms)
+I, [2016-12-07T02:09:32.507137 #26311]  INFO -- :   Rendered partials/_modal.html.erb (0.1ms)
+I, [2016-12-07T02:09:32.507509 #26311]  INFO -- : Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+I, [2016-12-07T02:09:36.687336 #26311]  INFO -- : Started GET "/?utf8=%E2%9C%93&authenticity_token=Hvszp8mTEKLl%2FQpSK1EZnQ6Bkpaa6AWrp01wZSxKMUnJDd74Z3PNfU202LwJBhJAVtaXsQJ5hrJwpRk7BNA5Zw%3D%3D&button=" for 172.13.50.136 at 2016-12-07 02:09:36 -0500
+I, [2016-12-07T02:09:36.692928 #26311]  INFO -- : Processing by LoginController#index as HTML
+I, [2016-12-07T02:09:36.693090 #26311]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"Hvszp8mTEKLl/QpSK1EZnQ6Bkpaa6AWrp01wZSxKMUnJDd74Z3PNfU202LwJBhJAVtaXsQJ5hrJwpRk7BNA5Zw==", "button"=>""}
+I, [2016-12-07T02:09:36.696441 #26311]  INFO -- :   Rendered login/index.html.erb within layouts/application (0.2ms)
+I, [2016-12-07T02:09:36.700608 #26311]  INFO -- :   Rendered partials/_navigation.html.erb (2.1ms)
+I, [2016-12-07T02:09:36.701027 #26311]  INFO -- :   Rendered partials/_modal.html.erb (0.1ms)
+I, [2016-12-07T02:09:36.701581 #26311]  INFO -- : Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+I, [2016-12-07T02:09:39.668822 #26311]  INFO -- : Started GET "/?utf8=%E2%9C%93&authenticity_token=rXSmUh5umIk85KZUmuf%2FStz8ALwSnQQuCKfBktG4iuB6gksNsI5FVpStdLq4sPSXhKsFm4oMhzffT6jM%2BSKCzg%3D%3D&button=" for 172.13.50.136 at 2016-12-07 02:09:39 -0500
+I, [2016-12-07T02:09:39.670094 #26311]  INFO -- : Processing by LoginController#index as HTML
+I, [2016-12-07T02:09:39.670194 #26311]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"rXSmUh5umIk85KZUmuf/Stz8ALwSnQQuCKfBktG4iuB6gksNsI5FVpStdLq4sPSXhKsFm4oMhzffT6jM+SKCzg==", "button"=>""}
+I, [2016-12-07T02:09:39.671206 #26311]  INFO -- :   Rendered login/index.html.erb within layouts/application (0.0ms)
+I, [2016-12-07T02:09:39.672252 #26311]  INFO -- :   Rendered partials/_navigation.html.erb (0.5ms)
+I, [2016-12-07T02:09:39.672536 #26311]  INFO -- :   Rendered partials/_modal.html.erb (0.1ms)
+I, [2016-12-07T02:09:39.672721 #26311]  INFO -- : Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+I, [2016-12-07T02:09:42.714009 #26311]  INFO -- : Started GET "/?utf8=%E2%9C%93&authenticity_token=gGpIrJdlYki4uHbHQO1ZK64FFl%2BEpyupVwfND58HI4lXnKXzOYW%2FlxDxpCliulL29lITeBw2qLCA76RRt50rpw%3D%3D&button=" for 172.13.50.136 at 2016-12-07 02:09:42 -0500
+I, [2016-12-07T02:09:42.716982 #26311]  INFO -- : Processing by LoginController#index as HTML
+I, [2016-12-07T02:09:42.717119 #26311]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"gGpIrJdlYki4uHbHQO1ZK64FFl+EpyupVwfND58HI4lXnKXzOYW/lxDxpCliulL29lITeBw2qLCA76RRt50rpw==", "button"=>""}
+I, [2016-12-07T02:09:42.719170 #26311]  INFO -- :   Rendered login/index.html.erb within layouts/application (0.1ms)
+I, [2016-12-07T02:09:42.721615 #26311]  INFO -- :   Rendered partials/_navigation.html.erb (1.0ms)
+I, [2016-12-07T02:09:42.722047 #26311]  INFO -- :   Rendered partials/_modal.html.erb (0.1ms)
+I, [2016-12-07T02:09:42.722508 #26311]  INFO -- : Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+I, [2016-12-07T02:09:46.334804 #26311]  INFO -- : Started GET "/?utf8=%E2%9C%93&authenticity_token=DpccItfV1uQaX9mUALsOMMjzES4QyFMTTA5a8zwI3QDZYfF9eTULO7IWC3oi7AXtkKQUCYhZ0Aqb5jOtFJLVLg%3D%3D&button=" for 172.13.50.136 at 2016-12-07 02:09:46 -0500
+I, [2016-12-07T02:09:46.336090 #26311]  INFO -- : Processing by LoginController#index as HTML
+I, [2016-12-07T02:09:46.336157 #26311]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"DpccItfV1uQaX9mUALsOMMjzES4QyFMTTA5a8zwI3QDZYfF9eTULO7IWC3oi7AXtkKQUCYhZ0Aqb5jOtFJLVLg==", "button"=>""}
+I, [2016-12-07T02:09:46.337182 #26311]  INFO -- :   Rendered login/index.html.erb within layouts/application (0.0ms)
+I, [2016-12-07T02:09:46.338227 #26311]  INFO -- :   Rendered partials/_navigation.html.erb (0.5ms)
+I, [2016-12-07T02:09:46.338400 #26311]  INFO -- :   Rendered partials/_modal.html.erb (0.0ms)
+I, [2016-12-07T02:09:46.338579 #26311]  INFO -- : Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+I, [2016-12-07T02:10:48.976011 #26408]  INFO -- : Started GET "/" for 172.13.50.136 at 2016-12-07 02:10:48 -0500
+I, [2016-12-07T02:10:48.993994 #26408]  INFO -- : Processing by LoginController#index as HTML
+I, [2016-12-07T02:10:49.005309 #26408]  INFO -- :   Rendered login/index.html.erb within layouts/application (0.8ms)
+I, [2016-12-07T02:10:49.008743 #26408]  INFO -- :   Rendered partials/_navigation.html.erb (1.2ms)
+I, [2016-12-07T02:10:49.009605 #26408]  INFO -- :   Rendered partials/_modal.html.erb (0.4ms)
+I, [2016-12-07T02:10:49.009917 #26408]  INFO -- : Completed 200 OK in 16ms (Views: 13.9ms | ActiveRecord: 0.0ms)
+I, [2016-12-07T02:10:49.600253 #26408]  INFO -- : Started GET "/assets/application-0825d1a2c53941f1bdeb0e3c417c00158a2eacd834a2a4e77084e59da8814dfe.js" for 172.13.50.136 at 2016-12-07 02:10:49 -0500
+I, [2016-12-07T02:11:57.958862 #26489]  INFO -- : Started GET "/" for 172.13.50.136 at 2016-12-07 02:11:57 -0500
+I, [2016-12-07T02:11:57.977037 #26489]  INFO -- : Processing by LoginController#index as HTML
+I, [2016-12-07T02:11:57.988885 #26489]  INFO -- :   Rendered login/index.html.erb within layouts/application (1.1ms)
+I, [2016-12-07T02:11:57.995333 #26489]  INFO -- :   Rendered partials/_navigation.html.erb (2.6ms)
+I, [2016-12-07T02:11:57.997253 #26489]  INFO -- :   Rendered partials/_modal.html.erb (0.9ms)
+I, [2016-12-07T02:11:57.997874 #26489]  INFO -- : Completed 200 OK in 20ms (Views: 18.7ms | ActiveRecord: 0.0ms)
+I, [2016-12-07T02:11:58.678279 #26489]  INFO -- : Started GET "/assets/application-73c1fe533ba1a2a0982e06ebfe094f35a1ba06e3e3af8b6e8fcb114309ed7a8c.css" for 172.13.50.136 at 2016-12-07 02:11:58 -0500
+I, [2016-12-07T02:11:59.120410 #26489]  INFO -- : Started GET "/assets/application-bc6cceda972e36557381bad1d492aa91a0804ee9273ba2ca98cfe453e78b0a6d.js" for 172.13.50.136 at 2016-12-07 02:11:59 -0500
+I, [2016-12-07T02:11:59.524352 #26489]  INFO -- : Started GET "/assets/glbrc-logo-38x38-ab29766fe53fa7c7542c289783ff019df86fe620dde94481a154a23908371c3e.jpg" for 172.13.50.136 at 2016-12-07 02:11:59 -0500
+I, [2016-12-07T02:12:00.543091 #26489]  INFO -- : Started GET "/assets/font-awesome/fontawesome-webfont-2adefcbc041e7d18fcf2d417879dc5a09997aa64d675b7a3c4b6ce33da13f3fe.woff2?v=4.7.0" for 172.13.50.136 at 2016-12-07 02:12:00 -0500
+I, [2016-12-07T02:15:39.657896 #26586]  INFO -- : Started GET "/" for 172.13.50.136 at 2016-12-07 02:15:39 -0500
+I, [2016-12-07T02:15:39.677770 #26586]  INFO -- : Processing by LoginController#index as HTML
+I, [2016-12-07T02:15:39.689788 #26586]  INFO -- :   Rendered login/index.html.erb within layouts/application (1.2ms)
+I, [2016-12-07T02:15:39.697120 #26586]  INFO -- :   Rendered partials/_navigation.html.erb (3.0ms)
+I, [2016-12-07T02:15:39.699213 #26586]  INFO -- :   Rendered partials/_modal.html.erb (0.9ms)
+I, [2016-12-07T02:15:39.699899 #26586]  INFO -- : Completed 200 OK in 22ms (Views: 19.8ms | ActiveRecord: 0.0ms)
+I, [2016-12-07T02:15:40.290163 #26586]  INFO -- : Started GET "/assets/application-73c1fe533ba1a2a0982e06ebfe094f35a1ba06e3e3af8b6e8fcb114309ed7a8c.css" for 172.13.50.136 at 2016-12-07 02:15:40 -0500
+I, [2016-12-07T02:15:40.621519 #26586]  INFO -- : Started GET "/assets/application-b098e3900b0c71fb9a7e6356fbb3577433b8a051290a472d57de3a046a51c994.js" for 172.13.50.136 at 2016-12-07 02:15:40 -0500
+I, [2016-12-07T02:15:41.036913 #26586]  INFO -- : Started GET "/assets/glbrc-logo-38x38-ab29766fe53fa7c7542c289783ff019df86fe620dde94481a154a23908371c3e.jpg" for 172.13.50.136 at 2016-12-07 02:15:41 -0500
+I, [2016-12-07T02:15:42.461464 #26586]  INFO -- : Started GET "/assets/font-awesome/fontawesome-webfont-2adefcbc041e7d18fcf2d417879dc5a09997aa64d675b7a3c4b6ce33da13f3fe.woff2?v=4.7.0" for 172.13.50.136 at 2016-12-07 02:15:42 -0500
+I, [2016-12-07T02:18:12.249432 #26676]  INFO -- : Started GET "/" for 172.13.50.136 at 2016-12-07 02:18:12 -0500
+I, [2016-12-07T02:18:12.268261 #26676]  INFO -- : Processing by LoginController#index as HTML
+I, [2016-12-07T02:18:12.279394 #26676]  INFO -- :   Rendered login/index.html.erb within layouts/application (1.0ms)
+I, [2016-12-07T02:18:12.285973 #26676]  INFO -- :   Rendered partials/_navigation.html.erb (2.6ms)
+I, [2016-12-07T02:18:12.287781 #26676]  INFO -- :   Rendered partials/_modal.html.erb (0.8ms)
+I, [2016-12-07T02:18:12.288373 #26676]  INFO -- : Completed 200 OK in 20ms (Views: 18.0ms | ActiveRecord: 0.0ms)
+I, [2016-12-07T02:18:12.866272 #26676]  INFO -- : Started GET "/assets/application-73c1fe533ba1a2a0982e06ebfe094f35a1ba06e3e3af8b6e8fcb114309ed7a8c.css" for 172.13.50.136 at 2016-12-07 02:18:12 -0500
+I, [2016-12-07T02:18:13.271066 #26676]  INFO -- : Started GET "/assets/application-db083156cf3f85293cd0cdfa26d8c0c0cfec0d150949abf97750cb32b3365ae8.js" for 172.13.50.136 at 2016-12-07 02:18:13 -0500
+I, [2016-12-07T02:18:13.461269 #26676]  INFO -- : Started GET "/assets/glbrc-logo-38x38-ab29766fe53fa7c7542c289783ff019df86fe620dde94481a154a23908371c3e.jpg" for 172.13.50.136 at 2016-12-07 02:18:13 -0500
+I, [2016-12-07T02:18:14.580415 #26676]  INFO -- : Started GET "/assets/font-awesome/fontawesome-webfont-2adefcbc041e7d18fcf2d417879dc5a09997aa64d675b7a3c4b6ce33da13f3fe.woff2?v=4.7.0" for 172.13.50.136 at 2016-12-07 02:18:14 -0500
+I, [2016-12-07T02:24:16.363168 #26773]  INFO -- : Started GET "/" for 172.13.50.136 at 2016-12-07 02:24:16 -0500
+I, [2016-12-07T02:24:16.380551 #26773]  INFO -- : Processing by LoginController#index as HTML
+I, [2016-12-07T02:24:16.393487 #26773]  INFO -- :   Rendered login/index.html.erb within layouts/application (1.2ms)
+I, [2016-12-07T02:24:16.399717 #26773]  INFO -- :   Rendered partials/_navigation.html.erb (2.4ms)
+I, [2016-12-07T02:24:16.401627 #26773]  INFO -- :   Rendered partials/_modal.html.erb (0.7ms)
+I, [2016-12-07T02:24:16.402281 #26773]  INFO -- : Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 0.0ms)
+I, [2016-12-07T02:24:17.172269 #26773]  INFO -- : Started GET "/assets/application-73c1fe533ba1a2a0982e06ebfe094f35a1ba06e3e3af8b6e8fcb114309ed7a8c.css" for 172.13.50.136 at 2016-12-07 02:24:17 -0500
+I, [2016-12-07T02:24:17.576595 #26773]  INFO -- : Started GET "/assets/application-6c468062f9d6c164f7187160c33405fe106fff1fd11f00aa9650f2148aa5dd08.js" for 172.13.50.136 at 2016-12-07 02:24:17 -0500
+I, [2016-12-07T02:24:17.728390 #26773]  INFO -- : Started GET "/assets/glbrc-logo-38x38-ab29766fe53fa7c7542c289783ff019df86fe620dde94481a154a23908371c3e.jpg" for 172.13.50.136 at 2016-12-07 02:24:17 -0500
+I, [2016-12-07T02:24:18.848916 #26773]  INFO -- : Started GET "/assets/font-awesome/fontawesome-webfont-2adefcbc041e7d18fcf2d417879dc5a09997aa64d675b7a3c4b6ce33da13f3fe.woff2?v=4.7.0" for 172.13.50.136 at 2016-12-07 02:24:18 -0500
+I, [2016-12-07T02:24:19.211753 #26773]  INFO -- : Started GET "/assets/angular/templates/modal/_login-6e6db0cd26ab6060e468844bfa4bf2676b21e6dfc25015405801348612be16fd.html" for 172.13.50.136 at 2016-12-07 02:24:19 -0500
+I, [2016-12-07T02:24:46.330490 #26773]  INFO -- : Started POST "/api/v1/auth/sign_in.json" for 172.13.50.136 at 2016-12-07 02:24:46 -0500
+I, [2016-12-07T02:24:46.335637 #26773]  INFO -- : Processing by DeviseTokenAuth::SessionsController#create as JSON
+I, [2016-12-07T02:24:46.335699 #26773]  INFO -- :   Parameters: {"email"=>"wmorgan2@wisc.edu", "password"=>"[FILTERED]"}
+W, [2016-12-07T02:24:46.336414 #26773]  WARN -- : Can't verify CSRF token authenticity
+D, [2016-12-07T02:24:46.353019 #26773] DEBUG -- :   [1m[36mUser Load (5.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE (BINARY email = 'wmorgan2@wisc.edu' AND provider='email')  ORDER BY `users`.`id` ASC LIMIT 1[0m
+D, [2016-12-07T02:24:46.749070 #26773] DEBUG -- :   [1m[35m (0.4ms)[0m  BEGIN
+D, [2016-12-07T02:24:46.765066 #26773] DEBUG -- :   [1m[36mSQL (3.1ms)[0m  [1mUPDATE `users` SET `tokens` = '{\"OahtYpClleXyb3sT6Ifrbg\":{\"token\":\"$2a$10$IvRhYHo1VVlimpHbhxt2UeZO8eZPxs8dORBwSOSONpKFA4BcbkRa.\",\"expiry\":1482234085,\"last_token\":\"$2a$10$Jj39dLkuQ9ptpTH1t3ddV.yh2EFwNjkSMrntvO1HYZTcjPx2.bacO\",\"updated_at\":\"2016-12-06T06:41:27.059-05:00\"},\"Muz6HHlnUISVS8AZdGGceg\":{\"token\":\"$2a$10$JtTYvFXvFw0qk6fse2EgHe2nqLapJvmPOAMTuniwzzLNXvW6o.CrK\",\"expiry\":1482234582,\"last_token\":\"$2a$10$gcAAXK4rI/gDHmMH2so.SuV9WyfUr5jil1aREb2UvJqCQadKPUQn2\",\"updated_at\":\"2016-12-06T06:49:42.919-05:00\"},\"gkF1_tKF8D6f9JZnoo1BWA\":{\"token\":\"$2a$10$UHEdfaJyCWQE//ZVEa0ayuX/K/n.FQX1N.jVzBD9C.A5AodJbdJMy\",\"expiry\":1482242005,\"last_token\":\"$2a$10$puposK83EYNVX9xPuWgcv.iaAdt.Wv/9ANmxS7LjJAjtxYCCsGxgO\",\"updated_at\":\"2016-12-06T08:53:25.423-05:00\"},\"5ENMlUJv8QlOmRMs7ZOwvQ\":{\"token\":\"$2a$10$zzsbIIKqM69aXJlt4UJ2z.qoqsaDNfYIcwe1OiWksSbMp2F4.2RlS\",\"expiry\":1482244218,\"last_token\":\"$2a$10$ZyW9FDchiDo3JGUwVMk5ye3lx8kPXKiOzRe6bIba7aUhY4Ovfw8na\",\"updated_at\":\"2016-12-06T09:30:18.430-05:00\"},\"sILNh3rgzfh_xjooyYevJA\":{\"token\":\"$2a$10$DItcUQu4B7zkuV2E5Tc6EuDT.0GJOS93FbscR5ojH7TBSIdcev5tO\",\"expiry\":1482244311,\"last_token\":\"$2a$10$QUNtvRQkooEP2/8azzkEZ..3yJspsz9zhKCYYxmFKmj0gzQoTAL5m\",\"updated_at\":\"2016-12-06T09:31:53.584-05:00\"},\"90UH5WpOqv1PysanfDHx1A\":{\"token\":\"$2a$10$yfOegTTJJeYT.0ejqsDqf.i1Jg.B2BCd.ioWsqGwtw/eZ.uCUqtya\",\"expiry\":1482262279,\"last_token\":\"$2a$10$Yo7Y1nkVFahSrbmAYdgqb.e6sqjSpurMtuEg4bBzEBe5lmDqSvNcu\",\"updated_at\":\"2016-12-06T14:31:19.653-05:00\"},\"zh0SFvkaDJcG3iZLQsGjtg\":{\"token\":\"$2a$10$clShsJla1UxpH.eFxd.Scuh03ycCc.HONJaZmVlLxFrNA1EyrAAGG\",\"expiry\":1482296475,\"last_token\":\"$2a$10$mEDzGV/TCncn5UuVH.f7Uu7wauBPUhM7eowGK5.3JO6Nr4Vfp5faW\",\"updated_at\":\"2016-12-07T00:01:15.153-05:00\"},\"LXv7BLUOC17097ssUFGn7g\":{\"token\":\"$2a$10$I3F6mKO6WFsdrwIV08NZH.kkGkfxp4ygWS4zq0HgoAp7934d/IDI2\",\"expiry\":1482270433,\"last_token\":\"$2a$10$BMB5.5ylJ11OKLoqm6iXY.Z6W/9FGH/../CegsnD/t6rRU36nRO0u\",\"updated_at\":\"2016-12-06T16:47:13.130-05:00\"},\"va4RX1DK_X6lCXDBw_bm3g\":{\"token\":\"$2a$10$bc087BAzPtoPkx0/fCY.8.Y.osrA.sQaxLkpUKU3Tl1qwC0GTMtFG\",\"expiry\":1482272734,\"last_token\":\"$2a$10$kDA7Y13Ke.sAeUYd0Q14J.LmdIXS8Hibajzote5ybpVKo/lif2w3S\",\"updated_at\":\"2016-12-06T17:25:34.690-05:00\"},\"RVBRMl5mVZmKVQmDarQ0LA\":{\"token\":\"$2a$10$lRbX2NtpMFFkAMFjv5jRmO/pX84dwz5C4ZQA.PVb1wLQQIsr1iIaO\",\"expiry\":1482303804,\"last_token\":\"$2a$10$1V4r3WavWmvFFFtYTu4fcORfOrscSbM7sOarocUHU.S9eU4KN9766\",\"updated_at\":\"2016-12-07T02:03:24.368-05:00\"},\"TRynJUzAZYxk9QEMCohjAw\":{\"token\":\"$2a$10$wtotrrQ0B94rBSWk6AAjs.h.tKlSuvv3kG6ZlZRtn8geUzpxCdrYi\",\"expiry\":1482305086}}', `updated_at` = '2016-12-07 07:24:46' WHERE `users`.`id` = 23[0m
+D, [2016-12-07T02:24:46.774340 #26773] DEBUG -- :   [1m[35m (3.5ms)[0m  COMMIT
+D, [2016-12-07T02:24:46.776381 #26773] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+D, [2016-12-07T02:24:46.782312 #26773] DEBUG -- :   [1m[35mSQL (0.6ms)[0m  UPDATE `users` SET `last_sign_in_at` = '2016-12-06 23:16:37', `current_sign_in_at` = '2016-12-07 07:24:46', `sign_in_count` = 84, `updated_at` = '2016-12-07 07:24:46' WHERE `users`.`id` = 23
+D, [2016-12-07T02:24:46.787994 #26773] DEBUG -- :   [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+D, [2016-12-07T02:24:46.790464 #26773] DEBUG -- :   [1m[35m (0.2ms)[0m  BEGIN
+D, [2016-12-07T02:24:46.793258 #26773] DEBUG -- :   [1m[36mUser Load (0.7ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 23 LIMIT 1 FOR UPDATE[0m
+D, [2016-12-07T02:24:46.977723 #26773] DEBUG -- :   [1m[35mSQL (1.0ms)[0m  UPDATE `users` SET `tokens` = '{\"Muz6HHlnUISVS8AZdGGceg\":{\"token\":\"$2a$10$JtTYvFXvFw0qk6fse2EgHe2nqLapJvmPOAMTuniwzzLNXvW6o.CrK\",\"expiry\":1482234582,\"last_token\":\"$2a$10$gcAAXK4rI/gDHmMH2so.SuV9WyfUr5jil1aREb2UvJqCQadKPUQn2\",\"updated_at\":\"2016-12-06T06:49:42.919-05:00\"},\"gkF1_tKF8D6f9JZnoo1BWA\":{\"token\":\"$2a$10$UHEdfaJyCWQE//ZVEa0ayuX/K/n.FQX1N.jVzBD9C.A5AodJbdJMy\",\"expiry\":1482242005,\"last_token\":\"$2a$10$puposK83EYNVX9xPuWgcv.iaAdt.Wv/9ANmxS7LjJAjtxYCCsGxgO\",\"updated_at\":\"2016-12-06T08:53:25.423-05:00\"},\"5ENMlUJv8QlOmRMs7ZOwvQ\":{\"token\":\"$2a$10$zzsbIIKqM69aXJlt4UJ2z.qoqsaDNfYIcwe1OiWksSbMp2F4.2RlS\",\"expiry\":1482244218,\"last_token\":\"$2a$10$ZyW9FDchiDo3JGUwVMk5ye3lx8kPXKiOzRe6bIba7aUhY4Ovfw8na\",\"updated_at\":\"2016-12-06T09:30:18.430-05:00\"},\"sILNh3rgzfh_xjooyYevJA\":{\"token\":\"$2a$10$DItcUQu4B7zkuV2E5Tc6EuDT.0GJOS93FbscR5ojH7TBSIdcev5tO\",\"expiry\":1482244311,\"last_token\":\"$2a$10$QUNtvRQkooEP2/8azzkEZ..3yJspsz9zhKCYYxmFKmj0gzQoTAL5m\",\"updated_at\":\"2016-12-06T09:31:53.584-05:00\"},\"90UH5WpOqv1PysanfDHx1A\":{\"token\":\"$2a$10$yfOegTTJJeYT.0ejqsDqf.i1Jg.B2BCd.ioWsqGwtw/eZ.uCUqtya\",\"expiry\":1482262279,\"last_token\":\"$2a$10$Yo7Y1nkVFahSrbmAYdgqb.e6sqjSpurMtuEg4bBzEBe5lmDqSvNcu\",\"updated_at\":\"2016-12-06T14:31:19.653-05:00\"},\"zh0SFvkaDJcG3iZLQsGjtg\":{\"token\":\"$2a$10$clShsJla1UxpH.eFxd.Scuh03ycCc.HONJaZmVlLxFrNA1EyrAAGG\",\"expiry\":1482296475,\"last_token\":\"$2a$10$mEDzGV/TCncn5UuVH.f7Uu7wauBPUhM7eowGK5.3JO6Nr4Vfp5faW\",\"updated_at\":\"2016-12-07T00:01:15.153-05:00\"},\"LXv7BLUOC17097ssUFGn7g\":{\"token\":\"$2a$10$I3F6mKO6WFsdrwIV08NZH.kkGkfxp4ygWS4zq0HgoAp7934d/IDI2\",\"expiry\":1482270433,\"last_token\":\"$2a$10$BMB5.5ylJ11OKLoqm6iXY.Z6W/9FGH/../CegsnD/t6rRU36nRO0u\",\"updated_at\":\"2016-12-06T16:47:13.130-05:00\"},\"va4RX1DK_X6lCXDBw_bm3g\":{\"token\":\"$2a$10$bc087BAzPtoPkx0/fCY.8.Y.osrA.sQaxLkpUKU3Tl1qwC0GTMtFG\",\"expiry\":1482272734,\"last_token\":\"$2a$10$kDA7Y13Ke.sAeUYd0Q14J.LmdIXS8Hibajzote5ybpVKo/lif2w3S\",\"updated_at\":\"2016-12-06T17:25:34.690-05:00\"},\"RVBRMl5mVZmKVQmDarQ0LA\":{\"token\":\"$2a$10$lRbX2NtpMFFkAMFjv5jRmO/pX84dwz5C4ZQA.PVb1wLQQIsr1iIaO\",\"expiry\":1482303804,\"last_token\":\"$2a$10$1V4r3WavWmvFFFtYTu4fcORfOrscSbM7sOarocUHU.S9eU4KN9766\",\"updated_at\":\"2016-12-07T02:03:24.368-05:00\"},\"TRynJUzAZYxk9QEMCohjAw\":{\"token\":\"$2a$10$KRY4BbjJHVX8bWwiNEWPD.WJ5M8hDM4ZTz15Jd2QmzsH.T2t1gbmG\",\"expiry\":1482305086,\"last_token\":\"$2a$10$wtotrrQ0B94rBSWk6AAjs.h.tKlSuvv3kG6ZlZRtn8geUzpxCdrYi\",\"updated_at\":\"2016-12-07T02:24:46.968-05:00\"}}', `updated_at` = '2016-12-07 07:24:46' WHERE `users`.`id` = 23
+D, [2016-12-07T02:24:46.986045 #26773] DEBUG -- :   [1m[36m (2.8ms)[0m  [1mCOMMIT[0m
+I, [2016-12-07T02:24:46.986438 #26773]  INFO -- : Completed 200 OK in 651ms (Views: 0.6ms | ActiveRecord: 23.0ms)
+I, [2016-12-07T02:24:47.363846 #26773]  INFO -- : Started GET "/" for 172.13.50.136 at 2016-12-07 02:24:47 -0500
+I, [2016-12-07T02:24:47.366764 #26773]  INFO -- : Processing by LoginController#index as HTML
+D, [2016-12-07T02:24:47.374452 #26773] DEBUG -- :   [1m[35mUser Load (1.1ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`uid` = 'wmorgan2@wisc.edu' LIMIT 1
+I, [2016-12-07T02:24:47.379757 #26773]  INFO -- : Redirected to http://192.241.239.22:3000/session
+I, [2016-12-07T02:24:47.380337 #26773]  INFO -- : Completed 302 Found in 13ms (ActiveRecord: 1.1ms)
+I, [2016-12-07T02:24:47.472165 #26773]  INFO -- : Started GET "/session" for 172.13.50.136 at 2016-12-07 02:24:47 -0500
+I, [2016-12-07T02:24:47.476406 #26773]  INFO -- : Processing by ProgramController#index as HTML
+D, [2016-12-07T02:24:47.478415 #26773] DEBUG -- :   [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`uid` = 'wmorgan2@wisc.edu' LIMIT 1[0m
+D, [2016-12-07T02:24:47.481524 #26773] DEBUG -- :   [1m[35m (0.8ms)[0m  SELECT `users`.`id` FROM `users` WHERE `users`.`email` = 'wmorgan2@wisc.edu'
+D, [2016-12-07T02:24:47.487318 #26773] DEBUG -- :   [1m[36mUserProgram Load (0.2ms)[0m  [1mSELECT  DISTINCT `user_programs`.`created_at` FROM `user_programs` WHERE `user_programs`.`user_id` = 23  ORDER BY created_at DESC LIMIT 1[0m
+D, [2016-12-07T02:24:47.537820 #26773] DEBUG -- :   [1m[35mUserProgram Load (6.6ms)[0m  SELECT programs.id, 
+                                       programs.name,
+                                       programs.name_shorthand, 
+                                       programs.description, 
+                                       programs.launch_text,
+                                       user_programs.display FROM `user_programs` INNER JOIN `users` ON `users`.`id` = `user_programs`.`user_id` INNER JOIN `programs` ON `programs`.`id` = `user_programs`.`program_id` WHERE (user_programs.user_id=23) AND (user_programs.created_at='2016-12-07 06:51:57.000000') AND (user_programs.display=1) AND (( programs.admin = 0 AND (users.admin = 1 OR users.admin = 0)) OR (programs.admin=1 AND users.admin =1))  ORDER BY user_programs.order
+I, [2016-12-07T02:24:47.542086 #26773]  INFO -- :   Rendered program/index.html.erb within layouts/application (27.4ms)
+I, [2016-12-07T02:24:47.543593 #26773]  INFO -- :   Rendered partials/_navigation.html.erb (0.6ms)
+I, [2016-12-07T02:24:47.543861 #26773]  INFO -- :   Rendered partials/_modal.html.erb (0.1ms)
+I, [2016-12-07T02:24:47.544151 #26773]  INFO -- : Completed 200 OK in 68ms (Views: 32.4ms | ActiveRecord: 10.6ms)
+I, [2016-12-07T02:24:48.117087 #26773]  INFO -- : Started GET "/assets/application-73c1fe533ba1a2a0982e06ebfe094f35a1ba06e3e3af8b6e8fcb114309ed7a8c.css" for 172.13.50.136 at 2016-12-07 02:24:48 -0500
+I, [2016-12-07T02:24:48.126023 #26773]  INFO -- : Started GET "/assets/application-6c468062f9d6c164f7187160c33405fe106fff1fd11f00aa9650f2148aa5dd08.js" for 172.13.50.136 at 2016-12-07 02:24:48 -0500
+I, [2016-12-07T02:24:48.211048 #26773]  INFO -- : Started GET "/assets/glbrc-logo-38x38-ab29766fe53fa7c7542c289783ff019df86fe620dde94481a154a23908371c3e.jpg" for 172.13.50.136 at 2016-12-07 02:24:48 -0500
+I, [2016-12-07T02:24:48.585654 #26773]  INFO -- : Started GET "/assets/font-awesome/fontawesome-webfont-2adefcbc041e7d18fcf2d417879dc5a09997aa64d675b7a3c4b6ce33da13f3fe.woff2?v=4.7.0" for 172.13.50.136 at 2016-12-07 02:24:48 -0500
+I, [2016-12-07T02:24:48.815380 #26773]  INFO -- : Started GET "/api/v1/auth/validate_token" for 172.13.50.136 at 2016-12-07 02:24:48 -0500
+I, [2016-12-07T02:24:48.822946 #26773]  INFO -- : Processing by DeviseTokenAuth::TokenValidationsController#validate_token as HTML
+D, [2016-12-07T02:24:48.827887 #26773] DEBUG -- :   [1m[36mUser Load (0.8ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`uid` = 'wmorgan2@wisc.edu' LIMIT 1[0m
+D, [2016-12-07T02:24:49.018512 #26773] DEBUG -- :   [1m[35m (0.4ms)[0m  BEGIN
+D, [2016-12-07T02:24:49.021890 #26773] DEBUG -- :   [1m[36mUser Load (1.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 23 LIMIT 1 FOR UPDATE[0m
+D, [2016-12-07T02:24:49.034005 #26773] DEBUG -- :   [1m[35mSQL (0.9ms)[0m  UPDATE `users` SET `tokens` = '{\"Muz6HHlnUISVS8AZdGGceg\":{\"token\":\"$2a$10$JtTYvFXvFw0qk6fse2EgHe2nqLapJvmPOAMTuniwzzLNXvW6o.CrK\",\"expiry\":1482234582,\"last_token\":\"$2a$10$gcAAXK4rI/gDHmMH2so.SuV9WyfUr5jil1aREb2UvJqCQadKPUQn2\",\"updated_at\":\"2016-12-06T06:49:42.919-05:00\"},\"gkF1_tKF8D6f9JZnoo1BWA\":{\"token\":\"$2a$10$UHEdfaJyCWQE//ZVEa0ayuX/K/n.FQX1N.jVzBD9C.A5AodJbdJMy\",\"expiry\":1482242005,\"last_token\":\"$2a$10$puposK83EYNVX9xPuWgcv.iaAdt.Wv/9ANmxS7LjJAjtxYCCsGxgO\",\"updated_at\":\"2016-12-06T08:53:25.423-05:00\"},\"5ENMlUJv8QlOmRMs7ZOwvQ\":{\"token\":\"$2a$10$zzsbIIKqM69aXJlt4UJ2z.qoqsaDNfYIcwe1OiWksSbMp2F4.2RlS\",\"expiry\":1482244218,\"last_token\":\"$2a$10$ZyW9FDchiDo3JGUwVMk5ye3lx8kPXKiOzRe6bIba7aUhY4Ovfw8na\",\"updated_at\":\"2016-12-06T09:30:18.430-05:00\"},\"sILNh3rgzfh_xjooyYevJA\":{\"token\":\"$2a$10$DItcUQu4B7zkuV2E5Tc6EuDT.0GJOS93FbscR5ojH7TBSIdcev5tO\",\"expiry\":1482244311,\"last_token\":\"$2a$10$QUNtvRQkooEP2/8azzkEZ..3yJspsz9zhKCYYxmFKmj0gzQoTAL5m\",\"updated_at\":\"2016-12-06T09:31:53.584-05:00\"},\"90UH5WpOqv1PysanfDHx1A\":{\"token\":\"$2a$10$yfOegTTJJeYT.0ejqsDqf.i1Jg.B2BCd.ioWsqGwtw/eZ.uCUqtya\",\"expiry\":1482262279,\"last_token\":\"$2a$10$Yo7Y1nkVFahSrbmAYdgqb.e6sqjSpurMtuEg4bBzEBe5lmDqSvNcu\",\"updated_at\":\"2016-12-06T14:31:19.653-05:00\"},\"zh0SFvkaDJcG3iZLQsGjtg\":{\"token\":\"$2a$10$clShsJla1UxpH.eFxd.Scuh03ycCc.HONJaZmVlLxFrNA1EyrAAGG\",\"expiry\":1482296475,\"last_token\":\"$2a$10$mEDzGV/TCncn5UuVH.f7Uu7wauBPUhM7eowGK5.3JO6Nr4Vfp5faW\",\"updated_at\":\"2016-12-07T00:01:15.153-05:00\"},\"LXv7BLUOC17097ssUFGn7g\":{\"token\":\"$2a$10$I3F6mKO6WFsdrwIV08NZH.kkGkfxp4ygWS4zq0HgoAp7934d/IDI2\",\"expiry\":1482270433,\"last_token\":\"$2a$10$BMB5.5ylJ11OKLoqm6iXY.Z6W/9FGH/../CegsnD/t6rRU36nRO0u\",\"updated_at\":\"2016-12-06T16:47:13.130-05:00\"},\"va4RX1DK_X6lCXDBw_bm3g\":{\"token\":\"$2a$10$bc087BAzPtoPkx0/fCY.8.Y.osrA.sQaxLkpUKU3Tl1qwC0GTMtFG\",\"expiry\":1482272734,\"last_token\":\"$2a$10$kDA7Y13Ke.sAeUYd0Q14J.LmdIXS8Hibajzote5ybpVKo/lif2w3S\",\"updated_at\":\"2016-12-06T17:25:34.690-05:00\"},\"RVBRMl5mVZmKVQmDarQ0LA\":{\"token\":\"$2a$10$lRbX2NtpMFFkAMFjv5jRmO/pX84dwz5C4ZQA.PVb1wLQQIsr1iIaO\",\"expiry\":1482303804,\"last_token\":\"$2a$10$1V4r3WavWmvFFFtYTu4fcORfOrscSbM7sOarocUHU.S9eU4KN9766\",\"updated_at\":\"2016-12-07T02:03:24.368-05:00\"},\"TRynJUzAZYxk9QEMCohjAw\":{\"token\":\"$2a$10$KRY4BbjJHVX8bWwiNEWPD.WJ5M8hDM4ZTz15Jd2QmzsH.T2t1gbmG\",\"expiry\":1482305086,\"last_token\":\"$2a$10$wtotrrQ0B94rBSWk6AAjs.h.tKlSuvv3kG6ZlZRtn8geUzpxCdrYi\",\"updated_at\":\"2016-12-07T02:24:49.024-05:00\"}}', `updated_at` = '2016-12-07 07:24:49' WHERE `users`.`id` = 23
+D, [2016-12-07T02:24:49.042702 #26773] DEBUG -- :   [1m[36m (2.3ms)[0m  [1mCOMMIT[0m
+I, [2016-12-07T02:24:49.043005 #26773]  INFO -- : Completed 200 OK in 220ms (Views: 0.8ms | ActiveRecord: 5.7ms)
+I, [2016-12-07T02:24:50.469773 #26773]  INFO -- : Started GET "/api/v1/listing.json" for 172.13.50.136 at 2016-12-07 02:24:50 -0500
+I, [2016-12-07T02:24:50.474138 #26773]  INFO -- : Processing by Api::UserProgramsController#index as JSON
+D, [2016-12-07T02:24:50.476762 #26773] DEBUG -- :   [1m[35mUser Load (1.1ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`uid` = 'wmorgan2@wisc.edu' LIMIT 1
+D, [2016-12-07T02:24:50.479089 #26773] DEBUG -- :   [1m[36mUserProgram Load (0.2ms)[0m  [1mSELECT  DISTINCT `user_programs`.`created_at` FROM `user_programs` WHERE `user_programs`.`user_id` = 23  ORDER BY created_at DESC LIMIT 1[0m
+D, [2016-12-07T02:24:50.486514 #26773] DEBUG -- :   [1m[35mUserProgram Load (4.6ms)[0m  SELECT programs.id, 
+                                          programs.name,
+                                          programs.name_shorthand, 
+                                          programs.description, 
+                                          programs.launch_text,
+                                          user_programs.display FROM `user_programs` INNER JOIN `users` ON `users`.`id` = `user_programs`.`user_id` INNER JOIN `programs` ON `programs`.`id` = `user_programs`.`program_id` WHERE (user_programs.user_id=23) AND (user_programs.created_at='2016-12-07 06:51:57.000000') AND (( programs.admin = 0 AND (users.admin = 1 OR users.admin = 0)) OR (programs.admin=1 AND users.admin =1))  ORDER BY user_programs.order
+I, [2016-12-07T02:24:50.491975 #26773]  INFO -- : Completed 200 OK in 18ms (Views: 6.7ms | ActiveRecord: 5.9ms)
+I, [2016-12-07T02:24:50.655291 #26773]  INFO -- : Started GET "/assets/angular/templates/modal/program-listing-dba084c6eee1cf629a67b6a17867444f8075b279dd232bf0358b1ddbfa1d31c0.html" for 172.13.50.136 at 2016-12-07 02:24:50 -0500
+I, [2016-12-07T02:25:05.239513 #26773]  INFO -- : Started POST "/api/v1/listing.json" for 172.13.50.136 at 2016-12-07 02:25:05 -0500
+I, [2016-12-07T02:25:05.242617 #26773]  INFO -- : Processing by Api::UserProgramsController#create as JSON
+I, [2016-12-07T02:25:05.243153 #26773]  INFO -- :   Parameters: {"user_programs"=>[{"program_id"=>7, "user_id"=>23, "display"=>1, "order"=>0, "token"=>"TRynJUzAZYxk9QEMCohjAw"}, {"program_id"=>11, "user_id"=>23, "display"=>1, "order"=>2, "token"=>"TRynJUzAZYxk9QEMCohjAw"}, {"program_id"=>6, "user_id"=>23, "display"=>1, "order"=>3, "token"=>"TRynJUzAZYxk9QEMCohjAw"}, {"program_id"=>3, "user_id"=>23, "display"=>1, "order"=>4, "token"=>"TRynJUzAZYxk9QEMCohjAw"}, {"program_id"=>9, "user_id"=>23, "display"=>1, "order"=>5, "token"=>"TRynJUzAZYxk9QEMCohjAw"}, {"program_id"=>2, "user_id"=>23, "display"=>1, "order"=>6, "token"=>"TRynJUzAZYxk9QEMCohjAw"}, {"program_id"=>4, "user_id"=>23, "display"=>1, "order"=>7, "token"=>"TRynJUzAZYxk9QEMCohjAw"}, {"program_id"=>12, "user_id"=>23, "display"=>1, "order"=>8, "token"=>"TRynJUzAZYxk9QEMCohjAw"}, {"program_id"=>8, "user_id"=>23, "display"=>1, "order"=>9, "token"=>"TRynJUzAZYxk9QEMCohjAw"}, {"program_id"=>1, "user_id"=>23, "display"=>1, "order"=>10, "token"=>"TRynJUzAZYxk9QEMCohjAw"}, {"program_id"=>5, "user_id"=>23, "display"=>1, "order"=>11, "token"=>"TRynJUzAZYxk9QEMCohjAw"}]}
+W, [2016-12-07T02:25:05.243536 #26773]  WARN -- : Can't verify CSRF token authenticity
+D, [2016-12-07T02:25:05.247341 #26773] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+D, [2016-12-07T02:25:05.250659 #26773] DEBUG -- :   [1m[35mSQL (0.8ms)[0m  INSERT INTO `user_programs` (`user_id`, `program_id`, `token`, `created_at`, `updated_at`) VALUES (23, 7, 'TRynJUzAZYxk9QEMCohjAw', '2016-12-07 07:25:05', '2016-12-07 07:25:05')
+D, [2016-12-07T02:25:05.253250 #26773] DEBUG -- :   [1m[36m (1.5ms)[0m  [1mCOMMIT[0m
+D, [2016-12-07T02:25:05.254211 #26773] DEBUG -- :   [1m[35m (0.1ms)[0m  BEGIN
+D, [2016-12-07T02:25:05.255457 #26773] DEBUG -- :   [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `user_programs` (`user_id`, `program_id`, `order`, `token`, `created_at`, `updated_at`) VALUES (23, 11, 2, 'TRynJUzAZYxk9QEMCohjAw', '2016-12-07 07:25:05', '2016-12-07 07:25:05')[0m
+D, [2016-12-07T02:25:05.256642 #26773] DEBUG -- :   [1m[35m (0.8ms)[0m  COMMIT
+D, [2016-12-07T02:25:05.257203 #26773] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2016-12-07T02:25:05.258036 #26773] DEBUG -- :   [1m[35mSQL (0.2ms)[0m  INSERT INTO `user_programs` (`user_id`, `program_id`, `order`, `token`, `created_at`, `updated_at`) VALUES (23, 6, 3, 'TRynJUzAZYxk9QEMCohjAw', '2016-12-07 07:25:05', '2016-12-07 07:25:05')
+D, [2016-12-07T02:25:05.259048 #26773] DEBUG -- :   [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+D, [2016-12-07T02:25:05.259556 #26773] DEBUG -- :   [1m[35m (0.1ms)[0m  BEGIN
+D, [2016-12-07T02:25:05.260676 #26773] DEBUG -- :   [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `user_programs` (`user_id`, `program_id`, `order`, `token`, `created_at`, `updated_at`) VALUES (23, 3, 4, 'TRynJUzAZYxk9QEMCohjAw', '2016-12-07 07:25:05', '2016-12-07 07:25:05')[0m
+D, [2016-12-07T02:25:05.261663 #26773] DEBUG -- :   [1m[35m (0.7ms)[0m  COMMIT
+D, [2016-12-07T02:25:05.262173 #26773] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2016-12-07T02:25:05.263033 #26773] DEBUG -- :   [1m[35mSQL (0.2ms)[0m  INSERT INTO `user_programs` (`user_id`, `program_id`, `order`, `token`, `created_at`, `updated_at`) VALUES (23, 9, 5, 'TRynJUzAZYxk9QEMCohjAw', '2016-12-07 07:25:05', '2016-12-07 07:25:05')
+D, [2016-12-07T02:25:05.263696 #26773] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+D, [2016-12-07T02:25:05.264223 #26773] DEBUG -- :   [1m[35m (0.1ms)[0m  BEGIN
+D, [2016-12-07T02:25:05.265059 #26773] DEBUG -- :   [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `user_programs` (`user_id`, `program_id`, `order`, `token`, `created_at`, `updated_at`) VALUES (23, 2, 6, 'TRynJUzAZYxk9QEMCohjAw', '2016-12-07 07:25:05', '2016-12-07 07:25:05')[0m
+D, [2016-12-07T02:25:05.266112 #26773] DEBUG -- :   [1m[35m (0.7ms)[0m  COMMIT
+D, [2016-12-07T02:25:05.266657 #26773] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2016-12-07T02:25:05.267473 #26773] DEBUG -- :   [1m[35mSQL (0.2ms)[0m  INSERT INTO `user_programs` (`user_id`, `program_id`, `order`, `token`, `created_at`, `updated_at`) VALUES (23, 4, 7, 'TRynJUzAZYxk9QEMCohjAw', '2016-12-07 07:25:05', '2016-12-07 07:25:05')
+D, [2016-12-07T02:25:05.268129 #26773] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+D, [2016-12-07T02:25:05.268666 #26773] DEBUG -- :   [1m[35m (0.1ms)[0m  BEGIN
+D, [2016-12-07T02:25:05.269479 #26773] DEBUG -- :   [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `user_programs` (`user_id`, `program_id`, `order`, `token`, `created_at`, `updated_at`) VALUES (23, 12, 8, 'TRynJUzAZYxk9QEMCohjAw', '2016-12-07 07:25:05', '2016-12-07 07:25:05')[0m
+D, [2016-12-07T02:25:05.270666 #26773] DEBUG -- :   [1m[35m (0.8ms)[0m  COMMIT
+D, [2016-12-07T02:25:05.271200 #26773] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2016-12-07T02:25:05.272030 #26773] DEBUG -- :   [1m[35mSQL (0.2ms)[0m  INSERT INTO `user_programs` (`user_id`, `program_id`, `order`, `token`, `created_at`, `updated_at`) VALUES (23, 8, 9, 'TRynJUzAZYxk9QEMCohjAw', '2016-12-07 07:25:05', '2016-12-07 07:25:05')
+D, [2016-12-07T02:25:05.272977 #26773] DEBUG -- :   [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+D, [2016-12-07T02:25:05.273483 #26773] DEBUG -- :   [1m[35m (0.1ms)[0m  BEGIN
+D, [2016-12-07T02:25:05.274328 #26773] DEBUG -- :   [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `user_programs` (`user_id`, `program_id`, `order`, `token`, `created_at`, `updated_at`) VALUES (23, 1, 10, 'TRynJUzAZYxk9QEMCohjAw', '2016-12-07 07:25:05', '2016-12-07 07:25:05')[0m
+D, [2016-12-07T02:25:05.275357 #26773] DEBUG -- :   [1m[35m (0.7ms)[0m  COMMIT
+D, [2016-12-07T02:25:05.275869 #26773] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2016-12-07T02:25:05.276698 #26773] DEBUG -- :   [1m[35mSQL (0.2ms)[0m  INSERT INTO `user_programs` (`user_id`, `program_id`, `order`, `token`, `created_at`, `updated_at`) VALUES (23, 5, 11, 'TRynJUzAZYxk9QEMCohjAw', '2016-12-07 07:25:05', '2016-12-07 07:25:05')
+D, [2016-12-07T02:25:05.277723 #26773] DEBUG -- :   [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+I, [2016-12-07T02:25:05.278800 #26773]  INFO -- : Completed 201 Created in 35ms (Views: 0.9ms | ActiveRecord: 12.0ms)
+I, [2016-12-07T02:25:05.434715 #26773]  INFO -- : Started GET "/" for 172.13.50.136 at 2016-12-07 02:25:05 -0500
+I, [2016-12-07T02:25:05.437143 #26773]  INFO -- : Processing by LoginController#index as HTML
+D, [2016-12-07T02:25:05.439365 #26773] DEBUG -- :   [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`uid` = 'wmorgan2@wisc.edu' LIMIT 1
+I, [2016-12-07T02:25:05.441361 #26773]  INFO -- : Redirected to http://192.241.239.22:3000/session
+I, [2016-12-07T02:25:05.441913 #26773]  INFO -- : Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+I, [2016-12-07T02:25:05.526621 #26773]  INFO -- : Started GET "/session" for 172.13.50.136 at 2016-12-07 02:25:05 -0500
+I, [2016-12-07T02:25:05.527706 #26773]  INFO -- : Processing by ProgramController#index as HTML
+D, [2016-12-07T02:25:05.528784 #26773] DEBUG -- :   [1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`uid` = 'wmorgan2@wisc.edu' LIMIT 1[0m
+D, [2016-12-07T02:25:05.530285 #26773] DEBUG -- :   [1m[35m (0.5ms)[0m  SELECT `users`.`id` FROM `users` WHERE `users`.`email` = 'wmorgan2@wisc.edu'
+D, [2016-12-07T02:25:05.532715 #26773] DEBUG -- :   [1m[36mUserProgram Load (1.9ms)[0m  [1mSELECT  DISTINCT `user_programs`.`created_at` FROM `user_programs` WHERE `user_programs`.`user_id` = 23  ORDER BY created_at DESC LIMIT 1[0m
+D, [2016-12-07T02:25:05.536180 #26773] DEBUG -- :   [1m[35mUserProgram Load (2.0ms)[0m  SELECT programs.id, 
+                                       programs.name,
+                                       programs.name_shorthand, 
+                                       programs.description, 
+                                       programs.launch_text,
+                                       user_programs.display FROM `user_programs` INNER JOIN `users` ON `users`.`id` = `user_programs`.`user_id` INNER JOIN `programs` ON `programs`.`id` = `user_programs`.`program_id` WHERE (user_programs.user_id=23) AND (user_programs.created_at='2016-12-07 07:25:05.000000') AND (user_programs.display=1) AND (( programs.admin = 0 AND (users.admin = 1 OR users.admin = 0)) OR (programs.admin=1 AND users.admin =1))  ORDER BY user_programs.order
+I, [2016-12-07T02:25:05.540143 #26773]  INFO -- :   Rendered program/index.html.erb within layouts/application (6.4ms)
+I, [2016-12-07T02:25:05.541370 #26773]  INFO -- :   Rendered partials/_navigation.html.erb (0.5ms)
+I, [2016-12-07T02:25:05.541650 #26773]  INFO -- :   Rendered partials/_modal.html.erb (0.1ms)
+I, [2016-12-07T02:25:05.541891 #26773]  INFO -- : Completed 200 OK in 14ms (Views: 6.5ms | ActiveRecord: 4.6ms)
+I, [2016-12-07T02:25:06.092671 #26773]  INFO -- : Started GET "/assets/application-6c468062f9d6c164f7187160c33405fe106fff1fd11f00aa9650f2148aa5dd08.js" for 172.13.50.136 at 2016-12-07 02:25:06 -0500
+I, [2016-12-07T02:25:06.100794 #26773]  INFO -- : Started GET "/assets/application-73c1fe533ba1a2a0982e06ebfe094f35a1ba06e3e3af8b6e8fcb114309ed7a8c.css" for 172.13.50.136 at 2016-12-07 02:25:06 -0500
+I, [2016-12-07T02:25:06.207074 #26773]  INFO -- : Started GET "/assets/glbrc-logo-38x38-ab29766fe53fa7c7542c289783ff019df86fe620dde94481a154a23908371c3e.jpg" for 172.13.50.136 at 2016-12-07 02:25:06 -0500
+I, [2016-12-07T02:25:06.459380 #26773]  INFO -- : Started GET "/assets/font-awesome/fontawesome-webfont-2adefcbc041e7d18fcf2d417879dc5a09997aa64d675b7a3c4b6ce33da13f3fe.woff2?v=4.7.0" for 172.13.50.136 at 2016-12-07 02:25:06 -0500
+I, [2016-12-07T02:25:06.701993 #26773]  INFO -- : Started GET "/api/v1/auth/validate_token" for 172.13.50.136 at 2016-12-07 02:25:06 -0500
+I, [2016-12-07T02:25:06.704616 #26773]  INFO -- : Processing by DeviseTokenAuth::TokenValidationsController#validate_token as HTML
+D, [2016-12-07T02:25:06.707051 #26773] DEBUG -- :   [1m[36mUser Load (0.5ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`uid` = 'wmorgan2@wisc.edu' LIMIT 1[0m
+D, [2016-12-07T02:25:06.711243 #26773] DEBUG -- :   [1m[35m (0.3ms)[0m  BEGIN
+D, [2016-12-07T02:25:06.713093 #26773] DEBUG -- :   [1m[36mUser Load (0.7ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 23 LIMIT 1 FOR UPDATE[0m
+D, [2016-12-07T02:25:06.804227 #26773] DEBUG -- :   [1m[35mSQL (0.6ms)[0m  UPDATE `users` SET `tokens` = '{\"Muz6HHlnUISVS8AZdGGceg\":{\"token\":\"$2a$10$JtTYvFXvFw0qk6fse2EgHe2nqLapJvmPOAMTuniwzzLNXvW6o.CrK\",\"expiry\":1482234582,\"last_token\":\"$2a$10$gcAAXK4rI/gDHmMH2so.SuV9WyfUr5jil1aREb2UvJqCQadKPUQn2\",\"updated_at\":\"2016-12-06T06:49:42.919-05:00\"},\"gkF1_tKF8D6f9JZnoo1BWA\":{\"token\":\"$2a$10$UHEdfaJyCWQE//ZVEa0ayuX/K/n.FQX1N.jVzBD9C.A5AodJbdJMy\",\"expiry\":1482242005,\"last_token\":\"$2a$10$puposK83EYNVX9xPuWgcv.iaAdt.Wv/9ANmxS7LjJAjtxYCCsGxgO\",\"updated_at\":\"2016-12-06T08:53:25.423-05:00\"},\"5ENMlUJv8QlOmRMs7ZOwvQ\":{\"token\":\"$2a$10$zzsbIIKqM69aXJlt4UJ2z.qoqsaDNfYIcwe1OiWksSbMp2F4.2RlS\",\"expiry\":1482244218,\"last_token\":\"$2a$10$ZyW9FDchiDo3JGUwVMk5ye3lx8kPXKiOzRe6bIba7aUhY4Ovfw8na\",\"updated_at\":\"2016-12-06T09:30:18.430-05:00\"},\"sILNh3rgzfh_xjooyYevJA\":{\"token\":\"$2a$10$DItcUQu4B7zkuV2E5Tc6EuDT.0GJOS93FbscR5ojH7TBSIdcev5tO\",\"expiry\":1482244311,\"last_token\":\"$2a$10$QUNtvRQkooEP2/8azzkEZ..3yJspsz9zhKCYYxmFKmj0gzQoTAL5m\",\"updated_at\":\"2016-12-06T09:31:53.584-05:00\"},\"90UH5WpOqv1PysanfDHx1A\":{\"token\":\"$2a$10$yfOegTTJJeYT.0ejqsDqf.i1Jg.B2BCd.ioWsqGwtw/eZ.uCUqtya\",\"expiry\":1482262279,\"last_token\":\"$2a$10$Yo7Y1nkVFahSrbmAYdgqb.e6sqjSpurMtuEg4bBzEBe5lmDqSvNcu\",\"updated_at\":\"2016-12-06T14:31:19.653-05:00\"},\"zh0SFvkaDJcG3iZLQsGjtg\":{\"token\":\"$2a$10$clShsJla1UxpH.eFxd.Scuh03ycCc.HONJaZmVlLxFrNA1EyrAAGG\",\"expiry\":1482296475,\"last_token\":\"$2a$10$mEDzGV/TCncn5UuVH.f7Uu7wauBPUhM7eowGK5.3JO6Nr4Vfp5faW\",\"updated_at\":\"2016-12-07T00:01:15.153-05:00\"},\"LXv7BLUOC17097ssUFGn7g\":{\"token\":\"$2a$10$I3F6mKO6WFsdrwIV08NZH.kkGkfxp4ygWS4zq0HgoAp7934d/IDI2\",\"expiry\":1482270433,\"last_token\":\"$2a$10$BMB5.5ylJ11OKLoqm6iXY.Z6W/9FGH/../CegsnD/t6rRU36nRO0u\",\"updated_at\":\"2016-12-06T16:47:13.130-05:00\"},\"va4RX1DK_X6lCXDBw_bm3g\":{\"token\":\"$2a$10$bc087BAzPtoPkx0/fCY.8.Y.osrA.sQaxLkpUKU3Tl1qwC0GTMtFG\",\"expiry\":1482272734,\"last_token\":\"$2a$10$kDA7Y13Ke.sAeUYd0Q14J.LmdIXS8Hibajzote5ybpVKo/lif2w3S\",\"updated_at\":\"2016-12-06T17:25:34.690-05:00\"},\"RVBRMl5mVZmKVQmDarQ0LA\":{\"token\":\"$2a$10$lRbX2NtpMFFkAMFjv5jRmO/pX84dwz5C4ZQA.PVb1wLQQIsr1iIaO\",\"expiry\":1482303804,\"last_token\":\"$2a$10$1V4r3WavWmvFFFtYTu4fcORfOrscSbM7sOarocUHU.S9eU4KN9766\",\"updated_at\":\"2016-12-07T02:03:24.368-05:00\"},\"TRynJUzAZYxk9QEMCohjAw\":{\"token\":\"$2a$10$1GK//1qf.b3ANKceKELN9ueST74CZt1nPdRxLcpWAX2Mhv./nicxy\",\"expiry\":1482305106,\"last_token\":\"$2a$10$KRY4BbjJHVX8bWwiNEWPD.WJ5M8hDM4ZTz15Jd2QmzsH.T2t1gbmG\",\"updated_at\":\"2016-12-07T02:25:06.798-05:00\"}}', `updated_at` = '2016-12-07 07:25:06' WHERE `users`.`id` = 23
+D, [2016-12-07T02:25:06.809042 #26773] DEBUG -- :   [1m[36m (1.6ms)[0m  [1mCOMMIT[0m
+I, [2016-12-07T02:25:06.809248 #26773]  INFO -- : Completed 200 OK in 104ms (Views: 0.8ms | ActiveRecord: 3.6ms)
+I, [2016-12-07T02:25:09.032735 #26773]  INFO -- : Started GET "/assets/angular/templates/modal/_logout-be1a484c90a21603c063d67f001f18166e3d13e2d8228b141dba5bbca1986881.html" for 172.13.50.136 at 2016-12-07 02:25:09 -0500
+I, [2016-12-07T02:25:09.203676 #26773]  INFO -- : Started GET "/" for 172.13.50.136 at 2016-12-07 02:25:09 -0500
+I, [2016-12-07T02:25:09.206230 #26773]  INFO -- : Processing by LoginController#index as HTML
+I, [2016-12-07T02:25:09.209141 #26773]  INFO -- :   Rendered login/index.html.erb within layouts/application (0.1ms)
+I, [2016-12-07T02:25:09.213112 #26773]  INFO -- :   Rendered partials/_navigation.html.erb (1.6ms)
+I, [2016-12-07T02:25:09.214044 #26773]  INFO -- :   Rendered partials/_modal.html.erb (0.3ms)
+I, [2016-12-07T02:25:09.214601 #26773]  INFO -- : Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+I, [2016-12-07T02:25:10.149068 #26773]  INFO -- : Started GET "/assets/angular/templates/modal/_login-6e6db0cd26ab6060e468844bfa4bf2676b21e6dfc25015405801348612be16fd.html" for 172.13.50.136 at 2016-12-07 02:25:10 -0500
+I, [2016-12-07T02:25:28.492006 #26773]  INFO -- : Started POST "/api/v1/auth/sign_in.json" for 172.13.50.136 at 2016-12-07 02:25:28 -0500
+I, [2016-12-07T02:25:28.495584 #26773]  INFO -- : Processing by DeviseTokenAuth::SessionsController#create as JSON
+I, [2016-12-07T02:25:28.495754 #26773]  INFO -- :   Parameters: {"email"=>"wmorgan2@wisc.edu", "password"=>"[FILTERED]"}
+W, [2016-12-07T02:25:28.496312 #26773]  WARN -- : Can't verify CSRF token authenticity
+D, [2016-12-07T02:25:28.501751 #26773] DEBUG -- :   [1m[35mUser Load (1.5ms)[0m  SELECT  `users`.* FROM `users` WHERE (BINARY email = 'wmorgan2@wisc.edu' AND provider='email')  ORDER BY `users`.`id` ASC LIMIT 1
+D, [2016-12-07T02:25:28.847318 #26773] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+D, [2016-12-07T02:25:28.852876 #26773] DEBUG -- :   [1m[35mSQL (0.6ms)[0m  UPDATE `users` SET `tokens` = '{\"Muz6HHlnUISVS8AZdGGceg\":{\"token\":\"$2a$10$JtTYvFXvFw0qk6fse2EgHe2nqLapJvmPOAMTuniwzzLNXvW6o.CrK\",\"expiry\":1482234582,\"last_token\":\"$2a$10$gcAAXK4rI/gDHmMH2so.SuV9WyfUr5jil1aREb2UvJqCQadKPUQn2\",\"updated_at\":\"2016-12-06T06:49:42.919-05:00\"},\"gkF1_tKF8D6f9JZnoo1BWA\":{\"token\":\"$2a$10$UHEdfaJyCWQE//ZVEa0ayuX/K/n.FQX1N.jVzBD9C.A5AodJbdJMy\",\"expiry\":1482242005,\"last_token\":\"$2a$10$puposK83EYNVX9xPuWgcv.iaAdt.Wv/9ANmxS7LjJAjtxYCCsGxgO\",\"updated_at\":\"2016-12-06T08:53:25.423-05:00\"},\"5ENMlUJv8QlOmRMs7ZOwvQ\":{\"token\":\"$2a$10$zzsbIIKqM69aXJlt4UJ2z.qoqsaDNfYIcwe1OiWksSbMp2F4.2RlS\",\"expiry\":1482244218,\"last_token\":\"$2a$10$ZyW9FDchiDo3JGUwVMk5ye3lx8kPXKiOzRe6bIba7aUhY4Ovfw8na\",\"updated_at\":\"2016-12-06T09:30:18.430-05:00\"},\"sILNh3rgzfh_xjooyYevJA\":{\"token\":\"$2a$10$DItcUQu4B7zkuV2E5Tc6EuDT.0GJOS93FbscR5ojH7TBSIdcev5tO\",\"expiry\":1482244311,\"last_token\":\"$2a$10$QUNtvRQkooEP2/8azzkEZ..3yJspsz9zhKCYYxmFKmj0gzQoTAL5m\",\"updated_at\":\"2016-12-06T09:31:53.584-05:00\"},\"90UH5WpOqv1PysanfDHx1A\":{\"token\":\"$2a$10$yfOegTTJJeYT.0ejqsDqf.i1Jg.B2BCd.ioWsqGwtw/eZ.uCUqtya\",\"expiry\":1482262279,\"last_token\":\"$2a$10$Yo7Y1nkVFahSrbmAYdgqb.e6sqjSpurMtuEg4bBzEBe5lmDqSvNcu\",\"updated_at\":\"2016-12-06T14:31:19.653-05:00\"},\"zh0SFvkaDJcG3iZLQsGjtg\":{\"token\":\"$2a$10$clShsJla1UxpH.eFxd.Scuh03ycCc.HONJaZmVlLxFrNA1EyrAAGG\",\"expiry\":1482296475,\"last_token\":\"$2a$10$mEDzGV/TCncn5UuVH.f7Uu7wauBPUhM7eowGK5.3JO6Nr4Vfp5faW\",\"updated_at\":\"2016-12-07T00:01:15.153-05:00\"},\"LXv7BLUOC17097ssUFGn7g\":{\"token\":\"$2a$10$I3F6mKO6WFsdrwIV08NZH.kkGkfxp4ygWS4zq0HgoAp7934d/IDI2\",\"expiry\":1482270433,\"last_token\":\"$2a$10$BMB5.5ylJ11OKLoqm6iXY.Z6W/9FGH/../CegsnD/t6rRU36nRO0u\",\"updated_at\":\"2016-12-06T16:47:13.130-05:00\"},\"va4RX1DK_X6lCXDBw_bm3g\":{\"token\":\"$2a$10$bc087BAzPtoPkx0/fCY.8.Y.osrA.sQaxLkpUKU3Tl1qwC0GTMtFG\",\"expiry\":1482272734,\"last_token\":\"$2a$10$kDA7Y13Ke.sAeUYd0Q14J.LmdIXS8Hibajzote5ybpVKo/lif2w3S\",\"updated_at\":\"2016-12-06T17:25:34.690-05:00\"},\"RVBRMl5mVZmKVQmDarQ0LA\":{\"token\":\"$2a$10$lRbX2NtpMFFkAMFjv5jRmO/pX84dwz5C4ZQA.PVb1wLQQIsr1iIaO\",\"expiry\":1482303804,\"last_token\":\"$2a$10$1V4r3WavWmvFFFtYTu4fcORfOrscSbM7sOarocUHU.S9eU4KN9766\",\"updated_at\":\"2016-12-07T02:03:24.368-05:00\"},\"TRynJUzAZYxk9QEMCohjAw\":{\"token\":\"$2a$10$1GK//1qf.b3ANKceKELN9ueST74CZt1nPdRxLcpWAX2Mhv./nicxy\",\"expiry\":1482305106,\"last_token\":\"$2a$10$KRY4BbjJHVX8bWwiNEWPD.WJ5M8hDM4ZTz15Jd2QmzsH.T2t1gbmG\",\"updated_at\":\"2016-12-07T02:25:06.798-05:00\"},\"dqKUb0JvLFE5CwOJFxSjUg\":{\"token\":\"$2a$10$qV/utOv6MgJQsrbbMRchR.IWwT2TSbNyKwWuKdbh1Ej1TLu2nbb1C\",\"expiry\":1482305128}}', `updated_at` = '2016-12-07 07:25:28' WHERE `users`.`id` = 23
+D, [2016-12-07T02:25:28.857509 #26773] DEBUG -- :   [1m[36m (1.8ms)[0m  [1mCOMMIT[0m
+D, [2016-12-07T02:25:28.858469 #26773] DEBUG -- :   [1m[35m (0.1ms)[0m  BEGIN
+D, [2016-12-07T02:25:28.862229 #26773] DEBUG -- :   [1m[36mSQL (0.3ms)[0m  [1mUPDATE `users` SET `last_sign_in_at` = '2016-12-07 07:24:46', `current_sign_in_at` = '2016-12-07 07:25:28', `sign_in_count` = 85, `updated_at` = '2016-12-07 07:25:28' WHERE `users`.`id` = 23[0m
+D, [2016-12-07T02:25:28.866195 #26773] DEBUG -- :   [1m[35m (1.3ms)[0m  COMMIT
+D, [2016-12-07T02:25:28.899336 #26773] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+D, [2016-12-07T02:25:28.900714 #26773] DEBUG -- :   [1m[35mUser Load (0.5ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 23 LIMIT 1 FOR UPDATE
+D, [2016-12-07T02:25:28.987067 #26773] DEBUG -- :   [1m[36mSQL (0.6ms)[0m  [1mUPDATE `users` SET `tokens` = '{\"gkF1_tKF8D6f9JZnoo1BWA\":{\"token\":\"$2a$10$UHEdfaJyCWQE//ZVEa0ayuX/K/n.FQX1N.jVzBD9C.A5AodJbdJMy\",\"expiry\":1482242005,\"last_token\":\"$2a$10$puposK83EYNVX9xPuWgcv.iaAdt.Wv/9ANmxS7LjJAjtxYCCsGxgO\",\"updated_at\":\"2016-12-06T08:53:25.423-05:00\"},\"5ENMlUJv8QlOmRMs7ZOwvQ\":{\"token\":\"$2a$10$zzsbIIKqM69aXJlt4UJ2z.qoqsaDNfYIcwe1OiWksSbMp2F4.2RlS\",\"expiry\":1482244218,\"last_token\":\"$2a$10$ZyW9FDchiDo3JGUwVMk5ye3lx8kPXKiOzRe6bIba7aUhY4Ovfw8na\",\"updated_at\":\"2016-12-06T09:30:18.430-05:00\"},\"sILNh3rgzfh_xjooyYevJA\":{\"token\":\"$2a$10$DItcUQu4B7zkuV2E5Tc6EuDT.0GJOS93FbscR5ojH7TBSIdcev5tO\",\"expiry\":1482244311,\"last_token\":\"$2a$10$QUNtvRQkooEP2/8azzkEZ..3yJspsz9zhKCYYxmFKmj0gzQoTAL5m\",\"updated_at\":\"2016-12-06T09:31:53.584-05:00\"},\"90UH5WpOqv1PysanfDHx1A\":{\"token\":\"$2a$10$yfOegTTJJeYT.0ejqsDqf.i1Jg.B2BCd.ioWsqGwtw/eZ.uCUqtya\",\"expiry\":1482262279,\"last_token\":\"$2a$10$Yo7Y1nkVFahSrbmAYdgqb.e6sqjSpurMtuEg4bBzEBe5lmDqSvNcu\",\"updated_at\":\"2016-12-06T14:31:19.653-05:00\"},\"zh0SFvkaDJcG3iZLQsGjtg\":{\"token\":\"$2a$10$clShsJla1UxpH.eFxd.Scuh03ycCc.HONJaZmVlLxFrNA1EyrAAGG\",\"expiry\":1482296475,\"last_token\":\"$2a$10$mEDzGV/TCncn5UuVH.f7Uu7wauBPUhM7eowGK5.3JO6Nr4Vfp5faW\",\"updated_at\":\"2016-12-07T00:01:15.153-05:00\"},\"LXv7BLUOC17097ssUFGn7g\":{\"token\":\"$2a$10$I3F6mKO6WFsdrwIV08NZH.kkGkfxp4ygWS4zq0HgoAp7934d/IDI2\",\"expiry\":1482270433,\"last_token\":\"$2a$10$BMB5.5ylJ11OKLoqm6iXY.Z6W/9FGH/../CegsnD/t6rRU36nRO0u\",\"updated_at\":\"2016-12-06T16:47:13.130-05:00\"},\"va4RX1DK_X6lCXDBw_bm3g\":{\"token\":\"$2a$10$bc087BAzPtoPkx0/fCY.8.Y.osrA.sQaxLkpUKU3Tl1qwC0GTMtFG\",\"expiry\":1482272734,\"last_token\":\"$2a$10$kDA7Y13Ke.sAeUYd0Q14J.LmdIXS8Hibajzote5ybpVKo/lif2w3S\",\"updated_at\":\"2016-12-06T17:25:34.690-05:00\"},\"RVBRMl5mVZmKVQmDarQ0LA\":{\"token\":\"$2a$10$lRbX2NtpMFFkAMFjv5jRmO/pX84dwz5C4ZQA.PVb1wLQQIsr1iIaO\",\"expiry\":1482303804,\"last_token\":\"$2a$10$1V4r3WavWmvFFFtYTu4fcORfOrscSbM7sOarocUHU.S9eU4KN9766\",\"updated_at\":\"2016-12-07T02:03:24.368-05:00\"},\"TRynJUzAZYxk9QEMCohjAw\":{\"token\":\"$2a$10$1GK//1qf.b3ANKceKELN9ueST74CZt1nPdRxLcpWAX2Mhv./nicxy\",\"expiry\":1482305106,\"last_token\":\"$2a$10$KRY4BbjJHVX8bWwiNEWPD.WJ5M8hDM4ZTz15Jd2QmzsH.T2t1gbmG\",\"updated_at\":\"2016-12-07T02:25:06.798-05:00\"},\"dqKUb0JvLFE5CwOJFxSjUg\":{\"token\":\"$2a$10$zuP65.dS11/wjlqVnDtDK.K2wN/Rh6i1dXcMoOqUDy0m4HBNKjn7e\",\"expiry\":1482305128,\"last_token\":\"$2a$10$qV/utOv6MgJQsrbbMRchR.IWwT2TSbNyKwWuKdbh1Ej1TLu2nbb1C\",\"updated_at\":\"2016-12-07T02:25:28.981-05:00\"}}', `updated_at` = '2016-12-07 07:25:28' WHERE `users`.`id` = 23[0m
+D, [2016-12-07T02:25:28.992536 #26773] DEBUG -- :   [1m[35m (2.1ms)[0m  COMMIT
+I, [2016-12-07T02:25:28.992763 #26773]  INFO -- : Completed 200 OK in 497ms (Views: 31.9ms | ActiveRecord: 9.5ms)
+I, [2016-12-07T02:25:29.174905 #26773]  INFO -- : Started GET "/" for 172.13.50.136 at 2016-12-07 02:25:29 -0500
+I, [2016-12-07T02:25:29.178140 #26773]  INFO -- : Processing by LoginController#index as HTML
+D, [2016-12-07T02:25:29.181327 #26773] DEBUG -- :   [1m[36mUser Load (1.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`uid` = 'wmorgan2@wisc.edu' LIMIT 1[0m
+I, [2016-12-07T02:25:29.183408 #26773]  INFO -- : Redirected to http://192.241.239.22:3000/session
+I, [2016-12-07T02:25:29.183804 #26773]  INFO -- : Completed 302 Found in 5ms (ActiveRecord: 1.3ms)
+I, [2016-12-07T02:25:29.268118 #26773]  INFO -- : Started GET "/session" for 172.13.50.136 at 2016-12-07 02:25:29 -0500
+I, [2016-12-07T02:25:29.270636 #26773]  INFO -- : Processing by ProgramController#index as HTML
+D, [2016-12-07T02:25:29.272759 #26773] DEBUG -- :   [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`uid` = 'wmorgan2@wisc.edu' LIMIT 1
+D, [2016-12-07T02:25:29.275611 #26773] DEBUG -- :   [1m[36m (0.8ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE `users`.`email` = 'wmorgan2@wisc.edu'[0m
+D, [2016-12-07T02:25:29.277257 #26773] DEBUG -- :   [1m[35mUserProgram Load (0.2ms)[0m  SELECT  DISTINCT `user_programs`.`created_at` FROM `user_programs` WHERE `user_programs`.`user_id` = 23  ORDER BY created_at DESC LIMIT 1
+D, [2016-12-07T02:25:29.287698 #26773] DEBUG -- :   [1m[36mUserProgram Load (6.1ms)[0m  [1mSELECT programs.id, 
+                                       programs.name,
+                                       programs.name_shorthand, 
+                                       programs.description, 
+                                       programs.launch_text,
+                                       user_programs.display FROM `user_programs` INNER JOIN `users` ON `users`.`id` = `user_programs`.`user_id` INNER JOIN `programs` ON `programs`.`id` = `user_programs`.`program_id` WHERE (user_programs.user_id=23) AND (user_programs.created_at='2016-12-07 07:25:05.000000') AND (user_programs.display=1) AND (( programs.admin = 0 AND (users.admin = 1 OR users.admin = 0)) OR (programs.admin=1 AND users.admin =1))  ORDER BY user_programs.order[0m
+I, [2016-12-07T02:25:29.297365 #26773]  INFO -- :   Rendered program/index.html.erb within layouts/application (17.3ms)
+I, [2016-12-07T02:25:29.300788 #26773]  INFO -- :   Rendered partials/_navigation.html.erb (1.5ms)
+I, [2016-12-07T02:25:29.301354 #26773]  INFO -- :   Rendered partials/_modal.html.erb (0.1ms)
+I, [2016-12-07T02:25:29.301840 #26773]  INFO -- : Completed 200 OK in 31ms (Views: 16.5ms | ActiveRecord: 7.4ms)
+I, [2016-12-07T02:25:29.595481 #26773]  INFO -- : Started GET "/assets/application-73c1fe533ba1a2a0982e06ebfe094f35a1ba06e3e3af8b6e8fcb114309ed7a8c.css" for 172.13.50.136 at 2016-12-07 02:25:29 -0500
+I, [2016-12-07T02:25:29.609700 #26773]  INFO -- : Started GET "/assets/application-6c468062f9d6c164f7187160c33405fe106fff1fd11f00aa9650f2148aa5dd08.js" for 172.13.50.136 at 2016-12-07 02:25:29 -0500
+I, [2016-12-07T02:25:29.697055 #26773]  INFO -- : Started GET "/assets/glbrc-logo-38x38-ab29766fe53fa7c7542c289783ff019df86fe620dde94481a154a23908371c3e.jpg" for 172.13.50.136 at 2016-12-07 02:25:29 -0500
+I, [2016-12-07T02:25:29.832190 #26773]  INFO -- : Started GET "/assets/font-awesome/fontawesome-webfont-2adefcbc041e7d18fcf2d417879dc5a09997aa64d675b7a3c4b6ce33da13f3fe.woff2?v=4.7.0" for 172.13.50.136 at 2016-12-07 02:25:29 -0500
+I, [2016-12-07T02:25:30.059603 #26773]  INFO -- : Started GET "/api/v1/auth/validate_token" for 172.13.50.136 at 2016-12-07 02:25:30 -0500
+I, [2016-12-07T02:25:30.062646 #26773]  INFO -- : Processing by DeviseTokenAuth::TokenValidationsController#validate_token as HTML
+D, [2016-12-07T02:25:30.065503 #26773] DEBUG -- :   [1m[35mUser Load (0.5ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`uid` = 'wmorgan2@wisc.edu' LIMIT 1
+D, [2016-12-07T02:25:30.277977 #26773] DEBUG -- :   [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+D, [2016-12-07T02:25:30.280329 #26773] DEBUG -- :   [1m[35mUser Load (0.7ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 23 LIMIT 1 FOR UPDATE
+D, [2016-12-07T02:25:30.297085 #26773] DEBUG -- :   [1m[36mSQL (1.1ms)[0m  [1mUPDATE `users` SET `tokens` = '{\"gkF1_tKF8D6f9JZnoo1BWA\":{\"token\":\"$2a$10$UHEdfaJyCWQE//ZVEa0ayuX/K/n.FQX1N.jVzBD9C.A5AodJbdJMy\",\"expiry\":1482242005,\"last_token\":\"$2a$10$puposK83EYNVX9xPuWgcv.iaAdt.Wv/9ANmxS7LjJAjtxYCCsGxgO\",\"updated_at\":\"2016-12-06T08:53:25.423-05:00\"},\"5ENMlUJv8QlOmRMs7ZOwvQ\":{\"token\":\"$2a$10$zzsbIIKqM69aXJlt4UJ2z.qoqsaDNfYIcwe1OiWksSbMp2F4.2RlS\",\"expiry\":1482244218,\"last_token\":\"$2a$10$ZyW9FDchiDo3JGUwVMk5ye3lx8kPXKiOzRe6bIba7aUhY4Ovfw8na\",\"updated_at\":\"2016-12-06T09:30:18.430-05:00\"},\"sILNh3rgzfh_xjooyYevJA\":{\"token\":\"$2a$10$DItcUQu4B7zkuV2E5Tc6EuDT.0GJOS93FbscR5ojH7TBSIdcev5tO\",\"expiry\":1482244311,\"last_token\":\"$2a$10$QUNtvRQkooEP2/8azzkEZ..3yJspsz9zhKCYYxmFKmj0gzQoTAL5m\",\"updated_at\":\"2016-12-06T09:31:53.584-05:00\"},\"90UH5WpOqv1PysanfDHx1A\":{\"token\":\"$2a$10$yfOegTTJJeYT.0ejqsDqf.i1Jg.B2BCd.ioWsqGwtw/eZ.uCUqtya\",\"expiry\":1482262279,\"last_token\":\"$2a$10$Yo7Y1nkVFahSrbmAYdgqb.e6sqjSpurMtuEg4bBzEBe5lmDqSvNcu\",\"updated_at\":\"2016-12-06T14:31:19.653-05:00\"},\"zh0SFvkaDJcG3iZLQsGjtg\":{\"token\":\"$2a$10$clShsJla1UxpH.eFxd.Scuh03ycCc.HONJaZmVlLxFrNA1EyrAAGG\",\"expiry\":1482296475,\"last_token\":\"$2a$10$mEDzGV/TCncn5UuVH.f7Uu7wauBPUhM7eowGK5.3JO6Nr4Vfp5faW\",\"updated_at\":\"2016-12-07T00:01:15.153-05:00\"},\"LXv7BLUOC17097ssUFGn7g\":{\"token\":\"$2a$10$I3F6mKO6WFsdrwIV08NZH.kkGkfxp4ygWS4zq0HgoAp7934d/IDI2\",\"expiry\":1482270433,\"last_token\":\"$2a$10$BMB5.5ylJ11OKLoqm6iXY.Z6W/9FGH/../CegsnD/t6rRU36nRO0u\",\"updated_at\":\"2016-12-06T16:47:13.130-05:00\"},\"va4RX1DK_X6lCXDBw_bm3g\":{\"token\":\"$2a$10$bc087BAzPtoPkx0/fCY.8.Y.osrA.sQaxLkpUKU3Tl1qwC0GTMtFG\",\"expiry\":1482272734,\"last_token\":\"$2a$10$kDA7Y13Ke.sAeUYd0Q14J.LmdIXS8Hibajzote5ybpVKo/lif2w3S\",\"updated_at\":\"2016-12-06T17:25:34.690-05:00\"},\"RVBRMl5mVZmKVQmDarQ0LA\":{\"token\":\"$2a$10$lRbX2NtpMFFkAMFjv5jRmO/pX84dwz5C4ZQA.PVb1wLQQIsr1iIaO\",\"expiry\":1482303804,\"last_token\":\"$2a$10$1V4r3WavWmvFFFtYTu4fcORfOrscSbM7sOarocUHU.S9eU4KN9766\",\"updated_at\":\"2016-12-07T02:03:24.368-05:00\"},\"TRynJUzAZYxk9QEMCohjAw\":{\"token\":\"$2a$10$1GK//1qf.b3ANKceKELN9ueST74CZt1nPdRxLcpWAX2Mhv./nicxy\",\"expiry\":1482305106,\"last_token\":\"$2a$10$KRY4BbjJHVX8bWwiNEWPD.WJ5M8hDM4ZTz15Jd2QmzsH.T2t1gbmG\",\"updated_at\":\"2016-12-07T02:25:06.798-05:00\"},\"dqKUb0JvLFE5CwOJFxSjUg\":{\"token\":\"$2a$10$zuP65.dS11/wjlqVnDtDK.K2wN/Rh6i1dXcMoOqUDy0m4HBNKjn7e\",\"expiry\":1482305128,\"last_token\":\"$2a$10$qV/utOv6MgJQsrbbMRchR.IWwT2TSbNyKwWuKdbh1Ej1TLu2nbb1C\",\"updated_at\":\"2016-12-07T02:25:30.282-05:00\"}}', `updated_at` = '2016-12-07 07:25:30' WHERE `users`.`id` = 23[0m
+D, [2016-12-07T02:25:30.322599 #26773] DEBUG -- :   [1m[35m (16.5ms)[0m  COMMIT
+I, [2016-12-07T02:25:30.323303 #26773]  INFO -- : Completed 200 OK in 260ms (Views: 0.7ms | ActiveRecord: 19.3ms)
+I, [2016-12-07T02:25:34.576309 #26773]  INFO -- : Started GET "/assets/angular/templates/modal/_logout-be1a484c90a21603c063d67f001f18166e3d13e2d8228b141dba5bbca1986881.html" for 172.13.50.136 at 2016-12-07 02:25:34 -0500
+I, [2016-12-07T02:25:34.755689 #26773]  INFO -- : Started GET "/" for 172.13.50.136 at 2016-12-07 02:25:34 -0500
+I, [2016-12-07T02:25:34.758422 #26773]  INFO -- : Processing by LoginController#index as HTML
+I, [2016-12-07T02:25:34.765613 #26773]  INFO -- :   Rendered login/index.html.erb within layouts/application (0.2ms)
+I, [2016-12-07T02:25:34.771246 #26773]  INFO -- :   Rendered partials/_navigation.html.erb (3.5ms)
+I, [2016-12-07T02:25:34.771738 #26773]  INFO -- :   Rendered partials/_modal.html.erb (0.1ms)
+I, [2016-12-07T02:25:34.772409 #26773]  INFO -- : Completed 200 OK in 14ms (Views: 11.8ms | ActiveRecord: 0.0ms)
+I, [2016-12-07T02:25:35.535125 #26773]  INFO -- : Started GET "/assets/angular/templates/modal/_login-6e6db0cd26ab6060e468844bfa4bf2676b21e6dfc25015405801348612be16fd.html" for 172.13.50.136 at 2016-12-07 02:25:35 -0500
+I, [2016-12-07T02:26:55.698843 #26773]  INFO -- : Started GET "/" for 172.13.50.136 at 2016-12-07 02:26:55 -0500
+I, [2016-12-07T02:26:55.703408 #26773]  INFO -- : Processing by LoginController#index as HTML
+I, [2016-12-07T02:26:55.707157 #26773]  INFO -- :   Rendered login/index.html.erb within layouts/application (0.1ms)
+I, [2016-12-07T02:26:55.711230 #26773]  INFO -- :   Rendered partials/_navigation.html.erb (1.5ms)
+I, [2016-12-07T02:26:55.711725 #26773]  INFO -- :   Rendered partials/_modal.html.erb (0.1ms)
+I, [2016-12-07T02:26:55.712374 #26773]  INFO -- : Completed 200 OK in 9ms (Views: 6.5ms | ActiveRecord: 0.0ms)
+I, [2016-12-07T02:27:45.015546 #26773]  INFO -- : Started GET "/" for 172.13.50.136 at 2016-12-07 02:27:45 -0500
+I, [2016-12-07T02:27:45.018235 #26773]  INFO -- : Processing by LoginController#index as HTML
+I, [2016-12-07T02:27:45.021009 #26773]  INFO -- :   Rendered login/index.html.erb within layouts/application (0.1ms)
+I, [2016-12-07T02:27:45.023953 #26773]  INFO -- :   Rendered partials/_navigation.html.erb (1.1ms)
+I, [2016-12-07T02:27:45.024540 #26773]  INFO -- :   Rendered partials/_modal.html.erb (0.1ms)
+I, [2016-12-07T02:27:45.025048 #26773]  INFO -- : Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+I, [2016-12-07T02:27:45.650530 #26773]  INFO -- : Started GET "/assets/application-73c1fe533ba1a2a0982e06ebfe094f35a1ba06e3e3af8b6e8fcb114309ed7a8c.css" for 172.13.50.136 at 2016-12-07 02:27:45 -0500
+I, [2016-12-07T02:27:45.759327 #26773]  INFO -- : Started GET "/assets/application-6c468062f9d6c164f7187160c33405fe106fff1fd11f00aa9650f2148aa5dd08.js" for 172.13.50.136 at 2016-12-07 02:27:45 -0500
+I, [2016-12-07T02:27:45.765309 #26773]  INFO -- : Started GET "/assets/glbrc-logo-38x38-ab29766fe53fa7c7542c289783ff019df86fe620dde94481a154a23908371c3e.jpg" for 172.13.50.136 at 2016-12-07 02:27:45 -0500
+I, [2016-12-07T02:27:46.310995 #26773]  INFO -- : Started GET "/assets/font-awesome/fontawesome-webfont-2adefcbc041e7d18fcf2d417879dc5a09997aa64d675b7a3c4b6ce33da13f3fe.woff2?v=4.7.0" for 172.13.50.136 at 2016-12-07 02:27:46 -0500
+I, [2016-12-07T02:27:46.613901 #26773]  INFO -- : Started GET "/assets/angular/templates/modal/_login-6e6db0cd26ab6060e468844bfa4bf2676b21e6dfc25015405801348612be16fd.html" for 172.13.50.136 at 2016-12-07 02:27:46 -0500
+I, [2016-12-07T02:27:51.411634 #26773]  INFO -- : Started POST "/api/v1/auth/sign_in.json" for 172.13.50.136 at 2016-12-07 02:27:51 -0500
+I, [2016-12-07T02:27:51.415143 #26773]  INFO -- : Processing by DeviseTokenAuth::SessionsController#create as JSON
+I, [2016-12-07T02:27:51.415279 #26773]  INFO -- :   Parameters: {"email"=>"", "password"=>"[FILTERED]"}
+W, [2016-12-07T02:27:51.415763 #26773]  WARN -- : Can't verify CSRF token authenticity
+D, [2016-12-07T02:27:51.422820 #26773] DEBUG -- :   [1m[36mUser Load (2.6ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE (BINARY email = '' AND provider='email')  ORDER BY `users`.`id` ASC LIMIT 1[0m
+I, [2016-12-07T02:27:51.452946 #26773]  INFO -- : Completed 401 Unauthorized in 37ms (Views: 0.4ms | ActiveRecord: 2.6ms)
+I, [2016-12-07T02:28:01.116040 #26773]  INFO -- : Started POST "/api/v1/auth/sign_in.json" for 172.13.50.136 at 2016-12-07 02:28:01 -0500
+I, [2016-12-07T02:28:01.118066 #26773]  INFO -- : Processing by DeviseTokenAuth::SessionsController#create as JSON
+I, [2016-12-07T02:28:01.118133 #26773]  INFO -- :   Parameters: {"email"=>"wmorgan2@wisc.edu", "password"=>"[FILTERED]"}
+W, [2016-12-07T02:28:01.118382 #26773]  WARN -- : Can't verify CSRF token authenticity
+D, [2016-12-07T02:28:01.121010 #26773] DEBUG -- :   [1m[35mUser Load (0.7ms)[0m  SELECT  `users`.* FROM `users` WHERE (BINARY email = 'wmorgan2@wisc.edu' AND provider='email')  ORDER BY `users`.`id` ASC LIMIT 1
+D, [2016-12-07T02:28:01.284233 #26773] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+D, [2016-12-07T02:28:01.297646 #26773] DEBUG -- :   [1m[35mSQL (0.9ms)[0m  UPDATE `users` SET `tokens` = '{\"gkF1_tKF8D6f9JZnoo1BWA\":{\"token\":\"$2a$10$UHEdfaJyCWQE//ZVEa0ayuX/K/n.FQX1N.jVzBD9C.A5AodJbdJMy\",\"expiry\":1482242005,\"last_token\":\"$2a$10$puposK83EYNVX9xPuWgcv.iaAdt.Wv/9ANmxS7LjJAjtxYCCsGxgO\",\"updated_at\":\"2016-12-06T08:53:25.423-05:00\"},\"5ENMlUJv8QlOmRMs7ZOwvQ\":{\"token\":\"$2a$10$zzsbIIKqM69aXJlt4UJ2z.qoqsaDNfYIcwe1OiWksSbMp2F4.2RlS\",\"expiry\":1482244218,\"last_token\":\"$2a$10$ZyW9FDchiDo3JGUwVMk5ye3lx8kPXKiOzRe6bIba7aUhY4Ovfw8na\",\"updated_at\":\"2016-12-06T09:30:18.430-05:00\"},\"sILNh3rgzfh_xjooyYevJA\":{\"token\":\"$2a$10$DItcUQu4B7zkuV2E5Tc6EuDT.0GJOS93FbscR5ojH7TBSIdcev5tO\",\"expiry\":1482244311,\"last_token\":\"$2a$10$QUNtvRQkooEP2/8azzkEZ..3yJspsz9zhKCYYxmFKmj0gzQoTAL5m\",\"updated_at\":\"2016-12-06T09:31:53.584-05:00\"},\"90UH5WpOqv1PysanfDHx1A\":{\"token\":\"$2a$10$yfOegTTJJeYT.0ejqsDqf.i1Jg.B2BCd.ioWsqGwtw/eZ.uCUqtya\",\"expiry\":1482262279,\"last_token\":\"$2a$10$Yo7Y1nkVFahSrbmAYdgqb.e6sqjSpurMtuEg4bBzEBe5lmDqSvNcu\",\"updated_at\":\"2016-12-06T14:31:19.653-05:00\"},\"zh0SFvkaDJcG3iZLQsGjtg\":{\"token\":\"$2a$10$clShsJla1UxpH.eFxd.Scuh03ycCc.HONJaZmVlLxFrNA1EyrAAGG\",\"expiry\":1482296475,\"last_token\":\"$2a$10$mEDzGV/TCncn5UuVH.f7Uu7wauBPUhM7eowGK5.3JO6Nr4Vfp5faW\",\"updated_at\":\"2016-12-07T00:01:15.153-05:00\"},\"LXv7BLUOC17097ssUFGn7g\":{\"token\":\"$2a$10$I3F6mKO6WFsdrwIV08NZH.kkGkfxp4ygWS4zq0HgoAp7934d/IDI2\",\"expiry\":1482270433,\"last_token\":\"$2a$10$BMB5.5ylJ11OKLoqm6iXY.Z6W/9FGH/../CegsnD/t6rRU36nRO0u\",\"updated_at\":\"2016-12-06T16:47:13.130-05:00\"},\"va4RX1DK_X6lCXDBw_bm3g\":{\"token\":\"$2a$10$bc087BAzPtoPkx0/fCY.8.Y.osrA.sQaxLkpUKU3Tl1qwC0GTMtFG\",\"expiry\":1482272734,\"last_token\":\"$2a$10$kDA7Y13Ke.sAeUYd0Q14J.LmdIXS8Hibajzote5ybpVKo/lif2w3S\",\"updated_at\":\"2016-12-06T17:25:34.690-05:00\"},\"RVBRMl5mVZmKVQmDarQ0LA\":{\"token\":\"$2a$10$lRbX2NtpMFFkAMFjv5jRmO/pX84dwz5C4ZQA.PVb1wLQQIsr1iIaO\",\"expiry\":1482303804,\"last_token\":\"$2a$10$1V4r3WavWmvFFFtYTu4fcORfOrscSbM7sOarocUHU.S9eU4KN9766\",\"updated_at\":\"2016-12-07T02:03:24.368-05:00\"},\"TRynJUzAZYxk9QEMCohjAw\":{\"token\":\"$2a$10$1GK//1qf.b3ANKceKELN9ueST74CZt1nPdRxLcpWAX2Mhv./nicxy\",\"expiry\":1482305106,\"last_token\":\"$2a$10$KRY4BbjJHVX8bWwiNEWPD.WJ5M8hDM4ZTz15Jd2QmzsH.T2t1gbmG\",\"updated_at\":\"2016-12-07T02:25:06.798-05:00\"},\"dqKUb0JvLFE5CwOJFxSjUg\":{\"token\":\"$2a$10$zuP65.dS11/wjlqVnDtDK.K2wN/Rh6i1dXcMoOqUDy0m4HBNKjn7e\",\"expiry\":1482305128,\"last_token\":\"$2a$10$qV/utOv6MgJQsrbbMRchR.IWwT2TSbNyKwWuKdbh1Ej1TLu2nbb1C\",\"updated_at\":\"2016-12-07T02:25:30.282-05:00\"},\"rlIsxIgCkZQz28-xJdidJg\":{\"token\":\"$2a$10$/kB1uhN5zGkypAs9UOU3ku37X2k8WPdV5u19H94SzQ/rlaG0RGRzy\",\"expiry\":1482305281}}', `updated_at` = '2016-12-07 07:28:01' WHERE `users`.`id` = 23
+D, [2016-12-07T02:28:01.306072 #26773] DEBUG -- :   [1m[36m (1.7ms)[0m  [1mCOMMIT[0m
+D, [2016-12-07T02:28:01.307563 #26773] DEBUG -- :   [1m[35m (0.1ms)[0m  BEGIN
+D, [2016-12-07T02:28:01.327815 #26773] DEBUG -- :   [1m[36mSQL (0.5ms)[0m  [1mUPDATE `users` SET `last_sign_in_at` = '2016-12-07 07:25:28', `current_sign_in_at` = '2016-12-07 07:28:01', `sign_in_count` = 86, `updated_at` = '2016-12-07 07:28:01' WHERE `users`.`id` = 23[0m
+D, [2016-12-07T02:28:01.332516 #26773] DEBUG -- :   [1m[35m (1.0ms)[0m  COMMIT
+D, [2016-12-07T02:28:01.333939 #26773] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2016-12-07T02:28:01.335104 #26773] DEBUG -- :   [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 23 LIMIT 1 FOR UPDATE
+D, [2016-12-07T02:28:01.427481 #26773] DEBUG -- :   [1m[36mSQL (0.7ms)[0m  [1mUPDATE `users` SET `tokens` = '{\"5ENMlUJv8QlOmRMs7ZOwvQ\":{\"token\":\"$2a$10$zzsbIIKqM69aXJlt4UJ2z.qoqsaDNfYIcwe1OiWksSbMp2F4.2RlS\",\"expiry\":1482244218,\"last_token\":\"$2a$10$ZyW9FDchiDo3JGUwVMk5ye3lx8kPXKiOzRe6bIba7aUhY4Ovfw8na\",\"updated_at\":\"2016-12-06T09:30:18.430-05:00\"},\"sILNh3rgzfh_xjooyYevJA\":{\"token\":\"$2a$10$DItcUQu4B7zkuV2E5Tc6EuDT.0GJOS93FbscR5ojH7TBSIdcev5tO\",\"expiry\":1482244311,\"last_token\":\"$2a$10$QUNtvRQkooEP2/8azzkEZ..3yJspsz9zhKCYYxmFKmj0gzQoTAL5m\",\"updated_at\":\"2016-12-06T09:31:53.584-05:00\"},\"90UH5WpOqv1PysanfDHx1A\":{\"token\":\"$2a$10$yfOegTTJJeYT.0ejqsDqf.i1Jg.B2BCd.ioWsqGwtw/eZ.uCUqtya\",\"expiry\":1482262279,\"last_token\":\"$2a$10$Yo7Y1nkVFahSrbmAYdgqb.e6sqjSpurMtuEg4bBzEBe5lmDqSvNcu\",\"updated_at\":\"2016-12-06T14:31:19.653-05:00\"},\"zh0SFvkaDJcG3iZLQsGjtg\":{\"token\":\"$2a$10$clShsJla1UxpH.eFxd.Scuh03ycCc.HONJaZmVlLxFrNA1EyrAAGG\",\"expiry\":1482296475,\"last_token\":\"$2a$10$mEDzGV/TCncn5UuVH.f7Uu7wauBPUhM7eowGK5.3JO6Nr4Vfp5faW\",\"updated_at\":\"2016-12-07T00:01:15.153-05:00\"},\"LXv7BLUOC17097ssUFGn7g\":{\"token\":\"$2a$10$I3F6mKO6WFsdrwIV08NZH.kkGkfxp4ygWS4zq0HgoAp7934d/IDI2\",\"expiry\":1482270433,\"last_token\":\"$2a$10$BMB5.5ylJ11OKLoqm6iXY.Z6W/9FGH/../CegsnD/t6rRU36nRO0u\",\"updated_at\":\"2016-12-06T16:47:13.130-05:00\"},\"va4RX1DK_X6lCXDBw_bm3g\":{\"token\":\"$2a$10$bc087BAzPtoPkx0/fCY.8.Y.osrA.sQaxLkpUKU3Tl1qwC0GTMtFG\",\"expiry\":1482272734,\"last_token\":\"$2a$10$kDA7Y13Ke.sAeUYd0Q14J.LmdIXS8Hibajzote5ybpVKo/lif2w3S\",\"updated_at\":\"2016-12-06T17:25:34.690-05:00\"},\"RVBRMl5mVZmKVQmDarQ0LA\":{\"token\":\"$2a$10$lRbX2NtpMFFkAMFjv5jRmO/pX84dwz5C4ZQA.PVb1wLQQIsr1iIaO\",\"expiry\":1482303804,\"last_token\":\"$2a$10$1V4r3WavWmvFFFtYTu4fcORfOrscSbM7sOarocUHU.S9eU4KN9766\",\"updated_at\":\"2016-12-07T02:03:24.368-05:00\"},\"TRynJUzAZYxk9QEMCohjAw\":{\"token\":\"$2a$10$1GK//1qf.b3ANKceKELN9ueST74CZt1nPdRxLcpWAX2Mhv./nicxy\",\"expiry\":1482305106,\"last_token\":\"$2a$10$KRY4BbjJHVX8bWwiNEWPD.WJ5M8hDM4ZTz15Jd2QmzsH.T2t1gbmG\",\"updated_at\":\"2016-12-07T02:25:06.798-05:00\"},\"dqKUb0JvLFE5CwOJFxSjUg\":{\"token\":\"$2a$10$zuP65.dS11/wjlqVnDtDK.K2wN/Rh6i1dXcMoOqUDy0m4HBNKjn7e\",\"expiry\":1482305128,\"last_token\":\"$2a$10$qV/utOv6MgJQsrbbMRchR.IWwT2TSbNyKwWuKdbh1Ej1TLu2nbb1C\",\"updated_at\":\"2016-12-07T02:25:30.282-05:00\"},\"rlIsxIgCkZQz28-xJdidJg\":{\"token\":\"$2a$10$kBY8fjslkHAjUOI49V.GQubUARdi.GyMJcH/GOfeTVZ7TibUD3Jka\",\"expiry\":1482305281,\"last_token\":\"$2a$10$/kB1uhN5zGkypAs9UOU3ku37X2k8WPdV5u19H94SzQ/rlaG0RGRzy\",\"updated_at\":\"2016-12-07T02:28:01.417-05:00\"}}', `updated_at` = '2016-12-07 07:28:01' WHERE `users`.`id` = 23[0m
+D, [2016-12-07T02:28:01.436986 #26773] DEBUG -- :   [1m[35m (1.8ms)[0m  COMMIT
+I, [2016-12-07T02:28:01.437242 #26773]  INFO -- : Completed 200 OK in 319ms (Views: 0.3ms | ActiveRecord: 8.1ms)
+I, [2016-12-07T02:28:01.650953 #26773]  INFO -- : Started GET "/" for 172.13.50.136 at 2016-12-07 02:28:01 -0500
+I, [2016-12-07T02:28:01.652600 #26773]  INFO -- : Processing by LoginController#index as HTML
+D, [2016-12-07T02:28:01.654162 #26773] DEBUG -- :   [1m[36mUser Load (0.7ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`uid` = 'wmorgan2@wisc.edu' LIMIT 1[0m
+I, [2016-12-07T02:28:01.655313 #26773]  INFO -- : Redirected to http://192.241.239.22:3000/session
+I, [2016-12-07T02:28:01.655487 #26773]  INFO -- : Completed 302 Found in 3ms (ActiveRecord: 0.7ms)
+I, [2016-12-07T02:28:01.747183 #26773]  INFO -- : Started GET "/session" for 172.13.50.136 at 2016-12-07 02:28:01 -0500
+I, [2016-12-07T02:28:01.748754 #26773]  INFO -- : Processing by ProgramController#index as HTML
+D, [2016-12-07T02:28:01.750153 #26773] DEBUG -- :   [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`uid` = 'wmorgan2@wisc.edu' LIMIT 1
+D, [2016-12-07T02:28:01.751651 #26773] DEBUG -- :   [1m[36m (0.5ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE `users`.`email` = 'wmorgan2@wisc.edu'[0m
+D, [2016-12-07T02:28:01.752664 #26773] DEBUG -- :   [1m[35mUserProgram Load (0.1ms)[0m  SELECT  DISTINCT `user_programs`.`created_at` FROM `user_programs` WHERE `user_programs`.`user_id` = 23  ORDER BY created_at DESC LIMIT 1
+D, [2016-12-07T02:28:01.760084 #26773] DEBUG -- :   [1m[36mUserProgram Load (5.5ms)[0m  [1mSELECT programs.id, 
+                                       programs.name,
+                                       programs.name_shorthand, 
+                                       programs.description, 
+                                       programs.launch_text,
+                                       user_programs.display FROM `user_programs` INNER JOIN `users` ON `users`.`id` = `user_programs`.`user_id` INNER JOIN `programs` ON `programs`.`id` = `user_programs`.`program_id` WHERE (user_programs.user_id=23) AND (user_programs.created_at='2016-12-07 07:25:05.000000') AND (user_programs.display=1) AND (( programs.admin = 0 AND (users.admin = 1 OR users.admin = 0)) OR (programs.admin=1 AND users.admin =1))  ORDER BY user_programs.order[0m
+I, [2016-12-07T02:28:01.767782 #26773]  INFO -- :   Rendered program/index.html.erb within layouts/application (13.7ms)
+I, [2016-12-07T02:28:01.770450 #26773]  INFO -- :   Rendered partials/_navigation.html.erb (1.2ms)
+I, [2016-12-07T02:28:01.770733 #26773]  INFO -- :   Rendered partials/_modal.html.erb (0.1ms)
+I, [2016-12-07T02:28:01.771003 #26773]  INFO -- : Completed 200 OK in 22ms (Views: 11.8ms | ActiveRecord: 6.3ms)
+I, [2016-12-07T02:28:02.259606 #26773]  INFO -- : Started GET "/assets/application-73c1fe533ba1a2a0982e06ebfe094f35a1ba06e3e3af8b6e8fcb114309ed7a8c.css" for 172.13.50.136 at 2016-12-07 02:28:02 -0500
+I, [2016-12-07T02:28:02.265235 #26773]  INFO -- : Started GET "/assets/application-6c468062f9d6c164f7187160c33405fe106fff1fd11f00aa9650f2148aa5dd08.js" for 172.13.50.136 at 2016-12-07 02:28:02 -0500
+I, [2016-12-07T02:28:02.352219 #26773]  INFO -- : Started GET "/assets/glbrc-logo-38x38-ab29766fe53fa7c7542c289783ff019df86fe620dde94481a154a23908371c3e.jpg" for 172.13.50.136 at 2016-12-07 02:28:02 -0500
+I, [2016-12-07T02:28:02.737447 #26773]  INFO -- : Started GET "/assets/font-awesome/fontawesome-webfont-2adefcbc041e7d18fcf2d417879dc5a09997aa64d675b7a3c4b6ce33da13f3fe.woff2?v=4.7.0" for 172.13.50.136 at 2016-12-07 02:28:02 -0500
+I, [2016-12-07T02:28:02.985627 #26773]  INFO -- : Started GET "/api/v1/auth/validate_token" for 172.13.50.136 at 2016-12-07 02:28:02 -0500
+I, [2016-12-07T02:28:02.988138 #26773]  INFO -- : Processing by DeviseTokenAuth::TokenValidationsController#validate_token as HTML
+D, [2016-12-07T02:28:02.990294 #26773] DEBUG -- :   [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`uid` = 'wmorgan2@wisc.edu' LIMIT 1
+D, [2016-12-07T02:28:03.074017 #26773] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+D, [2016-12-07T02:28:03.075513 #26773] DEBUG -- :   [1m[35mUser Load (0.6ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 23 LIMIT 1 FOR UPDATE
+D, [2016-12-07T02:28:03.085213 #26773] DEBUG -- :   [1m[36mSQL (0.5ms)[0m  [1mUPDATE `users` SET `tokens` = '{\"5ENMlUJv8QlOmRMs7ZOwvQ\":{\"token\":\"$2a$10$zzsbIIKqM69aXJlt4UJ2z.qoqsaDNfYIcwe1OiWksSbMp2F4.2RlS\",\"expiry\":1482244218,\"last_token\":\"$2a$10$ZyW9FDchiDo3JGUwVMk5ye3lx8kPXKiOzRe6bIba7aUhY4Ovfw8na\",\"updated_at\":\"2016-12-06T09:30:18.430-05:00\"},\"sILNh3rgzfh_xjooyYevJA\":{\"token\":\"$2a$10$DItcUQu4B7zkuV2E5Tc6EuDT.0GJOS93FbscR5ojH7TBSIdcev5tO\",\"expiry\":1482244311,\"last_token\":\"$2a$10$QUNtvRQkooEP2/8azzkEZ..3yJspsz9zhKCYYxmFKmj0gzQoTAL5m\",\"updated_at\":\"2016-12-06T09:31:53.584-05:00\"},\"90UH5WpOqv1PysanfDHx1A\":{\"token\":\"$2a$10$yfOegTTJJeYT.0ejqsDqf.i1Jg.B2BCd.ioWsqGwtw/eZ.uCUqtya\",\"expiry\":1482262279,\"last_token\":\"$2a$10$Yo7Y1nkVFahSrbmAYdgqb.e6sqjSpurMtuEg4bBzEBe5lmDqSvNcu\",\"updated_at\":\"2016-12-06T14:31:19.653-05:00\"},\"zh0SFvkaDJcG3iZLQsGjtg\":{\"token\":\"$2a$10$clShsJla1UxpH.eFxd.Scuh03ycCc.HONJaZmVlLxFrNA1EyrAAGG\",\"expiry\":1482296475,\"last_token\":\"$2a$10$mEDzGV/TCncn5UuVH.f7Uu7wauBPUhM7eowGK5.3JO6Nr4Vfp5faW\",\"updated_at\":\"2016-12-07T00:01:15.153-05:00\"},\"LXv7BLUOC17097ssUFGn7g\":{\"token\":\"$2a$10$I3F6mKO6WFsdrwIV08NZH.kkGkfxp4ygWS4zq0HgoAp7934d/IDI2\",\"expiry\":1482270433,\"last_token\":\"$2a$10$BMB5.5ylJ11OKLoqm6iXY.Z6W/9FGH/../CegsnD/t6rRU36nRO0u\",\"updated_at\":\"2016-12-06T16:47:13.130-05:00\"},\"va4RX1DK_X6lCXDBw_bm3g\":{\"token\":\"$2a$10$bc087BAzPtoPkx0/fCY.8.Y.osrA.sQaxLkpUKU3Tl1qwC0GTMtFG\",\"expiry\":1482272734,\"last_token\":\"$2a$10$kDA7Y13Ke.sAeUYd0Q14J.LmdIXS8Hibajzote5ybpVKo/lif2w3S\",\"updated_at\":\"2016-12-06T17:25:34.690-05:00\"},\"RVBRMl5mVZmKVQmDarQ0LA\":{\"token\":\"$2a$10$lRbX2NtpMFFkAMFjv5jRmO/pX84dwz5C4ZQA.PVb1wLQQIsr1iIaO\",\"expiry\":1482303804,\"last_token\":\"$2a$10$1V4r3WavWmvFFFtYTu4fcORfOrscSbM7sOarocUHU.S9eU4KN9766\",\"updated_at\":\"2016-12-07T02:03:24.368-05:00\"},\"TRynJUzAZYxk9QEMCohjAw\":{\"token\":\"$2a$10$1GK//1qf.b3ANKceKELN9ueST74CZt1nPdRxLcpWAX2Mhv./nicxy\",\"expiry\":1482305106,\"last_token\":\"$2a$10$KRY4BbjJHVX8bWwiNEWPD.WJ5M8hDM4ZTz15Jd2QmzsH.T2t1gbmG\",\"updated_at\":\"2016-12-07T02:25:06.798-05:00\"},\"dqKUb0JvLFE5CwOJFxSjUg\":{\"token\":\"$2a$10$zuP65.dS11/wjlqVnDtDK.K2wN/Rh6i1dXcMoOqUDy0m4HBNKjn7e\",\"expiry\":1482305128,\"last_token\":\"$2a$10$qV/utOv6MgJQsrbbMRchR.IWwT2TSbNyKwWuKdbh1Ej1TLu2nbb1C\",\"updated_at\":\"2016-12-07T02:25:30.282-05:00\"},\"rlIsxIgCkZQz28-xJdidJg\":{\"token\":\"$2a$10$kBY8fjslkHAjUOI49V.GQubUARdi.GyMJcH/GOfeTVZ7TibUD3Jka\",\"expiry\":1482305281,\"last_token\":\"$2a$10$/kB1uhN5zGkypAs9UOU3ku37X2k8WPdV5u19H94SzQ/rlaG0RGRzy\",\"updated_at\":\"2016-12-07T02:28:03.077-05:00\"}}', `updated_at` = '2016-12-07 07:28:03' WHERE `users`.`id` = 23[0m
+D, [2016-12-07T02:28:03.093218 #26773] DEBUG -- :   [1m[35m (1.7ms)[0m  COMMIT
+I, [2016-12-07T02:28:03.093479 #26773]  INFO -- : Completed 200 OK in 105ms (Views: 2.2ms | ActiveRecord: 3.2ms)
+I, [2016-12-07T02:28:07.426019 #26773]  INFO -- : Started GET "/assets/angular/templates/modal/program-launch-581bb880f89d312a632c728c9b204a4a0b48eede2bcdcab32ae34165b37f94b3.html" for 172.13.50.136 at 2016-12-07 02:28:07 -0500
+I, [2016-12-07T02:28:07.614945 #26773]  INFO -- : Started GET "/api/v1/programs/5.json" for 172.13.50.136 at 2016-12-07 02:28:07 -0500
+I, [2016-12-07T02:28:07.620890 #26773]  INFO -- : Processing by Api::ProgramsController#show as JSON
+I, [2016-12-07T02:28:07.621031 #26773]  INFO -- :   Parameters: {"id"=>"5"}
+D, [2016-12-07T02:28:07.623744 #26773] DEBUG -- :   [1m[36mProgram Load (0.3ms)[0m  [1mSELECT `programs`.* FROM `programs` WHERE (id = '5')[0m
+I, [2016-12-07T02:28:07.657028 #26773]  INFO -- : Completed 200 OK in 36ms (Views: 31.8ms | ActiveRecord: 2.3ms)
+I, [2016-12-07T02:28:17.397198 #26773]  INFO -- : Started GET "/assets/angular/templates/modal/ui-default-f9a13972a5ef3ba1021163a71cfdebcc4191a6812f6f0fd6be8f7864217fa1e0.html" for 172.13.50.136 at 2016-12-07 02:28:17 -0500
+I, [2016-12-07T02:28:18.519771 #26773]  INFO -- : Started GET "/api/v1/listing.json" for 172.13.50.136 at 2016-12-07 02:28:18 -0500
+I, [2016-12-07T02:28:18.524821 #26773]  INFO -- : Processing by Api::UserProgramsController#index as JSON
+D, [2016-12-07T02:28:18.530385 #26773] DEBUG -- :   [1m[35mUser Load (2.6ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`uid` = 'wmorgan2@wisc.edu' LIMIT 1
+D, [2016-12-07T02:28:18.536128 #26773] DEBUG -- :   [1m[36mUserProgram Load (0.4ms)[0m  [1mSELECT  DISTINCT `user_programs`.`created_at` FROM `user_programs` WHERE `user_programs`.`user_id` = 23  ORDER BY created_at DESC LIMIT 1[0m
+D, [2016-12-07T02:28:18.545566 #26773] DEBUG -- :   [1m[35mUserProgram Load (6.0ms)[0m  SELECT programs.id, 
+                                          programs.name,
+                                          programs.name_shorthand, 
+                                          programs.description, 
+                                          programs.launch_text,
+                                          user_programs.display FROM `user_programs` INNER JOIN `users` ON `users`.`id` = `user_programs`.`user_id` INNER JOIN `programs` ON `programs`.`id` = `user_programs`.`program_id` WHERE (user_programs.user_id=23) AND (user_programs.created_at='2016-12-07 07:25:05.000000') AND (( programs.admin = 0 AND (users.admin = 1 OR users.admin = 0)) OR (programs.admin=1 AND users.admin =1))  ORDER BY user_programs.order
+I, [2016-12-07T02:28:18.558703 #26773]  INFO -- : Completed 200 OK in 33ms (Views: 13.5ms | ActiveRecord: 8.9ms)
+I, [2016-12-07T02:28:18.736277 #26773]  INFO -- : Started GET "/assets/angular/templates/modal/program-listing-dba084c6eee1cf629a67b6a17867444f8075b279dd232bf0358b1ddbfa1d31c0.html" for 172.13.50.136 at 2016-12-07 02:28:18 -0500
+I, [2016-12-07T02:28:25.722126 #26773]  INFO -- : Started POST "/api/v1/listing.json" for 172.13.50.136 at 2016-12-07 02:28:25 -0500
+I, [2016-12-07T02:28:25.727721 #26773]  INFO -- : Processing by Api::UserProgramsController#create as JSON
+I, [2016-12-07T02:28:25.728230 #26773]  INFO -- :   Parameters: {"user_programs"=>[{"program_id"=>5, "user_id"=>23, "display"=>1, "order"=>0, "token"=>"rlIsxIgCkZQz28-xJdidJg"}, {"program_id"=>7, "user_id"=>23, "display"=>1, "order"=>2, "token"=>"rlIsxIgCkZQz28-xJdidJg"}, {"program_id"=>11, "user_id"=>23, "display"=>1, "order"=>3, "token"=>"rlIsxIgCkZQz28-xJdidJg"}, {"program_id"=>6, "user_id"=>23, "display"=>1, "order"=>4, "token"=>"rlIsxIgCkZQz28-xJdidJg"}, {"program_id"=>3, "user_id"=>23, "display"=>1, "order"=>5, "token"=>"rlIsxIgCkZQz28-xJdidJg"}, {"program_id"=>9, "user_id"=>23, "display"=>1, "order"=>6, "token"=>"rlIsxIgCkZQz28-xJdidJg"}, {"program_id"=>2, "user_id"=>23, "display"=>1, "order"=>7, "token"=>"rlIsxIgCkZQz28-xJdidJg"}, {"program_id"=>4, "user_id"=>23, "display"=>1, "order"=>8, "token"=>"rlIsxIgCkZQz28-xJdidJg"}, {"program_id"=>12, "user_id"=>23, "display"=>1, "order"=>9, "token"=>"rlIsxIgCkZQz28-xJdidJg"}, {"program_id"=>8, "user_id"=>23, "display"=>1, "order"=>10, "token"=>"rlIsxIgCkZQz28-xJdidJg"}, {"program_id"=>1, "user_id"=>23, "display"=>1, "order"=>11, "token"=>"rlIsxIgCkZQz28-xJdidJg"}]}
+W, [2016-12-07T02:28:25.728812 #26773]  WARN -- : Can't verify CSRF token authenticity
+D, [2016-12-07T02:28:25.734476 #26773] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+D, [2016-12-07T02:28:25.739744 #26773] DEBUG -- :   [1m[35mSQL (1.1ms)[0m  INSERT INTO `user_programs` (`user_id`, `program_id`, `token`, `created_at`, `updated_at`) VALUES (23, 5, 'rlIsxIgCkZQz28-xJdidJg', '2016-12-07 07:28:25', '2016-12-07 07:28:25')
+D, [2016-12-07T02:28:25.742472 #26773] DEBUG -- :   [1m[36m (1.6ms)[0m  [1mCOMMIT[0m
+D, [2016-12-07T02:28:25.743393 #26773] DEBUG -- :   [1m[35m (0.1ms)[0m  BEGIN
+D, [2016-12-07T02:28:25.745840 #26773] DEBUG -- :   [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `user_programs` (`user_id`, `program_id`, `order`, `token`, `created_at`, `updated_at`) VALUES (23, 7, 2, 'rlIsxIgCkZQz28-xJdidJg', '2016-12-07 07:28:25', '2016-12-07 07:28:25')[0m
+D, [2016-12-07T02:28:25.747024 #26773] DEBUG -- :   [1m[35m (0.8ms)[0m  COMMIT
+D, [2016-12-07T02:28:25.748902 #26773] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2016-12-07T02:28:25.749712 #26773] DEBUG -- :   [1m[35mSQL (0.2ms)[0m  INSERT INTO `user_programs` (`user_id`, `program_id`, `order`, `token`, `created_at`, `updated_at`) VALUES (23, 11, 3, 'rlIsxIgCkZQz28-xJdidJg', '2016-12-07 07:28:25', '2016-12-07 07:28:25')
+D, [2016-12-07T02:28:25.751696 #26773] DEBUG -- :   [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+D, [2016-12-07T02:28:25.752230 #26773] DEBUG -- :   [1m[35m (0.1ms)[0m  BEGIN
+D, [2016-12-07T02:28:25.753485 #26773] DEBUG -- :   [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `user_programs` (`user_id`, `program_id`, `order`, `token`, `created_at`, `updated_at`) VALUES (23, 6, 4, 'rlIsxIgCkZQz28-xJdidJg', '2016-12-07 07:28:25', '2016-12-07 07:28:25')[0m
+D, [2016-12-07T02:28:25.754578 #26773] DEBUG -- :   [1m[35m (0.7ms)[0m  COMMIT
+D, [2016-12-07T02:28:25.755563 #26773] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2016-12-07T02:28:25.756321 #26773] DEBUG -- :   [1m[35mSQL (0.2ms)[0m  INSERT INTO `user_programs` (`user_id`, `program_id`, `order`, `token`, `created_at`, `updated_at`) VALUES (23, 3, 5, 'rlIsxIgCkZQz28-xJdidJg', '2016-12-07 07:28:25', '2016-12-07 07:28:25')
+D, [2016-12-07T02:28:25.757854 #26773] DEBUG -- :   [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+D, [2016-12-07T02:28:25.758419 #26773] DEBUG -- :   [1m[35m (0.1ms)[0m  BEGIN
+D, [2016-12-07T02:28:25.759500 #26773] DEBUG -- :   [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `user_programs` (`user_id`, `program_id`, `order`, `token`, `created_at`, `updated_at`) VALUES (23, 9, 6, 'rlIsxIgCkZQz28-xJdidJg', '2016-12-07 07:28:25', '2016-12-07 07:28:25')[0m
+D, [2016-12-07T02:28:25.760185 #26773] DEBUG -- :   [1m[35m (0.3ms)[0m  COMMIT
+D, [2016-12-07T02:28:25.760720 #26773] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2016-12-07T02:28:25.761809 #26773] DEBUG -- :   [1m[35mSQL (0.2ms)[0m  INSERT INTO `user_programs` (`user_id`, `program_id`, `order`, `token`, `created_at`, `updated_at`) VALUES (23, 2, 7, 'rlIsxIgCkZQz28-xJdidJg', '2016-12-07 07:28:25', '2016-12-07 07:28:25')
+D, [2016-12-07T02:28:25.765842 #26773] DEBUG -- :   [1m[36m (3.6ms)[0m  [1mCOMMIT[0m
+D, [2016-12-07T02:28:25.767017 #26773] DEBUG -- :   [1m[35m (0.1ms)[0m  BEGIN
+D, [2016-12-07T02:28:25.767973 #26773] DEBUG -- :   [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `user_programs` (`user_id`, `program_id`, `order`, `token`, `created_at`, `updated_at`) VALUES (23, 4, 8, 'rlIsxIgCkZQz28-xJdidJg', '2016-12-07 07:28:25', '2016-12-07 07:28:25')[0m
+D, [2016-12-07T02:28:25.770443 #26773] DEBUG -- :   [1m[35m (1.2ms)[0m  COMMIT
+D, [2016-12-07T02:28:25.771031 #26773] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2016-12-07T02:28:25.772180 #26773] DEBUG -- :   [1m[35mSQL (0.2ms)[0m  INSERT INTO `user_programs` (`user_id`, `program_id`, `order`, `token`, `created_at`, `updated_at`) VALUES (23, 12, 9, 'rlIsxIgCkZQz28-xJdidJg', '2016-12-07 07:28:25', '2016-12-07 07:28:25')
+D, [2016-12-07T02:28:25.773432 #26773] DEBUG -- :   [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+D, [2016-12-07T02:28:25.773989 #26773] DEBUG -- :   [1m[35m (0.1ms)[0m  BEGIN
+D, [2016-12-07T02:28:25.774966 #26773] DEBUG -- :   [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `user_programs` (`user_id`, `program_id`, `order`, `token`, `created_at`, `updated_at`) VALUES (23, 8, 10, 'rlIsxIgCkZQz28-xJdidJg', '2016-12-07 07:28:25', '2016-12-07 07:28:25')[0m
+D, [2016-12-07T02:28:25.775631 #26773] DEBUG -- :   [1m[35m (0.3ms)[0m  COMMIT
+D, [2016-12-07T02:28:25.776271 #26773] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2016-12-07T02:28:25.777194 #26773] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  INSERT INTO `user_programs` (`user_id`, `program_id`, `order`, `token`, `created_at`, `updated_at`) VALUES (23, 1, 11, 'rlIsxIgCkZQz28-xJdidJg', '2016-12-07 07:28:25', '2016-12-07 07:28:25')
+D, [2016-12-07T02:28:25.778253 #26773] DEBUG -- :   [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+I, [2016-12-07T02:28:25.779626 #26773]  INFO -- : Completed 201 Created in 51ms (Views: 1.1ms | ActiveRecord: 16.6ms)
+I, [2016-12-07T02:28:25.946655 #26773]  INFO -- : Started GET "/" for 172.13.50.136 at 2016-12-07 02:28:25 -0500
+I, [2016-12-07T02:28:25.949195 #26773]  INFO -- : Processing by LoginController#index as HTML
+D, [2016-12-07T02:28:25.951284 #26773] DEBUG -- :   [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`uid` = 'wmorgan2@wisc.edu' LIMIT 1
+I, [2016-12-07T02:28:25.953354 #26773]  INFO -- : Redirected to http://192.241.239.22:3000/session
+I, [2016-12-07T02:28:25.953729 #26773]  INFO -- : Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+I, [2016-12-07T02:28:26.047616 #26773]  INFO -- : Started GET "/session" for 172.13.50.136 at 2016-12-07 02:28:26 -0500
+I, [2016-12-07T02:28:26.050244 #26773]  INFO -- : Processing by ProgramController#index as HTML
+D, [2016-12-07T02:28:26.053166 #26773] DEBUG -- :   [1m[36mUser Load (0.6ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`uid` = 'wmorgan2@wisc.edu' LIMIT 1[0m
+D, [2016-12-07T02:28:26.056535 #26773] DEBUG -- :   [1m[35m (0.8ms)[0m  SELECT `users`.`id` FROM `users` WHERE `users`.`email` = 'wmorgan2@wisc.edu'
+D, [2016-12-07T02:28:26.062585 #26773] DEBUG -- :   [1m[36mUserProgram Load (4.5ms)[0m  [1mSELECT  DISTINCT `user_programs`.`created_at` FROM `user_programs` WHERE `user_programs`.`user_id` = 23  ORDER BY created_at DESC LIMIT 1[0m
+D, [2016-12-07T02:28:26.074489 #26773] DEBUG -- :   [1m[35mUserProgram Load (7.2ms)[0m  SELECT programs.id, 
+                                       programs.name,
+                                       programs.name_shorthand, 
+                                       programs.description, 
+                                       programs.launch_text,
+                                       user_programs.display FROM `user_programs` INNER JOIN `users` ON `users`.`id` = `user_programs`.`user_id` INNER JOIN `programs` ON `programs`.`id` = `user_programs`.`program_id` WHERE (user_programs.user_id=23) AND (user_programs.created_at='2016-12-07 07:28:25.000000') AND (user_programs.display=1) AND (( programs.admin = 0 AND (users.admin = 1 OR users.admin = 0)) OR (programs.admin=1 AND users.admin =1))  ORDER BY user_programs.order
+I, [2016-12-07T02:28:26.088805 #26773]  INFO -- :   Rendered program/index.html.erb within layouts/application (23.4ms)
+I, [2016-12-07T02:28:26.093186 #26773]  INFO -- :   Rendered partials/_navigation.html.erb (1.3ms)
+I, [2016-12-07T02:28:26.094029 #26773]  INFO -- :   Rendered partials/_modal.html.erb (0.3ms)
+I, [2016-12-07T02:28:26.095067 #26773]  INFO -- : Completed 200 OK in 45ms (Views: 23.6ms | ActiveRecord: 13.0ms)
+I, [2016-12-07T02:28:26.525822 #26773]  INFO -- : Started GET "/assets/application-6c468062f9d6c164f7187160c33405fe106fff1fd11f00aa9650f2148aa5dd08.js" for 172.13.50.136 at 2016-12-07 02:28:26 -0500
+I, [2016-12-07T02:28:26.532778 #26773]  INFO -- : Started GET "/assets/application-73c1fe533ba1a2a0982e06ebfe094f35a1ba06e3e3af8b6e8fcb114309ed7a8c.css" for 172.13.50.136 at 2016-12-07 02:28:26 -0500
+I, [2016-12-07T02:28:26.627106 #26773]  INFO -- : Started GET "/assets/glbrc-logo-38x38-ab29766fe53fa7c7542c289783ff019df86fe620dde94481a154a23908371c3e.jpg" for 172.13.50.136 at 2016-12-07 02:28:26 -0500
+I, [2016-12-07T02:28:27.027156 #26773]  INFO -- : Started GET "/assets/font-awesome/fontawesome-webfont-2adefcbc041e7d18fcf2d417879dc5a09997aa64d675b7a3c4b6ce33da13f3fe.woff2?v=4.7.0" for 172.13.50.136 at 2016-12-07 02:28:27 -0500
+I, [2016-12-07T02:28:27.301726 #26773]  INFO -- : Started GET "/api/v1/auth/validate_token" for 172.13.50.136 at 2016-12-07 02:28:27 -0500
+I, [2016-12-07T02:28:27.304336 #26773]  INFO -- : Processing by DeviseTokenAuth::TokenValidationsController#validate_token as HTML
+D, [2016-12-07T02:28:27.306738 #26773] DEBUG -- :   [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`uid` = 'wmorgan2@wisc.edu' LIMIT 1[0m
+D, [2016-12-07T02:28:27.312342 #26773] DEBUG -- :   [1m[35m (0.3ms)[0m  BEGIN
+D, [2016-12-07T02:28:27.314681 #26773] DEBUG -- :   [1m[36mUser Load (0.9ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 23 LIMIT 1 FOR UPDATE[0m
+D, [2016-12-07T02:28:27.418508 #26773] DEBUG -- :   [1m[35mSQL (0.7ms)[0m  UPDATE `users` SET `tokens` = '{\"5ENMlUJv8QlOmRMs7ZOwvQ\":{\"token\":\"$2a$10$zzsbIIKqM69aXJlt4UJ2z.qoqsaDNfYIcwe1OiWksSbMp2F4.2RlS\",\"expiry\":1482244218,\"last_token\":\"$2a$10$ZyW9FDchiDo3JGUwVMk5ye3lx8kPXKiOzRe6bIba7aUhY4Ovfw8na\",\"updated_at\":\"2016-12-06T09:30:18.430-05:00\"},\"sILNh3rgzfh_xjooyYevJA\":{\"token\":\"$2a$10$DItcUQu4B7zkuV2E5Tc6EuDT.0GJOS93FbscR5ojH7TBSIdcev5tO\",\"expiry\":1482244311,\"last_token\":\"$2a$10$QUNtvRQkooEP2/8azzkEZ..3yJspsz9zhKCYYxmFKmj0gzQoTAL5m\",\"updated_at\":\"2016-12-06T09:31:53.584-05:00\"},\"90UH5WpOqv1PysanfDHx1A\":{\"token\":\"$2a$10$yfOegTTJJeYT.0ejqsDqf.i1Jg.B2BCd.ioWsqGwtw/eZ.uCUqtya\",\"expiry\":1482262279,\"last_token\":\"$2a$10$Yo7Y1nkVFahSrbmAYdgqb.e6sqjSpurMtuEg4bBzEBe5lmDqSvNcu\",\"updated_at\":\"2016-12-06T14:31:19.653-05:00\"},\"zh0SFvkaDJcG3iZLQsGjtg\":{\"token\":\"$2a$10$clShsJla1UxpH.eFxd.Scuh03ycCc.HONJaZmVlLxFrNA1EyrAAGG\",\"expiry\":1482296475,\"last_token\":\"$2a$10$mEDzGV/TCncn5UuVH.f7Uu7wauBPUhM7eowGK5.3JO6Nr4Vfp5faW\",\"updated_at\":\"2016-12-07T00:01:15.153-05:00\"},\"LXv7BLUOC17097ssUFGn7g\":{\"token\":\"$2a$10$I3F6mKO6WFsdrwIV08NZH.kkGkfxp4ygWS4zq0HgoAp7934d/IDI2\",\"expiry\":1482270433,\"last_token\":\"$2a$10$BMB5.5ylJ11OKLoqm6iXY.Z6W/9FGH/../CegsnD/t6rRU36nRO0u\",\"updated_at\":\"2016-12-06T16:47:13.130-05:00\"},\"va4RX1DK_X6lCXDBw_bm3g\":{\"token\":\"$2a$10$bc087BAzPtoPkx0/fCY.8.Y.osrA.sQaxLkpUKU3Tl1qwC0GTMtFG\",\"expiry\":1482272734,\"last_token\":\"$2a$10$kDA7Y13Ke.sAeUYd0Q14J.LmdIXS8Hibajzote5ybpVKo/lif2w3S\",\"updated_at\":\"2016-12-06T17:25:34.690-05:00\"},\"RVBRMl5mVZmKVQmDarQ0LA\":{\"token\":\"$2a$10$lRbX2NtpMFFkAMFjv5jRmO/pX84dwz5C4ZQA.PVb1wLQQIsr1iIaO\",\"expiry\":1482303804,\"last_token\":\"$2a$10$1V4r3WavWmvFFFtYTu4fcORfOrscSbM7sOarocUHU.S9eU4KN9766\",\"updated_at\":\"2016-12-07T02:03:24.368-05:00\"},\"TRynJUzAZYxk9QEMCohjAw\":{\"token\":\"$2a$10$1GK//1qf.b3ANKceKELN9ueST74CZt1nPdRxLcpWAX2Mhv./nicxy\",\"expiry\":1482305106,\"last_token\":\"$2a$10$KRY4BbjJHVX8bWwiNEWPD.WJ5M8hDM4ZTz15Jd2QmzsH.T2t1gbmG\",\"updated_at\":\"2016-12-07T02:25:06.798-05:00\"},\"dqKUb0JvLFE5CwOJFxSjUg\":{\"token\":\"$2a$10$zuP65.dS11/wjlqVnDtDK.K2wN/Rh6i1dXcMoOqUDy0m4HBNKjn7e\",\"expiry\":1482305128,\"last_token\":\"$2a$10$qV/utOv6MgJQsrbbMRchR.IWwT2TSbNyKwWuKdbh1Ej1TLu2nbb1C\",\"updated_at\":\"2016-12-07T02:25:30.282-05:00\"},\"rlIsxIgCkZQz28-xJdidJg\":{\"token\":\"$2a$10$IHjRqcrAxBZPCj1zW4GWKu8QFFZ.9EFvxM2K9Nq/jiIMkW8rOBJ7.\",\"expiry\":1482305307,\"last_token\":\"$2a$10$kBY8fjslkHAjUOI49V.GQubUARdi.GyMJcH/GOfeTVZ7TibUD3Jka\",\"updated_at\":\"2016-12-07T02:28:27.411-05:00\"}}', `updated_at` = '2016-12-07 07:28:27' WHERE `users`.`id` = 23
+D, [2016-12-07T02:28:27.438340 #26773] DEBUG -- :   [1m[36m (5.4ms)[0m  [1mCOMMIT[0m
+I, [2016-12-07T02:28:27.439014 #26773]  INFO -- : Completed 200 OK in 134ms (Views: 0.8ms | ActiveRecord: 7.6ms)
+I, [2016-12-07T02:30:03.734369 #26773]  INFO -- : Started GET "/assets/angular/templates/modal/_recent-payroll-cef36f0236c4961970ccd868f9c12736d45993b2feaa030ca8c216cdb2ef37c2.html" for 172.13.50.136 at 2016-12-07 02:30:03 -0500
+I, [2016-12-07T02:30:09.609845 #26773]  INFO -- : Started GET "/assets/angular/templates/modal/ui-default-f9a13972a5ef3ba1021163a71cfdebcc4191a6812f6f0fd6be8f7864217fa1e0.html" for 172.13.50.136 at 2016-12-07 02:30:09 -0500

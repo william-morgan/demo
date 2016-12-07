@@ -1,0 +1,33 @@
+{:uriI"§file://app/assets/javascripts/angular/templates/modal/_course-search-results.html?type=text/html&id=89d5faf77c9dd455a4a8a030b8e1caeef78f17cba5c8f769a2a68477679f6ddd:ET:load_pathI"app/assets/javascripts;T:filenameI"Oapp/assets/javascripts/angular/templates/modal/_course-search-results.html;T:	nameI"3angular/templates/modal/_course-search-results;T:logical_pathI"8angular/templates/modal/_course-search-results.html;T:content_typeI"text/html;T:sourceI"X      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="modal-title-container">
+        	<h5 class="modal-title-loading">Searching for <mark>{{ q }}</mark>...</h5>
+        	<h5 class="modal-title">{{title}} for <mark>{{ q }}</mark>:</h5 ng-title>
+        </div>
+      </div>
+      <div class="modal-body">
+		<div class="modal-view-loading loader"></div>
+		<div class="modal-view" ng-view>
+			<p><strong>URI Encode:</strong> <mark>/?q={{ q | encodeURIComponent }}</mark></p>
+			<p><strong>{{ random_results }} Query Results:</strong></p>
+			<div class="search-results">
+				<ul>
+					<li>Matched <mark>{{ q }}</mark> in {{ random_one }} academic courses</li>
+					<li>{{ random_inflection }}  courses have <mark>{{ q }}</mark> in syllabus topics</li>
+					<li>Referenced <mark>{{ q }}</mark> in {{ random_two }}  academic journals</li>
+					<li>Found <mark>{{ q }}</mark> in {{ random_three }}  research publications</li>
+					<li>Found {{ random_four }}  questions regarding <mark>{{ q }}</mark> in online discussions</li>
+				</ul>
+			</div>
+		</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" id="modal-close" data-dismiss="modal">Exit</button>
+      </div>;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"]file-digest://app/assets/javascripts/angular/templates/modal/_course-search-results.html;TTF:charsetI"
+utf-8;F:digest"%Ê…≥t-ˆÍﬂÚHÍI‘˚ˇ⁄—ŸwK[î¡	‰Â:lengthiX:dependencies_digest"%Áñ’ÈPçn‘KZõ<æeª[ú
+Î"”åv˚4StÓ;:idI"E89d5faf77c9dd455a4a8a030b8e1caeef78f17cba5c8f769a2a68477679f6ddd;F:
+mtimel+ßÆGX

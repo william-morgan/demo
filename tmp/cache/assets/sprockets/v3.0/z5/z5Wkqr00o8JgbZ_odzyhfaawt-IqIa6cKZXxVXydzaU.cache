@@ -1,29 +1,0 @@
-{:uriI"úfile://app/assets/javascripts/angular/templates/modal/program-launch.html?type=text/html&id=a4ff79a68e8146f2b990335239d430ccd048cfcaeb2dbd1bb4e6e251efa02ab0:ET:load_pathI"app/assets/javascripts;T:filenameI"Gapp/assets/javascripts/angular/templates/modal/program-launch.html;T:	nameI"+angular/templates/modal/program-launch;T:logical_pathI"0angular/templates/modal/program-launch.html;T:content_typeI"text/html;T:sourceI"D      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <div class="modal-title-container">
-        	<h5 class="modal-title-loading">Loading {{ title_loading }}...</h5>
-        	<h5 class="modal-title"><i class="fa fa-{{ program.icon }}"></i> {{ title_loaded }}</h5 ng-title>
-        </div>
-      </div>
-      <div class="modal-body">
-		<div class="modal-view-loading loader"></div>
-		<div class="modal-view" ng-view>
-			<ul>
-				<li>id: <mark>{{ program.id }}</mark></li>
-				<li>url: <mark>NULL</mark></li>
-				<li>name: <mark>{{ program.name }}</mark></li>
-				<li>icon: <mark>fa-{{ program.icon }}</mark></li>
-				<li>description: <mark>{{ program.html }}</mark></li>
-			</ul>
-		</div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" id="modal-action" disabled>Launch</button>
-        <button type="button" class="btn btn-secondary" id="modal-close" data-dismiss="modal">Close</button>
-      </div>;T:metadata{	:dependencieso:Set:
-@hash}
-I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"Ufile-digest://app/assets/javascripts/angular/templates/modal/program-launch.html;TTF:charsetI"
-utf-8;F:digest"%–ä”o-B«–8}ó˙ì'zıS=C≠ÀΩ6ﬂW‰,:lengthiD:dependencies_digest"%·v˚nˇvHQ·^ÛÉ/xêbRÈ˝Pà<jÊÒ :idI"Ea4ff79a68e8146f2b990335239d430ccd048cfcaeb2dbd1bb4e6e251efa02ab0;F:
-mtimel+M{FX

@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     end
   end
   root to: "login#index"
-  get '/home' => "program#index"
+  get '/session' => "program#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

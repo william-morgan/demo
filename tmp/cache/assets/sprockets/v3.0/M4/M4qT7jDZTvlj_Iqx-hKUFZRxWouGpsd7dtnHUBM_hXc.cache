@@ -1,35 +1,0 @@
-{:uriI"ùfile://app/assets/javascripts/angular/templates/modal/_recent-payroll.html?type=text/html&id=e79375882c65d8c331eee682fc0fa515f956bc8dd5a6c4023259d4cd86c543d0:ET:load_pathI"app/assets/javascripts;T:filenameI"Happ/assets/javascripts/angular/templates/modal/_recent-payroll.html;T:	nameI",angular/templates/modal/_recent-payroll;T:logical_pathI"1angular/templates/modal/_recent-payroll.html;T:content_typeI"text/html;T:sourceI"e      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <div class="modal-title-container">
-        	<h5 class="modal-title-loading">Loading {{ title }} Activity...</h5>
-        	<h5 class="modal-title" ng-title>{{ title }}</h5 ng-title>
-        </div>
-      </div>
-      <div class="modal-body">
-		<div class="modal-view-loading loader"></div>
-		<div class="modal-view" ng-view>
-			<span>Detailed Payment Activity</span>
-			<ul class="program-highlighted-text">
-			 <li><a href="#">2016-05-01</a><img src="http://findicons.com/files/icons/977/rrze/48/excel.png" height="22"></li>
-			 <li><a href="#">2016-04-01</a><img src="http://findicons.com/files/icons/977/rrze/48/excel.png" height="22"></li>
-			 <li><a href="#">2016-03-01</a><img src="http://findicons.com/files/icons/977/rrze/48/excel.png" height="22"></li>
-			 <li><a href="#">2016-02-01</a><img src="http://findicons.com/files/icons/977/rrze/48/excel.png" height="22"></li>
-			 <li><a href="#">2016-01-01</a><img src="http://findicons.com/files/icons/977/rrze/48/excel.png" height="22"></li>
-			</ul>
-		</div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" id="modal-close" data-dismiss="modal">Close</button>
-      </div>
-
-
-
-
-;T:metadata{	:dependencieso:Set:
-@hash}
-I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"Vfile-digest://app/assets/javascripts/angular/templates/modal/_recent-payroll.html;TTF:charsetI"
-utf-8;F:digest"%SŸ¯Ù•ö÷ÛN5B∏;πı£√˘^Z|K-;¯√tu:lengthie:dependencies_digest"%6Ë¥2˜ˇD\àIé$ô»Ç≈
-R‹∂ßbßÄ—8:idI"Ee79375882c65d8c331eee682fc0fa515f956bc8dd5a6c4023259d4cd86c543d0;F:
-mtimel+·sCX

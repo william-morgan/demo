@@ -1,0 +1,204 @@
+I, [2016-12-07T03:12:01.988587 #29032]  INFO -- : Refreshing Gem list
+I, [2016-12-07T03:12:04.749395 #29032]  INFO -- : listening on addr=/var/glbrc/demo/log/shared/sockets/unicorn.sock fd=12
+I, [2016-12-07T03:12:04.749577 #29032]  INFO -- : worker=0 spawning...
+I, [2016-12-07T03:12:04.751146 #29032]  INFO -- : worker=1 spawning...
+I, [2016-12-07T03:12:04.752020 #29040]  INFO -- : worker=0 spawned pid=29040
+I, [2016-12-07T03:12:04.752175 #29040]  INFO -- : worker=0 ready
+I, [2016-12-07T03:12:04.753850 #29032]  INFO -- : master process ready
+I, [2016-12-07T03:12:04.759973 #29043]  INFO -- : worker=1 spawned pid=29043
+I, [2016-12-07T03:12:04.760232 #29043]  INFO -- : worker=1 ready
+ArgumentError: Already running on PID:29032 (or pid=/var/glbrc/demo/log/shared/pids/unicorn.pid is stale)
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:195:in `pid='
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:127:in `start'
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/bin/unicorn:126:in `<top (required)>'
+  /root/.rbenv/versions/2.3.1/bin/unicorn:23:in `load'
+  /root/.rbenv/versions/2.3.1/bin/unicorn:23:in `<top (required)>'
+ArgumentError: Already running on PID:29032 (or pid=/var/glbrc/demo/log/shared/pids/unicorn.pid is stale)
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:195:in `pid='
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:127:in `start'
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/bin/unicorn:126:in `<top (required)>'
+  /root/.rbenv/versions/2.3.1/bin/unicorn:23:in `load'
+  /root/.rbenv/versions/2.3.1/bin/unicorn:23:in `<top (required)>'
+ArgumentError: Already running on PID:29032 (or pid=/var/glbrc/demo/log/shared/pids/unicorn.pid is stale)
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:195:in `pid='
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:127:in `start'
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/bin/unicorn:126:in `<top (required)>'
+  /root/.rbenv/versions/2.3.1/bin/unicorn:23:in `load'
+  /root/.rbenv/versions/2.3.1/bin/unicorn:23:in `<top (required)>'
+I, [2016-12-07T03:18:04.210914 #29288]  INFO -- : Refreshing Gem list
+E, [2016-12-07T03:18:06.725738 #29288] ERROR -- : adding listener failed addr=/var/glbrc/demo/log/shared/sockets/unicorn.sock (in use)
+E, [2016-12-07T03:18:06.725937 #29288] ERROR -- : retrying in 0.5 seconds (4 tries left)
+E, [2016-12-07T03:18:07.228256 #29288] ERROR -- : adding listener failed addr=/var/glbrc/demo/log/shared/sockets/unicorn.sock (in use)
+E, [2016-12-07T03:18:07.228549 #29288] ERROR -- : retrying in 0.5 seconds (3 tries left)
+E, [2016-12-07T03:18:07.729517 #29288] ERROR -- : adding listener failed addr=/var/glbrc/demo/log/shared/sockets/unicorn.sock (in use)
+E, [2016-12-07T03:18:07.729722 #29288] ERROR -- : retrying in 0.5 seconds (2 tries left)
+E, [2016-12-07T03:18:08.231001 #29288] ERROR -- : adding listener failed addr=/var/glbrc/demo/log/shared/sockets/unicorn.sock (in use)
+E, [2016-12-07T03:18:08.231264 #29288] ERROR -- : retrying in 0.5 seconds (1 tries left)
+E, [2016-12-07T03:18:08.732063 #29288] ERROR -- : adding listener failed addr=/var/glbrc/demo/log/shared/sockets/unicorn.sock (in use)
+E, [2016-12-07T03:18:08.732198 #29288] ERROR -- : retrying in 0.5 seconds (0 tries left)
+E, [2016-12-07T03:18:09.232968 #29288] ERROR -- : adding listener failed addr=/var/glbrc/demo/log/shared/sockets/unicorn.sock (in use)
+Errno::EADDRINUSE: Address already in use - connect(2) for /var/glbrc/demo/log/shared/sockets/unicorn.sock
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/socket_helper.rb:122:in `initialize'
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/socket_helper.rb:122:in `new'
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/socket_helper.rb:122:in `bind_listen'
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:231:in `listen'
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:808:in `block in bind_new_listeners!'
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:808:in `each'
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:808:in `bind_new_listeners!'
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:130:in `start'
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/bin/unicorn:126:in `<top (required)>'
+  /root/.rbenv/versions/2.3.1/bin/unicorn:23:in `load'
+  /root/.rbenv/versions/2.3.1/bin/unicorn:23:in `<top (required)>'
+I, [2016-12-07T03:19:37.327089 #29343]  INFO -- : Refreshing Gem list
+I, [2016-12-07T03:19:39.321279 #29343]  INFO -- : listening on addr=/var/glbrc/demo/log/shared/sockets/unicorn.sock fd=12
+I, [2016-12-07T03:19:39.321474 #29343]  INFO -- : worker=0 spawning...
+I, [2016-12-07T03:19:39.323831 #29343]  INFO -- : worker=1 spawning...
+I, [2016-12-07T03:19:39.325340 #29351]  INFO -- : worker=0 spawned pid=29351
+I, [2016-12-07T03:19:39.325487 #29351]  INFO -- : worker=0 ready
+I, [2016-12-07T03:19:39.327166 #29343]  INFO -- : master process ready
+I, [2016-12-07T03:19:39.333684 #29354]  INFO -- : worker=1 spawned pid=29354
+I, [2016-12-07T03:19:39.333894 #29354]  INFO -- : worker=1 ready
+I, [2016-12-07T03:24:43.811036 #29536]  INFO -- : Refreshing Gem list
+I, [2016-12-07T03:24:46.319724 #29536]  INFO -- : listening on addr=/var/glbrc/demo/log/shared/sockets/unicorn.sock fd=12
+I, [2016-12-07T03:24:46.319915 #29536]  INFO -- : worker=0 spawning...
+I, [2016-12-07T03:24:46.322146 #29536]  INFO -- : worker=1 spawning...
+I, [2016-12-07T03:24:46.323511 #29544]  INFO -- : worker=0 spawned pid=29544
+I, [2016-12-07T03:24:46.323698 #29544]  INFO -- : worker=0 ready
+I, [2016-12-07T03:24:46.325605 #29536]  INFO -- : master process ready
+I, [2016-12-07T03:24:46.333846 #29547]  INFO -- : worker=1 spawned pid=29547
+I, [2016-12-07T03:24:46.334266 #29547]  INFO -- : worker=1 ready
+ArgumentError: Already running on PID:29536 (or pid=/var/glbrc/demo/log/shared/pids/unicorn.pid is stale)
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:195:in `pid='
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:127:in `start'
+  /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/bin/unicorn:126:in `<top (required)>'
+  /root/.rbenv/versions/2.3.1/bin/unicorn:23:in `load'
+  /root/.rbenv/versions/2.3.1/bin/unicorn:23:in `<top (required)>'
+I, [2016-12-07T03:32:52.222958 #29767]  INFO -- : Refreshing Gem list
+I, [2016-12-07T03:32:54.687659 #29767]  INFO -- : listening on addr=/var/glbrc/demo/log/shared/sockets/unicorn.sock fd=12
+I, [2016-12-07T03:32:54.687868 #29767]  INFO -- : worker=0 spawning...
+I, [2016-12-07T03:32:54.690391 #29767]  INFO -- : worker=1 spawning...
+I, [2016-12-07T03:32:54.691331 #29775]  INFO -- : worker=0 spawned pid=29775
+I, [2016-12-07T03:32:54.691491 #29775]  INFO -- : worker=0 ready
+I, [2016-12-07T03:32:54.693156 #29767]  INFO -- : master process ready
+I, [2016-12-07T03:32:54.700901 #29778]  INFO -- : worker=1 spawned pid=29778
+I, [2016-12-07T03:32:54.701220 #29778]  INFO -- : worker=1 ready
+I, [2016-12-07T03:34:41.411826 #29890]  INFO -- : Refreshing Gem list
+I, [2016-12-07T03:34:44.339513 #29890]  INFO -- : listening on addr=/var/glbrc/demo/log/shared/sockets/unicorn.sock fd=12
+I, [2016-12-07T03:34:44.340121 #29890]  INFO -- : worker=0 spawning...
+I, [2016-12-07T03:34:44.343394 #29890]  INFO -- : worker=1 spawning...
+I, [2016-12-07T03:34:44.346777 #29890]  INFO -- : master process ready
+I, [2016-12-07T03:34:44.353855 #29898]  INFO -- : worker=0 spawned pid=29898
+I, [2016-12-07T03:34:44.354240 #29898]  INFO -- : worker=0 ready
+I, [2016-12-07T03:34:44.359263 #29901]  INFO -- : worker=1 spawned pid=29901
+I, [2016-12-07T03:34:44.359601 #29901]  INFO -- : worker=1 ready
+I, [2016-12-07T03:36:55.452746 #29890]  INFO -- : reaped #<Process::Status: pid 29898 exit 0> worker=0
+I, [2016-12-07T03:36:55.453319 #29890]  INFO -- : reaped #<Process::Status: pid 29901 exit 0> worker=1
+I, [2016-12-07T03:36:55.453670 #29890]  INFO -- : master complete
+I, [2016-12-07T03:37:59.423505 #29978]  INFO -- : Refreshing Gem list
+I, [2016-12-07T03:38:02.492817 #29978]  INFO -- : listening on addr=/var/glbrc/demo/log/shared/sockets/unicorn.sock fd=12
+I, [2016-12-07T03:38:02.493282 #29978]  INFO -- : worker=0 spawning...
+I, [2016-12-07T03:38:02.495781 #29978]  INFO -- : worker=1 spawning...
+I, [2016-12-07T03:38:02.497786 #29978]  INFO -- : master process ready
+I, [2016-12-07T03:38:02.505313 #29986]  INFO -- : worker=0 spawned pid=29986
+I, [2016-12-07T03:38:02.505860 #29986]  INFO -- : worker=0 ready
+I, [2016-12-07T03:38:02.509025 #29989]  INFO -- : worker=1 spawned pid=29989
+I, [2016-12-07T03:38:02.509841 #29989]  INFO -- : worker=1 ready
+I, [2016-12-07T03:40:23.592702 #30346]  INFO -- : Refreshing Gem list
+/root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/mysql2-0.4.5/lib/mysql2/client.rb:89:in `connect': Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (111) (Mysql2::Error)
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/mysql2-0.4.5/lib/mysql2/client.rb:89:in `initialize'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activerecord-4.2.6/lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `new'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activerecord-4.2.6/lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `mysql2_connection'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activerecord-4.2.6/lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activerecord-4.2.6/lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activerecord-4.2.6/lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activerecord-4.2.6/lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/2.3.0/monitor.rb:214:in `mon_synchronize'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activerecord-4.2.6/lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activerecord-4.2.6/lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/2.3.0/monitor.rb:214:in `mon_synchronize'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activerecord-4.2.6/lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activerecord-4.2.6/lib/active_record/connection_adapters/abstract/connection_pool.rb:571:in `retrieve_connection'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activerecord-4.2.6/lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activerecord-4.2.6/lib/active_record/connection_handling.rb:87:in `connection'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activerecord-4.2.6/lib/active_record/model_schema.rb:230:in `table_exists?'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/devise_token_auth-0.1.39/app/models/devise_token_auth/concerns/user.rb:98:in `tokens_has_json_column_type?'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/devise_token_auth-0.1.39/app/models/devise_token_auth/concerns/user.rb:26:in `block in <module:User>'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activesupport-4.2.6/lib/active_support/concern.rb:120:in `class_eval'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activesupport-4.2.6/lib/active_support/concern.rb:120:in `append_features'
+	from /var/glbrc/demo/app/models/user.rb:8:in `include'
+	from /var/glbrc/demo/app/models/user.rb:8:in `<class:User>'
+	from /var/glbrc/demo/app/models/user.rb:1:in `<top (required)>'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:274:in `require'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:274:in `block in require'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:240:in `load_dependency'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:274:in `require'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:360:in `require_or_load'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:494:in `load_missing_constant'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:184:in `const_missing'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activesupport-4.2.6/lib/active_support/inflector/methods.rb:261:in `const_get'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activesupport-4.2.6/lib/active_support/inflector/methods.rb:261:in `block in constantize'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activesupport-4.2.6/lib/active_support/inflector/methods.rb:259:in `each'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activesupport-4.2.6/lib/active_support/inflector/methods.rb:259:in `inject'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activesupport-4.2.6/lib/active_support/inflector/methods.rb:259:in `constantize'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:566:in `get'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:597:in `constantize'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/devise-4.2.0/lib/devise.rb:301:in `get'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/devise-4.2.0/lib/devise/mapping.rb:81:in `to'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/devise-4.2.0/lib/devise/mapping.rb:76:in `modules'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/devise-4.2.0/lib/devise/mapping.rb:93:in `routes'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/devise-4.2.0/lib/devise/mapping.rb:160:in `default_used_route'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/devise-4.2.0/lib/devise/mapping.rb:70:in `initialize'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/devise-4.2.0/lib/devise.rb:331:in `new'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/devise-4.2.0/lib/devise.rb:331:in `add_mapping'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/devise-4.2.0/lib/devise/rails/routes.rb:241:in `block in devise_for'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/devise-4.2.0/lib/devise/rails/routes.rb:240:in `each'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/devise-4.2.0/lib/devise/rails/routes.rb:240:in `devise_for'
+	from /var/glbrc/demo/config/routes.rb:2:in `block in <top (required)>'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/routing/route_set.rb:432:in `instance_exec'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/routing/route_set.rb:432:in `eval_block'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/routing/route_set.rb:410:in `draw'
+	from /var/glbrc/demo/config/routes.rb:1:in `<top (required)>'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:268:in `load'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:268:in `block in load'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:240:in `load_dependency'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:268:in `load'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-4.2.6/lib/rails/application/routes_reloader.rb:40:in `block in load_paths'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-4.2.6/lib/rails/application/routes_reloader.rb:40:in `each'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-4.2.6/lib/rails/application/routes_reloader.rb:40:in `load_paths'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-4.2.6/lib/rails/application/routes_reloader.rb:16:in `reload!'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-4.2.6/lib/rails/application.rb:170:in `reload_routes!'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/devise-4.2.0/lib/devise/rails.rb:15:in `block in <class:Engine>'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activesupport-4.2.6/lib/active_support/lazy_load_hooks.rb:36:in `execute_hook'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activesupport-4.2.6/lib/active_support/lazy_load_hooks.rb:45:in `block in run_load_hooks'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activesupport-4.2.6/lib/active_support/lazy_load_hooks.rb:44:in `each'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activesupport-4.2.6/lib/active_support/lazy_load_hooks.rb:44:in `run_load_hooks'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-4.2.6/lib/rails/application/finisher.rb:55:in `block in <module:Finisher>'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-4.2.6/lib/rails/initializable.rb:30:in `instance_exec'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-4.2.6/lib/rails/initializable.rb:30:in `run'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-4.2.6/lib/rails/initializable.rb:55:in `block in run_initializers'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/2.3.0/tsort.rb:228:in `block in tsort_each'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/2.3.0/tsort.rb:350:in `block (2 levels) in each_strongly_connected_component'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/2.3.0/tsort.rb:431:in `each_strongly_connected_component_from'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/2.3.0/tsort.rb:349:in `block in each_strongly_connected_component'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/2.3.0/tsort.rb:347:in `each'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/2.3.0/tsort.rb:347:in `call'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/2.3.0/tsort.rb:347:in `each_strongly_connected_component'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/2.3.0/tsort.rb:226:in `tsort_each'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/2.3.0/tsort.rb:205:in `tsort_each'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-4.2.6/lib/rails/initializable.rb:54:in `run_initializers'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-4.2.6/lib/rails/application.rb:352:in `initialize!'
+	from /var/glbrc/demo/config/environment.rb:5:in `<top (required)>'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from config.ru:4:in `block in <main>'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/rack-1.6.5/lib/rack/builder.rb:55:in `instance_eval'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/rack-1.6.5/lib/rack/builder.rb:55:in `initialize'
+	from config.ru:1:in `new'
+	from config.ru:1:in `<main>'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn.rb:56:in `eval'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn.rb:56:in `block in builder'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:752:in `build_app!'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:129:in `start'
+	from /root/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/bin/unicorn:126:in `<top (required)>'
+	from /root/.rbenv/versions/2.3.1/bin/unicorn:23:in `load'
+	from /root/.rbenv/versions/2.3.1/bin/unicorn:23:in `<main>'

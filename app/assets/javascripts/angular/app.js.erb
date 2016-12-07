@@ -6,7 +6,7 @@ app.filter('encodeURIComponent', function($window) {
 });
 app.run(function($window, $rootScope, $timeout) {
   var hideClass = 'ng-hide',
-    delay = 3000,
+    delay = 2000,
     firstChangeStartt = false,
     firstContentLoaded = false,
     timer;
@@ -74,18 +74,8 @@ app.config(function($stateProvider, $urlRouterProvider, $authProvider, $location
 			            headers: {'Content-Type': 'application/json'}
 	    			}
 	    		).success(function(response, status, r, x) {
-			            console.log(status);
-			            console.log(response);
-			            console.log(x);
-			            console.log(x.headers['access-token']);
-			            console.log(x.headers['client']);
-			            console.log(x.headers['expiry']);
-			            console.log($('meta[name="csrf-token"]').attr('content'));
 			            location.reload();			            
 			    }).error(function(response, status, errors){
-			            console.log(status);
-			            console.log(response);
-			            console.log(errors);
 	    			    $(".modal-content").shake(3,7,800);			    	
 			    });
 
@@ -118,6 +108,7 @@ app.config(function($stateProvider, $urlRouterProvider, $authProvider, $location
 			$('#modal').on('hidden.bs.modal', function ($stateParams) {
 			    $state.transitionTo('default', $stateParams, {reload: true});
 			})
+			$(".payroll-view").css({"max-height":"300px","overflow-y":"auto"});
 	    }
 	    $scope.custom();   	
     },	
@@ -128,6 +119,15 @@ app.config(function($stateProvider, $urlRouterProvider, $authProvider, $location
     	if(typeof $scope.q=='undefined'){
     	    $scope.q = "<blank>";    		
     	}
+    	// random numbers for search results
+    	$scope.random_results    = randomNumberGenerator(34, 6500);
+    	$scope.random_one        = randomNumberGenerator(1, 99);
+    	$scope.random_two        = randomNumberGenerator(1, 99);
+    	$scope.random_three      = randomNumberGenerator(1, 99);
+    	$scope.random_four       = randomNumberGenerator(1, 99);
+    	$scope.random_inflection = numberInflection(randomNumberGenerator(1, 33));
+    	// random numbers
+    	
     	$scope.title = "Search Results";
 	    $scope.custom = function() {
 	    	// custom code (jQuery, extras)//
@@ -189,7 +189,7 @@ app.config(function($stateProvider, $urlRouterProvider, $authProvider, $location
 			            headers: {'Content-Type': 'application/json'}
 	    			}
 	    		).success(function(response, status, r, x) {
-			            location.reload();			            
+			            location.reload();		            
 			    }).error(function(response, status, errors){
 	    			    $(".modal-content").shake(3,7,800);			    	
 			    });
@@ -203,7 +203,6 @@ app.config(function($stateProvider, $urlRouterProvider, $authProvider, $location
     templateUrl: "<%= asset_path('angular/templates/modal/program-listing.html') %>"
   })
   .state('program-launch', {
-  	url: '/program-launch/:id',
     params: {
 	 id: '1'
 	},
@@ -213,19 +212,21 @@ app.config(function($stateProvider, $urlRouterProvider, $authProvider, $location
          $scope.title_loading = $scope.data.name_shorthand + " Application";
          $scope.title_loaded  = $scope.data.name;
          $scope.program = {
-                          "id"        : $scope.data.id,
-                          "name"      : $scope.data.name,
-                          "icon"      : $scope.data.icon,
-                          "shorthand" : $scope.data.name_shorthand,
-                          "html"      : $scope.data.description     	
-         	
+                          "id"            : $scope.data.id,
+                          "name"          : $scope.data.name,
+                          "icon"          : $scope.data.icon,
+                          "color"         : $scope.data.color,
+                          "shorthand"     : $scope.data.name_shorthand,
+                          "html"          : $scope.data.description,     	
+         	              "default_status": $scope.data.default_status
          };
 	     $scope.custom = function() {
 			$('#modal').on('hidden.bs.modal', function ($stateParams) {
 			    $state.transitionTo('default', $stateParams, {reload: true});
 			});
 		    $("#modal-action").click(function(){
-		    	alert( $scope.data.name + ' Demo only');
+		    	alert($scope.data.name + ' Demo only');
+		    	$(".close").trigger("click");
 		    });
 	     }
 	     $scope.custom(); 
@@ -234,64 +235,3 @@ app.config(function($stateProvider, $urlRouterProvider, $authProvider, $location
 	templateUrl: "<%= asset_path('angular/templates/modal/program-launch.html') %>"
   })
 });
-
-var encodeQueryString = function encodeRFC5987ValueChars (str) {
-    return encodeURIComponent(str).
-        // Note that although RFC3986 reserves "!", RFC5987 does not,
-        // so we do not need to escape it
-        replace(/['()]/g, escape). // i.e., %27 %28 %29
-        replace(/\*/g, '%2A').
-            // The following are not required for percent-encoding per RFC5987, 
-            // so we can allow for a little better readability over the wire: |`^
-            replace(/%(?:7C|60|5E)/g, unescape);
-}
-jQuery.fn.shake = function(intShakes, intDistance, intDuration) {
-	this.each(function() {
-		$(this).css("position","relative"); 
-		for (var x=1; x<=intShakes; x++) {
-			$(this).animate({left:(intDistance*-1)}, (((intDuration/intShakes)/4)))
-    		.animate({left:intDistance}, ((intDuration/intShakes)/2))
-    		.animate({left:0}, (((intDuration/intShakes)/4)));
-   		}
-  	});
-	return this;
-};
-
-var getCookies = function(){
-  var pairs = document.cookie.split(";");
-  var cookies = {};
-  for (var i=0; i<pairs.length; i++){
-    var pair = pairs[i].split("=");
-    cookies[pair[0]] = unescape(pair[1]);
-  }
-  return cookies;
-}
-function createCookie(name,value,days) {
-    if (days) {
-        var date = new Date();
-        date.setTime(date.getTime()+(days*24*60*60*1000));
-        var expires = "; expires="+date.toGMTString();
-    }
-    else var expires = "";
-    document.cookie = name+"="+value+expires+"; path=/";
-}
-
-function readCookie(name) {
-    var nameEQ = name + "=";
-    var ca = document.cookie.split(';');
-    for(var i=0;i < ca.length;i++) {
-        var c = ca[i];
-        while (c.charAt(0)==' ') c = c.substring(1,c.length);
-        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
-    }
-    return null;
-}
-
-function eraseCookie(name) {
-    createCookie(name,"",-1);
-}
-
-function getBaseUrl() {
-    var re = new RegExp(/^.*\//);
-    return re.exec(window.location.href);
-}

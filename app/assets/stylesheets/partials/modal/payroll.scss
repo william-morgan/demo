@@ -1,0 +1,38 @@
+.payroll-activity{
+  margin: 0;
+  padding: 5px;
+}
+.payroll-activity li:nth-child(odd) {
+    background-color: #ffffff;
+}
+.payroll-activity li:nth-child(even) {
+    background-color: #f3f3f3;
+}
+.payroll-activity li{
+  margin: 0;
+  padding: 0;
+}
+.statement-date, .statement-icon, .statement-text{
+  padding:3px;
+  display: table-cell;
+}
+.statement-text{
+  font-size: .71em;
+}
+.statement-date{
+  font-size: .65em;
+}
+
+
+.statement-date{
+  font-weight:bold;
+}
+
+.statement-text{
+  color: #333;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.statement-text:hover{
+  text-decoration: none;
+}

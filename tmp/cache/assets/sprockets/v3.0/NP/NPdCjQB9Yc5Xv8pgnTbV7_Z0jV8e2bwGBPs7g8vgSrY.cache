@@ -1,35 +1,0 @@
-{:uriI"ùfile://app/assets/javascripts/angular/templates/modal/program-listing.html?type=text/html&id=4f6899ca183b4f546170107fedefcc714f7cf1a5a276667d6c60e9758ba3502e:ET:load_pathI"app/assets/javascripts;T:filenameI"Happ/assets/javascripts/angular/templates/modal/program-listing.html;T:	nameI",angular/templates/modal/program-listing;T:logical_pathI"1angular/templates/modal/program-listing.html;T:content_typeI"text/html;T:sourceI"z      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <div class="modal-title-container">
-        	<h5 class="modal-title-loading">Loading {{ title_loading }}...</h5>
-        	<h5 class="modal-title"><i class="fa fa-wrench"></i> {{ title_loaded }}</h5 ng-title>
-        </div>
-      </div>
-      <div class="modal-body">
-		<div class="modal-view-loading loader"></div>
-		<div class="modal-view" ng-view>
-			<div class="program-listing">
-				<span style="margin-left: 20px;font-size: .75em;     color: #373a3c;    background: #f3f3f3;"><i class="fa fa-arrows-alt"></i> Drag & Drop Functionality</span>
-				<ul id="program-listing-list">
-					<li class="card" ng-repeat=" program in programs" data-id="{{program.id}}" data-original="{{$index}}" data-current="{{$index}}">
-					  	 <div class="program-listing-title">{{ program.name }}</div>
-						 <div class="program-listing-checkbox-holder">
-						 	{{program.display}}
-							<span ng-if="program.display == true" class="program-listing-label"><input type="checkbox" class="program-listing-checkbox" checked> Display</span>
-							<span ng-if="program.display == false"><input type="checkbox" class="program-listing-checkbox"        > Display</span>
-						 </div>
-					</li>
-				</ul>
-			</div>
-		</div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" id="modal-action" disabled>Save</button>
-        <button type="button" class="btn btn-secondary" id="modal-close" data-dismiss="modal">Cancel</button>
-      </div>;T:metadata{	:dependencieso:Set:
-@hash}
-I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"Vfile-digest://app/assets/javascripts/angular/templates/modal/program-listing.html;TTF:charsetI"
-utf-8;F:digest"%S«µœÍR•\¸Ú®±<ﬂs¥9H-9ﬂÒ˝b÷x"r/ô:lengthiz:dependencies_digest"%fÕ≠‹™‚ÆBÄ™ˆ„•f”≥ÛeR#b.ã\RR:idI"E4f6899ca183b4f546170107fedefcc714f7cf1a5a276667d6c60e9758ba3502e;F:
-mtimel+-îFX

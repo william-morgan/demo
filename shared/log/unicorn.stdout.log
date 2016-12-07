@@ -1,0 +1,6 @@
+bundler: failed to load command: unicorn_rails (/root/.rbenv/versions/2.3.1/bin/unicorn_rails)
+bundler: failed to load command: unicorn (/root/.rbenv/versions/2.3.1/bin/unicorn)
+bundler: failed to load command: unicorn (/root/.rbenv/versions/2.3.1/bin/unicorn)
+bundler: failed to load command: unicorn (/root/.rbenv/versions/2.3.1/bin/unicorn)
+bundler: failed to load command: unicorn (/root/.rbenv/versions/2.3.1/bin/unicorn)
+bundler: failed to load command: unicorn (/root/.rbenv/versions/2.3.1/bin/unicorn)

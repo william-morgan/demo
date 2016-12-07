@@ -13,12 +13,12 @@
 //= require jquery
 //= require tether
 //= require bootstrap
-//= require angular1.5.8.min
+//= require angular1.5.8
 //= require scripts/angular-ui-router.min
 //= require scripts/angular-cookie.min
 //= require scripts/ng-token-auth
 //= require angular/app
-//= require angular/helpers/main
+//= require angular/helpers/index
 //= require jquery-ui
 //= require jquery_ujs
 //= require turbolinks

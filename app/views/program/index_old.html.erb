@@ -1,0 +1,17 @@
+<% @programs.in_groups_of(4, false).each do |programs|%>
+    <div class="row" style="height: 100%;">
+    	<% programs.each do |program| %>
+        <div class="col-lg-2 card text-xs-center">
+		    <div class="card-header"><%= program.name %></div>
+		    <div class="card-block"><%= raw CGI.unescapeHTML program.description %></div>
+		    <div class="card-footer">
+		    	<a class="btn btn-secondary btn-launch" data-title="<%= program.name_shorthand %> Application"
+		    		                                    data-id="<%= program.id %>" 
+		    		                                    data-target="#modal" 
+		    		                                    data-toggle="modal"  
+		    		                                    ui-sref="program-launch({id:'<%= program.id %>'})"><%= program.launch_text %></a>   
+		    </div>       	
+        </div>
+    	<% end %>
+    </div>
+<% end %>

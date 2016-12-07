@@ -1,0 +1,32 @@
+{:uriI"¤file://app/assets/javascripts/angular/templates/modal/_course-search-results.html?type=text/html&id=c17f3cbf12ea0cec23c5d5895e8258aa3071c99d0972c54bf5f46db1cd75774b:ET:load_pathI"app/assets/javascripts;T:filenameI"Oapp/assets/javascripts/angular/templates/modal/_course-search-results.html;T:	nameI"3angular/templates/modal/_course-search-results;T:logical_pathI"8angular/templates/modal/_course-search-results.html;T:content_typeI"text/html;T:sourceI"ï      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="modal-title-container">
+        	<h5 class="modal-title-loading">Searching for <mark>{{ q }}</mark>...</h5>
+        	<h5 class="modal-title">{{title}} for <mark>{{ q }}</mark>:</h5 ng-title>
+        </div>
+      </div>
+      <div class="modal-body">
+		<div class="modal-view-loading loader"></div>
+		<div class="modal-view" ng-view>
+			<p><strong>URI Encode:</strong> <mark>/?q={{ q | encodeURIComponent }}</mark></p>
+			<p><strong>Query Results:</strong></p>
+			<div class="search-results">
+				<ul>
+					<li>Matched <mark>{{ q }}</mark> in 14 academic courses</li>
+					<li>Two courses have <mark>{{ q }}</mark> in syllabus topics</li>
+					<li>Referenced <mark>{{ q }}</mark> in 8 academic journals</li>
+					<li>Found <mark>{{ q }}</mark> in 33 research publications</li>
+					<li>Found 16 questions regarding <mark>{{ q }}</mark> in online discussions</li>
+				</ul>
+			</div>
+		</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" id="modal-close" data-dismiss="modal">Exit</button>
+      </div>;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"]file-digest://app/assets/javascripts/angular/templates/modal/_course-search-results.html;TTF:charsetI"
+utf-8;F:digest"%îf¼¤G+žÜÉWü4màw%þ—.q§ÖIZ×•øŸ·†:lengthiï:dependencies_digest"%QÎBf¨¶8ÝØ.¾¶áÔö=¤öî*rsEþ[y:idI"Ec17f3cbf12ea0cec23c5d5895e8258aa3071c99d0972c54bf5f46db1cd75774b;F:
+mtimel+þ¨GX

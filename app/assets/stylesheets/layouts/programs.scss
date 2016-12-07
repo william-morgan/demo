@@ -1,3 +1,48 @@
 // Place all the styles related to the programs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.programs{
+
+}
+
+.program-list{
+  list-style-type: none;
+  text-align:left; 
+  padding: 0;
+    margin: 0 auto;
+    width:100%;
+}
+
+
+.program-list li.card { 
+    /* make list elements fall inline as block elements */
+    position: relative;
+    display: inline-block;
+    width: 23.8%;
+    min-height: 283px;
+    max-height: 29.4vh;
+    text-align: middle;
+    vertical-align: middle;
+
+  padding-left:0;
+  padding-right:0;
+  margin-left: .25%;
+  margin-right: .25%;
+}
+
+/*ASUS*/
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+}
+
+/*Samsung vertical*/
+/*Asus Vertical*/
+/* Landscape phones and down */
+@media  (max-width: 560px) {
+
+}
